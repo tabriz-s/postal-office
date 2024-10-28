@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="COSCPFWA/COSCPFWA.csproj">
+    <Files>
+      <File FileName="COSCPFWA/COSCPFWA.csproj" Line="328" Column="57" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="COSCPFWA" expanded="True">
+            <Node name="COSCPFWA" expanded="True">
+              <Node name="Packages" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.COSCPFWA PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>
