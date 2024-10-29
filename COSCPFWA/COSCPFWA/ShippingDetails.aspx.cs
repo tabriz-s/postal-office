@@ -29,7 +29,7 @@ namespace COSCPFWA
                 try
                 {
                     conn.Open();
-                    string query = @"INSERT INTO shipping_details (SenderAddress, ShippingMethod, ReceivingAddress, ReceiverName)
+                    string query = @"INSERT INTO shippingdetails (SendingAddress, ShippingMethod, ReceivingAddress, ReceiverName)
                                      VALUES (@SenderAddress, @ShippingMethod, @ReceivingAddress, @ReceiverName)";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
@@ -45,12 +45,12 @@ namespace COSCPFWA
                     }
 
                     // Display success message or handle further actions
-                    Response.Write("<script>alert('Shipping details saved successfully.');</script>");
+                    Response.Write("Save shipping details!");
                 }
                 catch (Exception ex)
                 {
                     // Log error or display a friendly message
-                    Response.Write("<script>alert('An error occurred: " + ex.Message + "');</script>");
+                    Response.Write("Fail to load database!");
                 }
             }
         }
