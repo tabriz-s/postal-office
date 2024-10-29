@@ -1,65 +1,70 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace COSCPFWA
+{
+    public partial class PackageDetails : System.Web.UI.Page
     {
-        public partial class PackageDetails : System.Web.UI.Page
+        protected void Page_Load(object sender, EventArgs e)
         {
-            protected void Page_Load(object sender, EventArgs e)
+            // Optional: Page load logic if needed
+        }
+
+        // Check trigger and everything
+        protected void SubmitPackageDetails_Click(object sender, EventArgs e)
+        {
+            // Retrieve form values
+            string packageContents = contents.Text;
+            string weightLbsValue = weightLbs.Text;
+            string packageDimensions = dimensions.Text;
+            string packageMaterial = material.Text;
+
+            // Retrieve connection string from web.config
+            string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"]?.ConnectionString;
+
+            if (string.IsNullOrEmpty(connString))
             {
-                // Page load logic, if necessary
+                Response.Write("<script>alert('Database connection string is missing or misconfigured.');</script>");
+                return;
             }
 
-            //Check trigger and everything
-            protected void SubmitPackageDetails_Click(object sender, EventArgs e)
+            // Insert data into the database
+            using (MySqlConnection conn = new MySqlConnection(connString))
             {
-                // Retrieve form values
-                string packageContents = contents.Text;
-                string weightLbs = weight.Text;
-                string packageDimensions = dimensions.Text;
-                string packageMaterial = material.Text;
-
-                // Retrieve connection string from web.config
-                string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"].ConnectionString;
-
-                // Insert data into the database
-                using (MySqlConnection conn = new MySqlConnection(connString))
+                try
                 {
-                    try
+                    conn.Open();
+                    string query = @"INSERT INTO package (Contents, Weight_Lbs, Dimensions, mMaterial)
+                                     VALUES (@contents, @weightLbs, @dimensions, @material)";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
-                        conn.Open();
-                        string query = @"INSERT INTO packages (Contents, WeightLbs, Dimensions, Material)
-                                     VALUES (@Contents, @WeightLbs, @Dimensions, @Material)";
+                        // Set parameters to avoid SQL injection
+                        cmd.Parameters.AddWithValue("@Contents", packageContents);
+                        cmd.Parameters.AddWithValue("@WeightLbs", weightLbs);
+                        cmd.Parameters.AddWithValue("@Dimensions", packageDimensions);
+                        cmd.Parameters.AddWithValue("@Material", packageMaterial);
 
-                        using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                        {
-                            // Set parameters to avoid SQL injection
-                            cmd.Parameters.AddWithValue("@Contents", packageContents);
-                            cmd.Parameters.AddWithValue("@WeightLbs", weightLbs);
-                            cmd.Parameters.AddWithValue("@Dimensions", packageDimensions);
-                            cmd.Parameters.AddWithValue("@Material", packageMaterial);
-
-                            // Execute the command
-                            cmd.ExecuteNonQuery();
-                        }
-
-                        // Display success message
-                        Response.Write("<script>alert('Package details saved successfully.');</script>");
+                        // Execute the command
+                        cmd.ExecuteNonQuery();
                     }
-                    catch (Exception ex)
-                    {
-                        // Log or display an error message
-                        Response.Write("<script>alert('An error occurred: " + ex.Message + "');</script>");
-                    }
+
+                    // Display success message
+                    Response.Write("<script>alert('Package details saved successfully.');</script>");
+                }
+                catch (MySqlException sqlEx)
+                {
+                    // Specific handling for MySQL exceptions
+                    Response.Write("<script>alert('Database error: " + sqlEx.Message + "');</script>");
+                }
+                catch (Exception ex)
+                {
+                    // General exception handling
+                    Response.Write("<script>alert('An unexpected error occurred: " + ex.Message + "');</script>");
                 }
             }
         }
     }
-
 }

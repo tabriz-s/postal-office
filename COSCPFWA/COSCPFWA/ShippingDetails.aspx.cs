@@ -9,19 +9,33 @@ namespace COSCPFWA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Page load logic, if needed
+            // Optional: Page load logic if needed
         }
 
         protected void SubmitShippingDetails_Click(object sender, EventArgs e)
         {
             // Retrieve values from the form fields
-            string senderAddress = senderAddress.Text;
-            string shippingMethod = shippingMethod.SelectedValue;
-            string receivingAddress = receivingAddress.Text;
-            string receiverName = receiverName.Text;
+            string senderAddressValue = senderAddress.Text;
+            string shippingMethodValue = shippingMethod.SelectedValue;
+            string receivingAddressValue = receivingAddress.Text;
+            string receiverNameValue = receiverName.Text;
+
+            // Check for empty fields (basic validation)
+            if (string.IsNullOrEmpty(senderAddressValue) || string.IsNullOrEmpty(shippingMethodValue) ||
+                string.IsNullOrEmpty(receivingAddressValue) || string.IsNullOrEmpty(receiverNameValue))
+            {
+                Response.Write("<script>alert('Please fill in all fields.');</script>");
+                return;
+            }
 
             // Retrieve the connection string from web.config
-            string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"].ConnectionString;
+            string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"]?.ConnectionString;
+
+            if (string.IsNullOrEmpty(connString))
+            {
+                Response.Write("<script>alert('Database connection string is missing or misconfigured.');</script>");
+                return;
+            }
 
             // Insert data into the database
             using (MySqlConnection conn = new MySqlConnection(connString))
@@ -29,28 +43,34 @@ namespace COSCPFWA
                 try
                 {
                     conn.Open();
-                    string query = @"INSERT INTO shippingdetails (SendingAddress, ShippingMethod, ReceivingAddress, ReceiverName)
+                    string query = @"INSERT INTO shippingdetails 
+                                     (SendingAddress, ShippingMethod, ReceivingAddress, ReceiverName) 
                                      VALUES (@SenderAddress, @ShippingMethod, @ReceivingAddress, @ReceiverName)";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
                         // Set parameters to avoid SQL injection
-                        cmd.Parameters.AddWithValue("@SenderAddress", senderAddress);
-                        cmd.Parameters.AddWithValue("@ShippingMethod", shippingMethod);
-                        cmd.Parameters.AddWithValue("@ReceivingAddress", receivingAddress);
-                        cmd.Parameters.AddWithValue("@ReceiverName", receiverName);
+                        cmd.Parameters.AddWithValue("@SenderAddress", senderAddressValue);
+                        cmd.Parameters.AddWithValue("@ShippingMethod", shippingMethodValue);
+                        cmd.Parameters.AddWithValue("@ReceivingAddress", receivingAddressValue);
+                        cmd.Parameters.AddWithValue("@ReceiverName", receiverNameValue);
 
                         // Execute the command
                         cmd.ExecuteNonQuery();
                     }
 
-                    // Display success message or handle further actions
-                    Response.Write("Save shipping details!");
+                    // Display success message
+                    Response.Write("<script>alert('Shipping details saved successfully!');</script>");
+                }
+                catch (MySqlException sqlEx)
+                {
+                    // Specific handling for MySQL exceptions
+                    Response.Write("<script>alert('Database error: " + sqlEx.Message + "');</script>");
                 }
                 catch (Exception ex)
                 {
-                    // Log error or display a friendly message
-                    Response.Write("Fail to load database!");
+                    // General exception handling
+                    Response.Write("<script>alert('An unexpected error occurred: " + ex.Message + "');</script>");
                 }
             }
         }

@@ -93,11 +93,11 @@
             <h2>Shipping Details</h2>
             <div class="form-group">
                 <label for="senderAddress">Sending Address</label>
-                <asp:TextBox ID="senderAddress" runat="server" CssClass="form-control" required="required"></asp:TextBox>
+                <asp:TextBox ID="senderAddress" runat="server" CssClass="form-control" placeholder="Enter sending address"></asp:TextBox>
             </div>
             <div class="form-group">
                 <label for="shippingMethod">Shipping Method</label>
-                <asp:DropDownList ID="shippingMethod" runat="server" CssClass="form-control" required="required">
+                <asp:DropDownList ID="shippingMethod" runat="server" CssClass="form-control">
                     <asp:ListItem Value="" Text="Select a method" Disabled="true" Selected="true"></asp:ListItem>
                     <asp:ListItem Value="Standard" Text="Standard"></asp:ListItem>
                     <asp:ListItem Value="Express" Text="Express"></asp:ListItem>
@@ -106,11 +106,11 @@
             </div>
             <div class="form-group">
                 <label for="receivingAddress">Receiving Address</label>
-                <asp:TextBox ID="receivingAddress" runat="server" CssClass="form-control" required="required"></asp:TextBox>
+                <asp:TextBox ID="receivingAddress" runat="server" CssClass="form-control" placeholder="Enter receiving address"></asp:TextBox>
             </div>
             <div class="form-group">
                 <label for="receiverName">Receiver Name</label>
-                <asp:TextBox ID="receiverName" runat="server" CssClass="form-control" required="required"></asp:TextBox>
+                <asp:TextBox ID="receiverName" runat="server" CssClass="form-control" placeholder="Enter receiver name"></asp:TextBox>
             </div>
             <asp:Button ID="submitBtn" runat="server" Text="Submit" CssClass="submit-btn" OnClick="SubmitShippingDetails_Click" />
         </div>
