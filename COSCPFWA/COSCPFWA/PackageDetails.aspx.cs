@@ -8,21 +8,6 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace COSCPFWA
-{
-    public partial class PackageDetails : System.Web.UI.Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-    }
-
-    using System;
-using System.Configuration;
-using System.Web.UI;
-using MySql.Data.MySqlClient;
-
-namespace COSCPFWA
     {
         public partial class PackageDetails : System.Web.UI.Page
         {
@@ -36,7 +21,7 @@ namespace COSCPFWA
             {
                 // Retrieve form values
                 string packageContents = contents.Text;
-                string weightLbs = weightLbs.Text;
+                string weightLbs = weight.Text;
                 string packageDimensions = dimensions.Text;
                 string packageMaterial = material.Text;
 
@@ -49,7 +34,7 @@ namespace COSCPFWA
                     try
                     {
                         conn.Open();
-                        string query = @"INSERT INTO package_details (Contents, WeightLbs, Dimensions, Material)
+                        string query = @"INSERT INTO packages (Contents, WeightLbs, Dimensions, Material)
                                      VALUES (@Contents, @WeightLbs, @Dimensions, @Material)";
 
                         using (MySqlCommand cmd = new MySqlCommand(query, conn))

@@ -7,11 +7,11 @@
       "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\packagedetails.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\webappcosc\\coscpfwa\\coscpfwa\\packagedetails.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\WebappCOSC\\COSCPFWA\\coscpfwa\\packagedetails.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\packagedetails.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\webappcosc\\coscpfwa\\coscpfwa\\shipping.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\WebappCOSC\\COSCPFWA\\coscpfwa\\shipping.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\shipping.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -64,7 +64,7 @@
               "RelativeDocumentMoniker": "COSCPFWA\\PackageDetails.aspx.cs",
               "ToolTip": "C:\\WebappCOSC\\COSCPFWA\\COSCPFWA\\PackageDetails.aspx.cs",
               "RelativeToolTip": "COSCPFWA\\PackageDetails.aspx.cs",
-              "ViewState": "AgIAABwAAACgmZmZmZkjwCEAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAlwBsAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-28T04:05:15.722Z",
               "EditorCaption": ""
@@ -79,8 +79,7 @@
               "RelativeToolTip": "COSCPFWA\\PackageDetails.aspx",
               "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-10-28T04:04:27.321Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-28T04:04:27.321Z"
             },
             {
               "$type": "Document",
@@ -92,8 +91,7 @@
               "RelativeToolTip": "COSCPFWA\\ShippingDetails.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-10-28T03:54:17.203Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-28T03:54:17.203Z"
             },
             {
               "$type": "Document",
@@ -105,8 +103,7 @@
               "RelativeToolTip": "COSCPFWA\\ShippingDetails.aspx.cs",
               "ViewState": "AgIAAAgAAACAy8zMzMz0vxYAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T03:54:09.231Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-28T03:54:09.231Z"
             },
             {
               "$type": "Document",
@@ -118,8 +115,7 @@
               "RelativeToolTip": "COSCPFWA\\Employee.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T19:51:53.364Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T19:51:53.364Z"
             },
             {
               "$type": "Document",
@@ -131,8 +127,7 @@
               "RelativeToolTip": "COSCPFWA\\Shipping.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-10-26T19:31:28.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T19:31:28.431Z"
             },
             {
               "$type": "Document",
@@ -144,8 +139,7 @@
               "RelativeToolTip": "COSCPFWA\\Shipping.aspx.cs",
               "ViewState": "AgIAACgAAADAmJmZmdkowB4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T19:09:37.006Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T19:09:37.006Z"
             },
             {
               "$type": "Document",
@@ -157,8 +151,7 @@
               "RelativeToolTip": "COSCPFWA\\Login.aspx.designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T05:09:19.725Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T05:09:19.725Z"
             },
             {
               "$type": "Document",
@@ -170,8 +163,7 @@
               "RelativeToolTip": "COSCPFWA\\Login.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T01:41:01.633Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T01:41:01.633Z"
             },
             {
               "$type": "Document",
@@ -196,8 +188,7 @@
               "RelativeToolTip": "COSCPFWA\\Login.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-10-26T01:36:23.606Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T01:36:23.606Z"
             }
           ]
         }
