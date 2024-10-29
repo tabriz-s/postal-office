@@ -84,24 +84,24 @@
 <body>
     <form id="form1" runat="server">
         <div class="report-form-container">
-            <h2>Data Report Request</h2>
+            <h2>Employee/Customer Report Request</h2>
             
-            <!-- Group Name -->
+            <!-- Group By -->
             <div class="form-group">
-                <label for="groupName">Group Name</label>
-                <asp:TextBox ID="groupName" runat="server" CssClass="form-control" required="required"></asp:TextBox>
+                <label for="groupBy">Group By</label>
+                <asp:TextBox ID="groupBy" runat="server" CssClass="form-control" required="required"></asp:TextBox>
             </div>
             
-            <!-- Investigator's Name -->
+            <!-- Employee/Customer Name -->
             <div class="form-group">
-                <label for="investigatorName">Investigator's Name</label>
-                <asp:TextBox ID="investigatorName" runat="server" CssClass="form-control" required="required"></asp:TextBox>
+                <label for="Name">Name</label>
+                <asp:TextBox ID="Name" runat="server" CssClass="form-control" required="required"></asp:TextBox>
             </div>
             
             <!-- Additional Investigator -->
             <div class="form-group">
-                <label for="additionalInvestigator">Additional Investigator</label>
-                <asp:TextBox ID="additionalInvestigator" runat="server" CssClass="form-control"></asp:TextBox>
+                <label for="additionalPersonnel">Additional Personnel</label>
+                <asp:TextBox ID="additionalPersonnel" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
             
             <!-- Projects (Customer & Employee) -->
@@ -128,6 +128,9 @@
 
             <!-- View Report Button -->
             <asp:Button ID="viewReportBtn" runat="server" Text="View Report" CssClass="submit-btn" OnClick="ViewReport_Click" />
+
+            <asp:GridView ID="ReportGridView" runat="server" AutoGenerateColumns="true" />
+
         </div>
     </form>
 </body>

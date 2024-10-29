@@ -2,6 +2,7 @@
 using System;
 using System.Configuration;
 using System.Data;
+using System.Web.Configuration;
 using System.Web.UI;
 
 namespace COSCPFWA
@@ -15,13 +16,11 @@ namespace COSCPFWA
 
         protected void ViewReport_Click(object sender, EventArgs e)
         {
-            string groupNameValue = groupName.Text;
-            string investigator = investigatorName.Text;
-            string table = projectSource.SelectedValue; // this is the table name
-            string dateFrom = activityDateFrom.Text; // CreatedDate
-            string dateTo = activityDateTo.Text; // LastUpdated Date
+            string name = Name.Text;
+            string table = projectSource.SelectedValue;
+            string dateFrom = activityDateFrom.Text;
+            string dateTo = activityDateTo.Text;
 
-            // Connection string from web.config
             string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"].ConnectionString;
 
             using (MySqlConnection conn = new MySqlConnection(connString))
@@ -29,7 +28,13 @@ namespace COSCPFWA
                 try
                 {
                     conn.Open();
-                    string query = "";
+                    // Replace groupByValue with PackageID
+                    string query = $@"
+                SELECT PackageID, COUNT(*) AS RecordCount
+                FROM {table}
+                WHERE CreatedDate >= @DateFrom AND CreatedDate <= @DateTo
+                GROUP BY PackageID
+                ORDER BY PackageID;";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
@@ -40,12 +45,15 @@ namespace COSCPFWA
                         {
                             DataTable report = new DataTable();
                             adapter.Fill(report);
+
+                            // Bind the DataTable to the GridView
+                            ReportGridView.DataSource = report;
+                            ReportGridView.DataBind();
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    // Error handling if database connection or query execution fails
                     Response.Write("<script>alert('Failed to connect to the database: " + ex.Message + "');</script>");
                 }
             }

@@ -24,31 +24,31 @@ namespace COSCPFWA
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// groupName control.
+        /// groupBy control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox groupName;
+        protected global::System.Web.UI.WebControls.TextBox groupBy;
 
         /// <summary>
-        /// investigatorName control.
+        /// Name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox investigatorName;
+        protected global::System.Web.UI.WebControls.TextBox Name;
 
         /// <summary>
-        /// additionalInvestigator control.
+        /// additionalPersonnel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox additionalInvestigator;
+        protected global::System.Web.UI.WebControls.TextBox additionalPersonnel;
 
         /// <summary>
         /// projectSource control.
@@ -85,5 +85,14 @@ namespace COSCPFWA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button viewReportBtn;
+
+        /// <summary>
+        /// ReportGridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView ReportGridView;
     }
 }
