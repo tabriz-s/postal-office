@@ -169,6 +169,7 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="DataReportRequest.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Employee.aspx" />
     <Content Include="favicon.ico" />
@@ -254,6 +255,13 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataReportRequest.aspx.cs">
+      <DependentUpon>DataReportRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataReportRequest.aspx.designer.cs">
+      <DependentUpon>DataReportRequest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
