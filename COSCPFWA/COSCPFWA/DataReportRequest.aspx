@@ -82,9 +82,10 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" action="QueryDatabase" method="post">
         <div class="report-form-container">
             <h2>Employee/Customer Report Request</h2>
+            <!-- Been thinking of switch forms to dropdown lists ->-
             
             <!-- Group By -->
             <div class="form-group">
@@ -94,8 +95,14 @@
             
             <!-- Employee/Customer Name -->
             <div class="form-group">
-                <label for="Name">Name</label>
-                <asp:TextBox ID="Name" runat="server" CssClass="form-control" required="required"></asp:TextBox>
+                <label for="employeeName">Employee Name:</label>
+                <select id="employeeName" name="employeeName" runat="server" CssClass="form-control" TextMode="Date" required="required">
+                    <option value="Ryan Araula">Ryan Araula</option>
+                    <option value="Santiago Gamboa">Santiago Gamboa</option>
+                    <option value="Huy Nguyen">Huy Nguyen</option>
+                    <option value="Tabriz Sadredinov">Tabriz Sadredinov</option>
+                    <option value="Abubakar Memon">Abubakar Memon</option>
+                </select>
             </div>
             
             <!-- Additional Investigator -->
@@ -113,6 +120,15 @@
                     <asp:ListItem Value="Employee" Text="Employee"></asp:ListItem>
                 </asp:DropDownList>
             </div>
+
+            <!-- Selecting Delivery Type -->
+            <div class="form-group">
+                <label for="deliveryType">Delivery Type:</label>
+                <select id="deliveryType" name="deliveryType" runat="server" CssClass="form-control" required="required">
+                    <option value="Delivery">Delivery</option>
+                    <option value="SmartLocker">SmartLocker</option>
+                </select>
+            </div>
             
             <!-- Activity Date From -->
             <div class="form-group">
@@ -127,11 +143,13 @@
             </div>
 
             <!-- View Report Button -->
-            <asp:Button ID="viewReportBtn" runat="server" Text="View Report" CssClass="submit-btn" OnClick="ViewReport_Click" />
+            <asp:Button ID="ViewReportBtn" runat="server" Text="View Report" CssClass="submit-btn" OnClick="ViewReport_Click" />
 
-            <asp:GridView ID="ReportGridView" runat="server" AutoGenerateColumns="true" />
+            <!-- Grid View -->
+            <asp:GridView ID="ResultGrid" runat="server" AutoGenerateColumns="true" />
+            
 
         </div>
     </form>
 </body>
-</html>
+</html> 
