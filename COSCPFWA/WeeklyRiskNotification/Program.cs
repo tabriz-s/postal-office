@@ -93,7 +93,7 @@ namespace COSCPFWA.Services
             return sb.ToString();
         }
 
-        static void SendEmail(string to, string subject, string body)
+        /* static void SendEmail(string to, string subject, string body)
         {
             using (MailMessage mail = new MailMessage())
             {
@@ -110,14 +110,44 @@ namespace COSCPFWA.Services
                     smtp.Send(mail);
                 }
             }
+        } */
+        static void SendEmail(string to, string subject, string body)
+        {
+            try
+            {
+                Console.WriteLine("Setting up email message...");
+
+                using (MailMessage mail = new MailMessage())
+                {
+                    mail.From = new MailAddress("araulaphillipryan@gmail.com");
+                    mail.To.Add(to);
+                    mail.Subject = subject;
+                    mail.Body = body;
+                    mail.IsBodyHtml = true;
+
+                    Console.WriteLine("Configuring SMTP client...");
+
+                    using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                    {
+                        smtp.Credentials = new System.Net.NetworkCredential("araulaphillipryan@gmail.com", "eqzr lukj ygex bzdh");
+                        smtp.EnableSsl = true;
+                        smtp.Timeout = 10000; // 10 seconds timeout
+
+                        Console.WriteLine("Attempting to send email...");
+                        smtp.Send(mail);
+                        Console.WriteLine("Email sent successfully.");
+                    }
+                }
+            }
+            catch (SmtpException smtpEx)
+            {
+                Console.WriteLine($"SMTP Error: {smtpEx.Message}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"General Error: {ex.Message}");
+            }
         }
-
-
     }
-
-
-
-
-
 
 }

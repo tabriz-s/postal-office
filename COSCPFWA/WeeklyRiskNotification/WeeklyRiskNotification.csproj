@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
-    <BaseOutputPath>C:\Users\araul\source\repos\WebappCOSC\COSCPFWA\WeeklyRiskNotification\bin\Debug\net8.0</BaseOutputPath>
+    <BaseOutputPath>C:\Users\araul\source\repos\WebappCOSC\COSCPFWA\WeeklyRiskNotification\bin</BaseOutputPath>
   </PropertyGroup>
 
   <ItemGroup>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WeeklyRiskNotification")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e7993f4c0a1f4da58eeb1d543e0b93cc27a9b7c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4370395c9eaf354820b4b82e3086371e30cf1cad")]
 [assembly: System.Reflection.AssemblyProductAttribute("WeeklyRiskNotification")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WeeklyRiskNotification")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
