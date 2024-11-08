@@ -15,7 +15,8 @@ namespace COSCPFWA.Services
             //Don't use configuration only needed for html
             try
             {
-            string connString = "Server=uhbaseddatabasers.mysql.database.azure.com;Port=3306;Database=test_schema;Uid=UH4;Pwd=COSC3380!;";
+            string connString = "Server=uhbaseddatabasers.mysql.database.azure.com;Port=3306;Database=test_schema;Uid=UH4;Pwd=COSC3380!;SslMode=Required;";
+                
             string query = "SELECT employee.EmployeeID, employee.Name, employee.Email, employee.PhoneNumber, employee.IncidentCount FROM employee WHERE (LastUpdated >= NOW() - INTERVAL 7 DAY) AND (IncidentCount >= 5) ORDER BY LastUpdated DESC;";
 
             Console.WriteLine("Starting database query...");

@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A4A4DED5-0FAB-4D4C-A289-6AFCA57E5DD8}|WeeklyRiskNotification\\WeeklyRiskNotification.csproj|c:\\users\\araul\\source\\repos\\webappcosc\\coscpfwa\\weeklyrisknotification\\weeklyrisknotification.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{A4A4DED5-0FAB-4D4C-A289-6AFCA57E5DD8}|WeeklyRiskNotification\\WeeklyRiskNotification.csproj|solutionrelative:weeklyrisknotification\\weeklyrisknotification.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4A4DED5-0FAB-4D4C-A289-6AFCA57E5DD8}|WeeklyRiskNotification\\WeeklyRiskNotification.csproj|c:\\users\\araul\\source\\repos\\webappcosc\\coscpfwa\\weeklyrisknotification\\weeklyrisknotification.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A4A4DED5-0FAB-4D4C-A289-6AFCA57E5DD8}|WeeklyRiskNotification\\WeeklyRiskNotification.csproj|solutionrelative:weeklyrisknotification\\weeklyrisknotification.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A4A4DED5-0FAB-4D4C-A289-6AFCA57E5DD8}|WeeklyRiskNotification\\WeeklyRiskNotification.csproj|c:\\users\\araul\\source\\repos\\webappcosc\\coscpfwa\\weeklyrisknotification\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A4A4DED5-0FAB-4D4C-A289-6AFCA57E5DD8}|WeeklyRiskNotification\\WeeklyRiskNotification.csproj|solutionrelative:weeklyrisknotification\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,19 +19,11 @@
       "RelativeMoniker": "D:0:0:{A4A4DED5-0FAB-4D4C-A289-6AFCA57E5DD8}|WeeklyRiskNotification\\WeeklyRiskNotification.csproj|solutionrelative:weeklyrisknotification\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4A4DED5-0FAB-4D4C-A289-6AFCA57E5DD8}|WeeklyRiskNotification\\WeeklyRiskNotification.csproj|c:\\users\\araul\\source\\repos\\webappcosc\\coscpfwa\\weeklyrisknotification\\weeklyrisknotification.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A4A4DED5-0FAB-4D4C-A289-6AFCA57E5DD8}|WeeklyRiskNotification\\WeeklyRiskNotification.csproj|solutionrelative:weeklyrisknotification\\weeklyrisknotification.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\coscpfwa\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4A4DED5-0FAB-4D4C-A289-6AFCA57E5DD8}|WeeklyRiskNotification\\WeeklyRiskNotification.csproj|c:\\users\\araul\\source\\repos\\webappcosc\\coscpfwa\\weeklyrisknotification\\weeklyrisknotification.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{A4A4DED5-0FAB-4D4C-A289-6AFCA57E5DD8}|WeeklyRiskNotification\\WeeklyRiskNotification.csproj|solutionrelative:weeklyrisknotification\\weeklyrisknotification.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\users\\araul\\source\\repos\\webappcosc\\coscpfwa\\coscpfwa\\datareportrequest.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\coscpfwa\\datareportrequest.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\datareportrequest.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -31,7 +31,7 @@
       "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\datareportrequest.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\users\\araul\\source\\repos\\webappcosc\\coscpfwa\\coscpfwa\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\coscpfwa\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -82,46 +82,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WeeklyRiskNotification",
-              "DocumentMoniker": "C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
-              "RelativeDocumentMoniker": "WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
-              "ToolTip": "C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
-              "RelativeToolTip": "WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-08T03:06:05.575Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "WeeklyRiskNotification\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\Properties\\launchSettings.json",
-              "RelativeToolTip": "WeeklyRiskNotification\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAACJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-08T02:48:11.707Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "WeeklyRiskNotification",
-              "DocumentMoniker": "C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
-              "RelativeDocumentMoniker": "WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
-              "ToolTip": "C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
-              "RelativeToolTip": "WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-08T02:43:27.424Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -149,19 +111,57 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "WeeklyRiskNotification",
+              "DocumentMoniker": "C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
+              "RelativeDocumentMoniker": "WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
+              "ToolTip": "C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
+              "RelativeToolTip": "WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-08T03:06:05.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "WeeklyRiskNotification\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\Properties\\launchSettings.json",
+              "RelativeToolTip": "WeeklyRiskNotification\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAACJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-08T02:48:11.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WeeklyRiskNotification.csproj",
+              "DocumentMoniker": "C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
+              "RelativeDocumentMoniker": "WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
+              "ToolTip": "C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
+              "RelativeToolTip": "WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-08T02:43:27.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\Program.cs",
               "RelativeDocumentMoniker": "WeeklyRiskNotification\\Program.cs",
               "ToolTip": "C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\Program.cs",
               "RelativeToolTip": "WeeklyRiskNotification\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T02:38:54.169Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Web.config",
               "DocumentMoniker": "C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Web.config",
               "RelativeDocumentMoniker": "COSCPFWA\\Web.config",
@@ -169,8 +169,7 @@
               "RelativeToolTip": "COSCPFWA\\Web.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAChAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-10-17T19:31:28.238Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T19:31:28.238Z"
             },
             {
               "$type": "Document",
@@ -182,8 +181,7 @@
               "RelativeToolTip": "COSCPFWA\\DataReportRequest.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-10-29T02:52:25.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T02:52:25.837Z"
             },
             {
               "$type": "Document",
@@ -195,8 +193,7 @@
               "RelativeToolTip": "COSCPFWA\\DataReportRequest.aspx.cs",
               "ViewState": "AgIAAB8AAAAAJEmasoYLwD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T02:37:59.537Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T02:37:59.537Z"
             },
             {
               "$type": "Document",
@@ -208,8 +205,7 @@
               "RelativeToolTip": "COSCPFWA\\Properties\\AssemblyInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T02:48:16.162Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T02:48:16.162Z"
             },
             {
               "$type": "Document",
@@ -221,8 +217,7 @@
               "RelativeToolTip": "COSCPFWA\\ShippingDetails.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-10-28T03:54:17.203Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-28T03:54:17.203Z"
             },
             {
               "$type": "Document",
@@ -234,8 +229,7 @@
               "RelativeToolTip": "COSCPFWA\\PackageDetails.aspx.cs",
               "ViewState": "AgIAACYAAADAipmZmZnzvycAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T04:05:15.722Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-28T04:05:15.722Z"
             },
             {
               "$type": "Document",
@@ -247,8 +241,7 @@
               "RelativeToolTip": "COSCPFWA\\ShippingDetails.aspx.cs",
               "ViewState": "AgIAAAUAAACAMjMzMzMbwAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T03:54:09.231Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-28T03:54:09.231Z"
             },
             {
               "$type": "Document",
@@ -260,8 +253,7 @@
               "RelativeToolTip": "COSCPFWA\\Employee.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T19:51:53.364Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T19:51:53.364Z"
             },
             {
               "$type": "Document",
@@ -273,8 +265,7 @@
               "RelativeToolTip": "COSCPFWA\\PackageDetails.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-10-28T04:04:27.321Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-28T04:04:27.321Z"
             },
             {
               "$type": "Document",
@@ -286,8 +277,7 @@
               "RelativeToolTip": "COSCPFWA\\Shipping.aspx.cs",
               "ViewState": "AgIAAA8AAABAmJmZmZkbwBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T19:09:37.006Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T19:09:37.006Z"
             },
             {
               "$type": "Document",
@@ -299,8 +289,7 @@
               "RelativeToolTip": "COSCPFWA\\Shipping.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-10-26T19:31:28.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T19:31:28.431Z"
             },
             {
               "$type": "Document",
@@ -312,8 +301,7 @@
               "RelativeToolTip": "COSCPFWA\\Login.aspx.designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T05:09:19.725Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T05:09:19.725Z"
             },
             {
               "$type": "Document",
@@ -325,8 +313,7 @@
               "RelativeToolTip": "COSCPFWA\\Login.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T01:41:01.633Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T01:41:01.633Z"
             },
             {
               "$type": "Document",
@@ -338,8 +325,7 @@
               "RelativeToolTip": "COSCPFWA\\Login.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-10-26T01:36:23.606Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T01:36:23.606Z"
             }
           ]
         }
