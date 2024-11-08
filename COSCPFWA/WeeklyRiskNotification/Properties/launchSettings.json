@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "WeeklyRiskNotification": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  },
+
+  "ConnectionStrings": {
+    "DatabaseConnectionString": "Server=uhbaseddatabasers.mysql.database.azure.com;Port=3306;Database=test_schema;Uid=UH4;Pwd=COSC3380!;"
+  }
+}

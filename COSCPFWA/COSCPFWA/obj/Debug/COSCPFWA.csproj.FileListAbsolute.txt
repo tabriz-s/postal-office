@@ -206,3 +206,5 @@ C:\WebappCOSC\COSCPFWA\COSCPFWA\obj\Debug\COSCPFWA.csproj.CoreCompileInputs.cach
 C:\WebappCOSC\COSCPFWA\COSCPFWA\obj\Debug\COSCPFWA.csproj.Up2Date
 C:\WebappCOSC\COSCPFWA\COSCPFWA\obj\Debug\COSCPFWA.dll
 C:\WebappCOSC\COSCPFWA\COSCPFWA\obj\Debug\COSCPFWA.pdb
+C:\Users\araul\source\repos\WebappCOSC\COSCPFWA\COSCPFWA\obj\Debug\COSCPFWA.csproj.AssemblyReference.cache
+C:\Users\araul\source\repos\WebappCOSC\COSCPFWA\COSCPFWA\obj\Debug\COSCPFWA.csproj.CoreCompileInputs.cache
