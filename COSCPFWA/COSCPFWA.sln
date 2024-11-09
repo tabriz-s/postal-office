@@ -5,7 +5,7 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COSCPFWA", "COSCPFWA\COSCPFWA.csproj", "{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeeklyRiskNotification", "WeeklyRiskNotification\WeeklyRiskNotification.csproj", "{A4A4DED5-0FAB-4D4C-A289-6AFCA57E5DD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeeklyRiskNotification", "WeeklyRiskNotification\WeeklyRiskNotification.csproj", "{A4A4DED5-0FAB-4D4C-A289-6AFCA57E5DD8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

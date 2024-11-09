@@ -176,6 +176,7 @@
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="PackageDetails.aspx" />
+    <Content Include="Refunds.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -295,6 +296,13 @@
       <DependentUpon>PackageDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Refunds.aspx.cs">
+      <DependentUpon>Refunds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Refunds.aspx.designer.cs">
+      <DependentUpon>Refunds.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Shipping.aspx.cs">
       <DependentUpon>Shipping.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
