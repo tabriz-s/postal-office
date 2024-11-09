@@ -103,6 +103,10 @@
         <input type="email" id="email" name="email" required>
       </div>
       <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" maxlength="30" required>
+      </div>
+      <div class="form-group">
         <label for="zipcode">Zip Code</label>
         <input type="text" id="zipcode" name="zipcode" required>
       </div>

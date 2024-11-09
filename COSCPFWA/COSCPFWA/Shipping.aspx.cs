@@ -9,7 +9,6 @@ namespace COSCPFWA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void SubmitButton_Click(object sender, EventArgs e)
@@ -26,15 +25,12 @@ namespace COSCPFWA
             string address = Request.Form["address"];
 
             string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"].ConnectionString;
-
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
                 try
                 {
                     conn.Open();
-                    string query = @"INSERT INTO customer(FirstName, LastName, City, State, PhoneNumber, Email, Address, ZipCode) 
-                                    VALUES(@FirstName, @LastName, @City, @State, @PhoneNumber, @Email, @Address, @ZipCode)";
-
+                    string query = @"INSERT INTO customer (FirstName, LastName, City, State, PhoneNumber, Email, Address, ZipCode) VALUES (@FirstName, @LastName, @City, @State, @PhoneNumber, @Email, @Address, @ZipCode)";
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
                         // Define parameters to prevent SQL injection
@@ -45,19 +41,22 @@ namespace COSCPFWA
                         cmd.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
                         cmd.Parameters.AddWithValue("@Email", email);
                         cmd.Parameters.AddWithValue("@Address", address);
-                        cmd.Parameters.AddWithValue("@ZipCode", zipcode); // Adding ZipCode
+                        cmd.Parameters.AddWithValue("@ZipCode", zipcode);
 
                         // Execute the command
                         cmd.ExecuteNonQuery();
+                        Response.Write("<script>alert('Customer information saved successfully.');</script>");
                     }
-
-                    // Display success message or redirect as needed
-                    Response.Write("<script>alert('Customer information saved successfully.');</script>");
+                }
+                catch (MySqlException ex)
+                {
+                    // Display detailed MySQL error message on the webpage for debugging
+                    Response.Write("<script>alert('MySQL Error: " + ex.Message.Replace("'", "\\'") + "');</script>");
                 }
                 catch (Exception ex)
                 {
-                    // Log the exception if needed and display error message
-                    Response.Write("<script>alert('Cannot connect to the database!');</script>");
+                    // Display a generic error message for any other exception
+                    Response.Write("<script>alert('An error occurred: " + ex.Message.Replace("'", "\\'") + "');</script>");
                 }
             }
         }
