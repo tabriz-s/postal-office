@@ -76,51 +76,54 @@
 
   <div class="shipping-form-container">
     <h2>Shipping Information</h2>
-    <form>
+    <form runat="server">
       <div class="form-group">
         <label for="country">Country or Territory</label>
-        <select id="country" name="country" required>
-          <option value="" disabled selected>Select your country</option>
-          <option value="us">United States</option>
-          <option value="ca">Canada</option>
-          <option value="uk">United Kingdom</option>
-        </select>
+          <%-- Changed to dropdown and added ALL MISSING "asp:" prefixes  --%>
+        <asp:DropDownList ID="country" runat="server" CssClass="form-control">
+          <asp:ListItem Text="Select your country" Value="" />
+          <asp:ListItem Text="United States" Value="us" />
+          <asp:ListItem Text="Canada" Value="ca" />
+          <asp:ListItem Text="United Kingdom" Value="uk" />
+        </asp:DropDownList>
       </div>
       <div class="form-group">
+          <%-- Also all "id" have to be capitalized to ID --%>
         <label for="firstName">First Name</label>
-        <input type="text" id="firstName" name="firstName" required>
-      </div>
+        <asp:TextBox ID="firstName" name="firstName" required runat="server" /> 
+          <%-- Missing runat ="server" statements for each input --%>
       <div class="form-group">
         <label for="lastName">Last Name</label>
-        <input type="text" id="lastName" name="lastName" required>
+        <asp:TextBox ID="lastName" runat="server" CssClass="form-control" />
       </div>
       <div class="form-group">
         <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" required>
+        <asp:TextBox ID="phone" runat="server" CssClass="form-control" TextMode="Phone" />
       </div>
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+        <asp:TextBox ID="email" runat="server" CssClass="form-control" TextMode="Email" />
       </div>
       <div class="form-group">
         <label for="address">Address</label>
-        <input type="text" id="address" name="address" maxlength="30" required>
+        <asp:TextBox ID="address" runat="server" CssClass="form-control" MaxLength="30" />
       </div>
       <div class="form-group">
         <label for="zipcode">Zip Code</label>
-        <input type="text" id="zipcode" name="zipcode" required>
+        <asp:TextBox ID="zipcode" runat="server" CssClass="form-control" />
       </div>
       <div class="form-group">
         <label for="city">City</label>
-        <input type="text" id="city" name="city" required>
+        <asp:TextBox ID="city" runat="server" CssClass="form-control" />
       </div>
       <div class="form-group">
         <label for="state">State</label>
-        <input type="text" id="state" name="state" required>
+        <asp:TextBox ID="state" runat="server" CssClass="form-control" MaxLength="2" />
       </div>
-      <button type="submit" class="submit-btn">Submit</button>
+      <asp:Button ID="SubmitButton" runat="server" CssClass="submit-btn" Text="Submit" OnClick="SubmitButton_Click" /> 
+      <%-- Forgot to associate the submit button to the C# function AND changed "onserverclick" to "OnClick" --%>
     </form>
   </div>
-
+  <%-- Missing runat="server" statement to allow ASP.NET to manage form submission at line 79 --%>
 </body>
 </html>

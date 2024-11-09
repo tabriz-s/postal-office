@@ -13,6 +13,10 @@ namespace COSCPFWA
 
         protected void SubmitButton_Click(object sender, EventArgs e)
         {
+            Response.Write("<script>alert('Submit button clicked');</script>");
+
+            string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"].ConnectionString;
+
             // Retrieve form values
             string country = Request.Form["country"];
             string firstName = Request.Form["firstName"];
@@ -24,9 +28,10 @@ namespace COSCPFWA
             string state = Request.Form["state"];
             string address = Request.Form["address"];
 
-            string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"].ConnectionString;
+            //string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"].ConnectionString;
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
+                //Removed empty try-catch block. Why was this here?
                 try
                 {
                     conn.Open();
@@ -44,7 +49,16 @@ namespace COSCPFWA
                         cmd.Parameters.AddWithValue("@ZipCode", zipcode);
 
                         // Execute the command
-                        cmd.ExecuteNonQuery();
+                        //cmd.ExecuteNonQuery();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            Response.Write("<script>alert('Customer information saved successfully.');</script>");
+                        }
+                        else
+                        {
+                            Response.Write("<script>alert('No rows were inserted. Please check your data.');</script>");
+                        }
                         Response.Write("<script>alert('Customer information saved successfully.');</script>");
                     }
                 }
