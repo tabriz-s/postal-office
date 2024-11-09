@@ -33,13 +33,13 @@ namespace COSCPFWA
         protected global::System.Web.UI.WebControls.TextBox groupBy;
 
         /// <summary>
-        /// Name control.
+        /// employeeName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Name;
+        protected global::System.Web.UI.WebControls.DropDownList employeeName;
 
         /// <summary>
         /// additionalPersonnel control.
@@ -60,6 +60,15 @@ namespace COSCPFWA
         protected global::System.Web.UI.WebControls.DropDownList projectSource;
 
         /// <summary>
+        /// deliveryType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList deliveryType;
+
+        /// <summary>
         /// activityDateFrom control.
         /// </summary>
         /// <remarks>
@@ -78,21 +87,21 @@ namespace COSCPFWA
         protected global::System.Web.UI.WebControls.TextBox activityDateTo;
 
         /// <summary>
-        /// viewReportBtn control.
+        /// ViewReportBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button viewReportBtn;
+        protected global::System.Web.UI.WebControls.Button ViewReportBtn;
 
         /// <summary>
-        /// ReportGridView control.
+        /// ResultGrid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView ReportGridView;
+        protected global::System.Web.UI.WebControls.GridView ResultGrid;
     }
 }

@@ -21,8 +21,9 @@ namespace COSCPFWA
 
         protected void ViewReport_Click(object sender, EventArgs e)
         {
-            string name = employeeName.TagName; //Will add more variables soon
+            string name = employeeName.SelectedValue; //Will add more variables soon
             string table = projectSource.SelectedValue;
+            string type = deliveryType.SelectedValue;
             string dateFrom = activityDateFrom.Text;
             string dateTo = activityDateTo.Text;
 
@@ -46,10 +47,10 @@ namespace COSCPFWA
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@EmployeeName", employeeName);
-                        cmd.Parameters.AddWithValue("@DeliveryType", deliveryType);
-                        cmd.Parameters.AddWithValue("@DateFrom", dateFrom);
-                        cmd.Parameters.AddWithValue("@DateTo", dateTo);
+                        cmd.Parameters.AddWithValue("@EmployeeName", name);
+                        cmd.Parameters.AddWithValue("@DeliveryType", type);
+                        //cmd.Parameters.AddWithValue("@DateFrom", dateFrom);
+                        //cmd.Parameters.AddWithValue("@DateTo", dateTo);
 
                         using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
                         {

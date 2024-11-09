@@ -82,7 +82,7 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server" action="QueryDatabase" method="post">
+    <form id="form1" runat="server">
         <div class="report-form-container">
             <h2>Employee/Customer Report Request</h2>
             <!-- Been thinking of switch forms to dropdown lists ->-
@@ -96,13 +96,13 @@
             <!-- Employee/Customer Name -->
             <div class="form-group">
                 <label for="employeeName">Employee Name:</label>
-                <select id="employeeName" name="employeeName" runat="server" CssClass="form-control" TextMode="Date" required="required">
-                    <option value="Ryan Araula">Ryan Araula</option>
-                    <option value="Santiago Gamboa">Santiago Gamboa</option>
-                    <option value="Huy Nguyen">Huy Nguyen</option>
-                    <option value="Tabriz Sadredinov">Tabriz Sadredinov</option>
-                    <option value="Abubakar Memon">Abubakar Memon</option>
-                </select>
+                <asp:DropDownList ID="employeeName" runat="server" CssClass="form-control">
+                    <asp:ListItem value="Ryan Araula">Ryan Araula</asp:ListItem>
+                    <asp:ListItem value="Santiago Gamboa">Santiago Gamboa</asp:ListItem>
+                    <asp:ListItem value="Huy Nguyen">Huy Nguyen</asp:ListItem>
+                    <asp:ListItem value="Tabriz Sadredinov">Tabriz Sadredinov</asp:ListItem>
+                    <asp:ListItem value="Abubakar Memon">Abubakar Memon</asp:ListItem>
+                </asp:DropDownList>
             </div>
             
             <!-- Additional Investigator -->
@@ -124,10 +124,10 @@
             <!-- Selecting Delivery Type -->
             <div class="form-group">
                 <label for="deliveryType">Delivery Type:</label>
-                <select id="deliveryType" name="deliveryType" runat="server" CssClass="form-control" required="required">
-                    <option value="Delivery">Delivery</option>
-                    <option value="SmartLocker">SmartLocker</option>
-                </select>
+                <asp:DropDownList ID="deliveryType" runat="server" CssClass="form-control">
+                    <asp:ListItem value="Delivery">Delivery</asp:ListItem>
+                    <asp:ListItem value="SmartLocker">SmartLocker</asp:ListItem>
+                </asp:DropDownList>
             </div>
             
             <!-- Activity Date From -->

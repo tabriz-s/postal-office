@@ -32,8 +32,8 @@ namespace COSCPFWA
                 try
                 {
                     conn.Open();
-                    string query = @"INSERT INTO customer(FirstName, LastName, City, State, Country, PhoneNumber, Email, Address, ZipCode) 
-                                    VALUES(@FirstName, @LastName, @City, @State, @Country, @PhoneNumber, @Email, @Address, @ZipCode)";
+                    string query = @"INSERT INTO customer(FirstName, LastName, City, State, PhoneNumber, Email, Address, ZipCode) 
+                                    VALUES(@FirstName, @LastName, @City, @State, @PhoneNumber, @Email, @Address, @ZipCode)";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
@@ -42,7 +42,6 @@ namespace COSCPFWA
                         cmd.Parameters.AddWithValue("@LastName", lastName);
                         cmd.Parameters.AddWithValue("@City", city);
                         cmd.Parameters.AddWithValue("@State", state);
-                        cmd.Parameters.AddWithValue("@Country", country);
                         cmd.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
                         cmd.Parameters.AddWithValue("@Email", email);
                         cmd.Parameters.AddWithValue("@Address", address);
