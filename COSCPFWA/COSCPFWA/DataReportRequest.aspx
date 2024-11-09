@@ -1,155 +1,157 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DataReportRequest.aspx.cs" Inherits="COSCPFWA.DataReportRequest" %>
+﻿<%@ Page Title="DataReportRequest" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DataReportRequest.aspx.cs" Inherits="COSCPFWA.DataReportRequest" %>
 
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Report Request</title>
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f2f2f2;
+            margin: 0;
+        }
+
+        .main-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
+            padding: 20px;
         }
 
         .report-form-container {
             width: 100%;
-            max-width: 700px;
-            background-color: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            background-color: #fff;
             padding: 30px;
-            margin: 20px;
-            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            border-top: 8px solid #3b3b3b;
+            box-sizing: border-box;
         }
 
-        .report-form-container h2 {
-            text-align: center;
-            font-size: 26px;
-            color: #333;
-            font-weight: 700;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #d3a037;
-            padding-bottom: 10px;
-        }
+            .report-form-container h2 {
+                text-align: center;
+                color: #333;
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
 
         .form-group {
-            margin-bottom: 18px;
-        }
-        .form-group label {
-            display: block;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 5px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 15px;
+            align-items: center;
         }
 
-        .form-group input, .form-group select {
-            width: 100%;
-            padding: 10px;
-            font-size: 15px;
-            border: 1px solid #d3a037;
-            border-radius: 4px;
-            outline: none;
-        }
-        .form-group input:focus, .form-group select:focus {
-            border-color: #d3a037;
-            box-shadow: 0 0 4px rgba(211, 160, 55, 0.4);
-        }
+            .form-group label {
+                display: block;
+                width: 100%;
+                color: #3b3b3b;
+                font-weight: bold;
+                margin-bottom: 5px;
+                margin-left: 260px;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group asp\\:TextBox,
+            .form-group asp\\:DropDownList {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 15px;
+                box-sizing: border-box;
+            }
+
+                .form-group input:focus,
+                .form-group select:focus,
+                .form-group asp\\:TextBox:focus {
+                    border-color: #ffc107;
+                    outline: none;
+                    box-shadow: 0 0 4px rgba(255, 193, 7, 0.5);
+                }
+
 
         .submit-btn {
             width: 100%;
+            max-width: 300px;
             padding: 14px;
+            background-color: #ffc107;
+            color: #3b3b3b;
             font-size: 16px;
             font-weight: bold;
-            color: #ffffff;
-            background-color: #d3a037;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            box-sizing: border-box;
+            margin-left: 120px;
         }
-        .submit-btn:hover {
-            background-color: #b58428;
-        }
+
+            .submit-btn:hover {
+                background-color: #d39e00;
+            }
     </style>
-</head>
-<body>
-    <form id="form1" runat="server">
+
+    
+    <div class="main-container">
         <div class="report-form-container">
             <h2>Employee/Customer Report Request</h2>
-            <!-- Been thinking of switch forms to dropdown lists ->-
             
-            <!-- Group By -->
-            <div class="form-group">
-                <label for="groupBy">Group By</label>
-                <asp:TextBox ID="groupBy" runat="server" CssClass="form-control" required="required"></asp:TextBox>
-            </div>
-            
-            <!-- Employee/Customer Name -->
-            <div class="form-group">
-                <label for="employeeName">Employee Name:</label>
-                <asp:DropDownList ID="employeeName" runat="server" CssClass="form-control">
-                    <asp:ListItem value="Ryan Araula">Ryan Araula</asp:ListItem>
-                    <asp:ListItem value="Santiago Gamboa">Santiago Gamboa</asp:ListItem>
-                    <asp:ListItem value="Huy Nguyen">Huy Nguyen</asp:ListItem>
-                    <asp:ListItem value="Tabriz Sadredinov">Tabriz Sadredinov</asp:ListItem>
-                    <asp:ListItem value="Abubakar Memon">Abubakar Memon</asp:ListItem>
-                </asp:DropDownList>
-            </div>
-            
-            <!-- Additional Investigator -->
-            <div class="form-group">
-                <label for="additionalPersonnel">Additional Personnel</label>
-                <asp:TextBox ID="additionalPersonnel" runat="server" CssClass="form-control"></asp:TextBox>
-            </div>
-            
-            <!-- Projects (Customer & Employee) -->
-            <div class="form-group">
-                <label for="projectSource">Projects (Customer & Employee)</label>
-                <asp:DropDownList ID="projectSource" runat="server" CssClass="form-control" required="required">
-                    <asp:ListItem Value="" Text="Select Project Source" Disabled="true" Selected="true"></asp:ListItem>
-                    <asp:ListItem Value="Customer" Text="Customer"></asp:ListItem>
-                    <asp:ListItem Value="Employee" Text="Employee"></asp:ListItem>
-                </asp:DropDownList>
-            </div>
+            <form id="form1">
+                <div class="form-group">
+                    <label for="groupBy">Group By</label>
+                    <asp:TextBox ID="groupBy" runat="server" CssClass="form-control" placeholder="Enter grouping criteria" required="required"></asp:TextBox>
+                </div>
+                
+                <div class="form-group">
+                    <label for="employeeName">Employee Name</label>
+                    <asp:DropDownList ID="employeeName" runat="server" CssClass="form-select">
+                        <asp:ListItem value="Ryan Araula">Ryan Araula</asp:ListItem>
+                        <asp:ListItem value="Santiago Gamboa">Santiago Gamboa</asp:ListItem>
+                        <asp:ListItem value="Huy Nguyen">Huy Nguyen</asp:ListItem>
+                        <asp:ListItem value="Tabriz Sadredinov">Tabriz Sadredinov</asp:ListItem>
+                        <asp:ListItem value="Abubakar Memon">Abubakar Memon</asp:ListItem>
+                    </asp:DropDownList>
+                </div>
+                
+                <div class="form-group">
+                    <label for="additionalPersonnel">Additional Personnel</label>
+                    <asp:TextBox ID="additionalPersonnel" runat="server" CssClass="form-control" placeholder="Optional"></asp:TextBox>
+                </div>
+                
+                <div class="form-group">
+                    <label for="projectSource">Projects (Customer & Employee)</label>
+                    <asp:DropDownList ID="projectSource" runat="server" CssClass="form-select" required="required">
+                        <asp:ListItem Value="" Text="Select Project Source" Disabled="true" Selected="true"></asp:ListItem>
+                        <asp:ListItem Value="Customer" Text="Customer"></asp:ListItem>
+                        <asp:ListItem Value="Employee" Text="Employee"></asp:ListItem>
+                    </asp:DropDownList>
+                </div>
 
-            <!-- Selecting Delivery Type -->
-            <div class="form-group">
-                <label for="deliveryType">Delivery Type:</label>
-                <asp:DropDownList ID="deliveryType" runat="server" CssClass="form-control">
-                    <asp:ListItem value="Delivery">Delivery</asp:ListItem>
-                    <asp:ListItem value="SmartLocker">SmartLocker</asp:ListItem>
-                </asp:DropDownList>
-            </div>
-            
-            <!-- Activity Date From -->
-            <div class="form-group">
-                <label for="activityDateFrom">Activity Date From</label>
-                <asp:TextBox ID="activityDateFrom" runat="server" CssClass="form-control" TextMode="Date" required="required"></asp:TextBox>
-            </div>
-            
-            <!-- Activity Date To -->
-            <div class="form-group">
-                <label for="activityDateTo">Activity Date To</label>
-                <asp:TextBox ID="activityDateTo" runat="server" CssClass="form-control" TextMode="Date" required="required"></asp:TextBox>
-            </div>
+                <div class="form-group">
+                    <label for="deliveryType">Delivery Type</label>
+                    <asp:DropDownList ID="deliveryType" runat="server" CssClass="form-select">
+                        <asp:ListItem value="Delivery">Delivery</asp:ListItem>
+                        <asp:ListItem value="SmartLocker">SmartLocker</asp:ListItem>
+                    </asp:DropDownList>
+                </div>
+                
+                <div class="form-group">
+                    <label for="activityDateFrom">Activity Date From</label>
+                    <asp:TextBox ID="activityDateFrom" runat="server" CssClass="form-control" TextMode="Date" required="required"></asp:TextBox>
+                </div>
+                
+                <div class="form-group">
+                    <label for="activityDateTo">Activity Date To</label>
+                    <asp:TextBox ID="activityDateTo" runat="server" CssClass="form-control" TextMode="Date" required="required"></asp:TextBox>
+                </div>
 
-            <!-- View Report Button -->
-            <asp:Button ID="ViewReportBtn" runat="server" Text="View Report" CssClass="submit-btn" OnClick="ViewReport_Click" />
-
-            <!-- Grid View -->
-            <asp:GridView ID="ResultGrid" runat="server" AutoGenerateColumns="true" />
-            
-
+                <asp:Button ID="ViewReportBtn" runat="server" Text="View Report" CssClass="submit-btn" OnClick="ViewReport_Click" />
+                
+                <asp:GridView ID="ResultGrid" runat="server" AutoGenerateColumns="true" CssClass="table table-striped table-hover mt-4" />
+            </form>
         </div>
-    </form>
-</body>
-</html> 
+    </div>
+</asp:Content>

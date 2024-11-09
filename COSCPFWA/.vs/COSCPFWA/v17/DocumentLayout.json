@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\users\\tsadr\\source\\repos\\webappcosc_v2\\coscpfwa\\coscpfwa\\refunds.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\refunds.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\users\\tsadr\\source\\repos\\webappcosc_v2\\coscpfwa\\coscpfwa\\refunds.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\refunds.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\users\\tsadr\\source\\repos\\webappcosc_v2\\coscpfwa\\coscpfwa\\about.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\about.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\coscpfwa\\shipping.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\shipping.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\coscpfwa\\datareportrequest.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\datareportrequest.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\coscpfwa\\shipping.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\shipping.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\users\\tsadr\\source\\repos\\webappcosc_v2\\coscpfwa\\coscpfwa\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\users\\tsadr\\source\\repos\\webappcosc_v2\\coscpfwa\\coscpfwa\\refunds.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\refunds.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\users\\tsadr\\source\\repos\\webappcosc_v2\\coscpfwa\\coscpfwa\\packagedetails.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\packagedetails.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\users\\tsadr\\source\\repos\\webappcosc_v2\\coscpfwa\\coscpfwa\\shipping.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,41 +98,67 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PackageDetails.aspx",
+              "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\COSCPFWA\\PackageDetails.aspx",
+              "RelativeDocumentMoniker": "COSCPFWA\\PackageDetails.aspx",
+              "ToolTip": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\COSCPFWA\\PackageDetails.aspx",
+              "RelativeToolTip": "COSCPFWA\\PackageDetails.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-09T15:35:36.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "About.aspx.designer.cs",
-              "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\COSCPFWA\\About.aspx.designer.cs",
-              "RelativeDocumentMoniker": "COSCPFWA\\About.aspx.designer.cs",
-              "ToolTip": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\COSCPFWA\\About.aspx.designer.cs",
-              "RelativeToolTip": "COSCPFWA\\About.aspx.designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T14:53:06.43Z",
+              "Title": "Site.Master",
+              "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\COSCPFWA\\Site.Master",
+              "RelativeDocumentMoniker": "COSCPFWA\\Site.Master",
+              "ToolTip": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\COSCPFWA\\Site.Master",
+              "RelativeToolTip": "COSCPFWA\\Site.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-09T15:02:39.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Refunds.aspx",
+              "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\COSCPFWA\\Refunds.aspx",
+              "RelativeDocumentMoniker": "COSCPFWA\\Refunds.aspx",
+              "ToolTip": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\COSCPFWA\\Refunds.aspx",
+              "RelativeToolTip": "COSCPFWA\\Refunds.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-09T14:45:00.582Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Refunds.aspx.designer.cs",
-              "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\COSCPFWA\\Refunds.aspx.designer.cs",
-              "RelativeDocumentMoniker": "COSCPFWA\\Refunds.aspx.designer.cs",
-              "ToolTip": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\COSCPFWA\\Refunds.aspx.designer.cs*",
-              "RelativeToolTip": "COSCPFWA\\Refunds.aspx.designer.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T14:52:49.427Z",
+              "Title": "DataReportRequest.aspx",
+              "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\COSCPFWA\\DataReportRequest.aspx",
+              "RelativeDocumentMoniker": "COSCPFWA\\DataReportRequest.aspx",
+              "ToolTip": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\COSCPFWA\\DataReportRequest.aspx",
+              "RelativeToolTip": "COSCPFWA\\DataReportRequest.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-09T05:15:24.323Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Refunds.aspx",
-              "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\COSCPFWA\\Refunds.aspx",
-              "RelativeDocumentMoniker": "COSCPFWA\\Refunds.aspx",
-              "ToolTip": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\COSCPFWA\\Refunds.aspx*",
-              "RelativeToolTip": "COSCPFWA\\Refunds.aspx*",
+              "Title": "Shipping.aspx",
+              "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\COSCPFWA\\Shipping.aspx",
+              "RelativeDocumentMoniker": "COSCPFWA\\Shipping.aspx",
+              "ToolTip": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\COSCPFWA\\Shipping.aspx*",
+              "RelativeToolTip": "COSCPFWA\\Shipping.aspx*",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-09T14:45:00.582Z",
+              "WhenOpened": "2024-11-09T03:56:31.545Z",
               "EditorCaption": ""
             },
             {
@@ -146,19 +172,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-26T19:09:37.006Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DataReportRequest.aspx",
-              "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\COSCPFWA\\DataReportRequest.aspx",
-              "RelativeDocumentMoniker": "COSCPFWA\\DataReportRequest.aspx",
-              "ToolTip": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\COSCPFWA\\DataReportRequest.aspx",
-              "RelativeToolTip": "COSCPFWA\\DataReportRequest.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-09T05:15:24.323Z",
               "EditorCaption": ""
             },
             {
@@ -184,19 +197,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2024-11-09T04:59:53.47Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Shipping.aspx",
-              "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\COSCPFWA\\Shipping.aspx",
-              "RelativeDocumentMoniker": "COSCPFWA\\Shipping.aspx",
-              "ToolTip": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_v2\\COSCPFWA\\COSCPFWA\\Shipping.aspx",
-              "RelativeToolTip": "COSCPFWA\\Shipping.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-09T03:56:31.545Z",
               "EditorCaption": ""
             },
             {
