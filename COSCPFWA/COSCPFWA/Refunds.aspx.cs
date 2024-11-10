@@ -16,7 +16,7 @@ namespace COSCPFWA
         {
             if (!IsPostBack)
             {
-                LoadRefunds("All");  // Load all refunds by default
+                LoadRefunds("All");  // loads all refunds by default
                 CalculateTotalRefund();
             }
         }
@@ -79,8 +79,8 @@ namespace COSCPFWA
                         cmd.ExecuteNonQuery();
                     }
 
-                    LoadRefunds(ddlStatusFilter.SelectedValue); // Reload refunds to reflect changes
-                    CalculateTotalRefund(); // Recalculate total refund amount
+                    LoadRefunds(ddlStatusFilter.SelectedValue); // reload refunds to reflect changes
+                    CalculateTotalRefund(); // recalculate total refund amount
                 }
                 catch (Exception ex)
                 {

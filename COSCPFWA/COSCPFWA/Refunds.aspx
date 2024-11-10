@@ -4,9 +4,9 @@
     <main aria-labelledby="title">
         <h1>Refunds</h1>
 
-        <!-- Filter by Refund Status -->
+        <!-- Refund Status filter -->
         <div class="mt-3">
-            <label for="statusFilter">Filter by Status:</label>
+            <label for="statusFilter" runat="server">Filter by Status:</label>
             <asp:DropDownList ID="ddlStatusFilter" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlStatusFilter_SelectedIndexChanged">
                 <asp:ListItem Text="All" Value="All" />
                 <asp:ListItem Text="Pending" Value="Pending" />
@@ -14,7 +14,6 @@
             </asp:DropDownList>
         </div>
 
-        <!-- Display Refunds in a Table -->
         <asp:Repeater ID="refundRepeater" runat="server">
             <HeaderTemplate>
                 <table class="table table-striped mt-4">
@@ -53,7 +52,7 @@
             </FooterTemplate>
         </asp:Repeater>
 
-        <!-- Total Refunds Section -->
+        <!-- Total refunds  -->
         <div class="mt-4">
             <asp:Label ID="lblTotalRefund" runat="server" Text="Total Refund Amount: " CssClass="font-weight-bold"></asp:Label>
             <asp:Label ID="lblRefundSum" runat="server" CssClass="font-weight-bold"></asp:Label>
