@@ -98,7 +98,7 @@
     <div class="main-container">
         <div class="report-form-container">
             <h2>Employee/Customer Report Request</h2>
-            
+                
             <form id="form1">
                 <div class="form-group">
                     <label for="groupBy">Group By</label>

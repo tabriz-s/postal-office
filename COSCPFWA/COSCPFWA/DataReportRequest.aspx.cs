@@ -16,7 +16,55 @@ namespace COSCPFWA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             // Page load logic if needed
+=======
+            if(!IsPostBack)
+            {
+                PopulateOrderByDropdown();
+            }
+        }
+
+        // Event handler for Generate Chart button
+        protected void btnGenerateChart_Click(object sender, EventArgs e)
+        {
+            GenerateChart();
+        }
+
+        private void PopulateOrderByDropdown()
+        {
+            orderByDropdown.Items.Add(new ListItem("CustomerID", "CustomerID"));
+        }
+
+        private void GenerateChart()
+        {
+            List<string> labels = new List<string>();
+            List<int> values = new List<int>();
+
+            using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(@"SELECT c.CustomerID, COUNT(*) AS NumPackages
+                                                      FROM customer AS c
+                                                      JOIN package AS p ON c.CustomerID = p.CustomerID
+                                                      GROUP BY c.CustomerID", conn);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    labels.Add(reader["CustomerID"].ToString());
+                    values.Add(int.Parse(reader["NumPackages"].ToString()));
+                }
+            }
+
+            // Convert chart data to JSON format for rendering in JavaScript
+            var jsonData = new
+            {
+                labels = labels,
+                values = values
+            };
+            chartData.Value = JsonConvert.SerializeObject(jsonData); // Set JSON data for hidden field
+>>>>>>> parent of eec488e (Data Visualization & Table Generated)
         }
 
         protected void ViewReport_Click(object sender, EventArgs e)
