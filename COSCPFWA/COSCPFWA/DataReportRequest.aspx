@@ -98,7 +98,7 @@
     <div class="main-container">
         <div class="report-form-container">
             <h2>Employee/Customer Report Request</h2>
-                
+            
             <form id="form1">
                 <div class="form-group">
                     <label for="groupBy">Group By</label>
@@ -149,67 +149,9 @@
                 </div>
 
                 <asp:Button ID="ViewReportBtn" runat="server" Text="View Report" CssClass="submit-btn" OnClick="ViewReport_Click" />
-
-                <!-- NEW form for selecting CustomerID and package count for chart generation -->
-                <h2>Generate Customer/Package Reports</h2>
-
-                <label for="orderByDropdown">Order By:</label> <!-- Updated label to "Order By" -->
-                <asp:DropDownList ID="orderByDropdown" runat="server"></asp:DropDownList> <!-- Renamed to "orderByDropdown" -->
-
-                <!-- Generate Chart button -->
-                <asp:Button ID="btnGenerateChart" runat="server" Text="Generate Chart" OnClick="btnGenerateChart_Click" CssClass="btnStacked" />
-
-                <!-- Canvas element to display the generated chart -->
-                <div>
-                    <canvas id="myChart" width="400" height="200"></canvas>
-                </div>
-
-                <!-- Hidden field to store JSON data for chart rendering -->
-                <asp:HiddenField ID="chartData" runat="server" />
-
-                <!-- Added Chart.js library for data visualization -->
-                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-                <script type="text/javascript">
-                    // Function to render chart using Chart.js and JSON data from server
-                    function renderChart(data) {
-                        var ctx = document.getElementById('myChart').getContext('2d');
-                        var chartData = JSON.parse(data);
-                        new Chart(ctx, {
-                            type: 'bar',
-                            data: {
-                                labels: chartData.labels,
-                                datasets: [{
-                                    label: '# of Packages',
-                                    data: chartData.values,
-                                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                                    borderColor: 'rgba(75, 192, 192, 1)',
-                                    borderWidth: 1
-                                }]
-                            },
-                            options: {
-                                scales: {
-                                    y: {
-                                        beginAtZero: true
-                                    }
-                                }
-                            }
-                        });
-                    }
-
-                    // Automatically call renderChart on page load if chartData is present - [New]
-                    window.onload = function () {
-                        var chartData = document.getElementById('<%= chartData.ClientID %>').value;
-                        if (chartData) {
-                            renderChart(chartData);
-                        }
-                    };
-                </script>
                 
                 <asp:GridView ID="ResultGrid" runat="server" AutoGenerateColumns="true" CssClass="table table-striped table-hover mt-4" />
             </form>
         </div>
     </div>
 </asp:Content>
-
-

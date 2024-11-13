@@ -87,33 +87,6 @@ namespace COSCPFWA
         protected global::System.Web.UI.WebControls.Button ViewReportBtn;
 
         /// <summary>
-        /// orderByDropdown control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList orderByDropdown;
-
-        /// <summary>
-        /// btnGenerateChart control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGenerateChart;
-
-        /// <summary>
-        /// chartData control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField chartData;
-
-        /// <summary>
         /// ResultGrid control.
         /// </summary>
         /// <remarks>

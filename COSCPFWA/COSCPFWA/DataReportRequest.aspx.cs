@@ -6,10 +6,7 @@ using System.Data;
 using System.Web.Configuration;
 using System.Web.UI;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using Org.BouncyCastle.Asn1.Ocsp;
-using Newtonsoft.Json;
-using System.Web.UI.WebControls;
 
 //I made some changes to the code, if you can see this that means you can see all the changes I made
 namespace COSCPFWA
@@ -19,51 +16,7 @@ namespace COSCPFWA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
-            {
-                PopulateOrderByDropdown();
-            }
-        }
-
-        // Event handler for Generate Chart button
-        protected void btnGenerateChart_Click(object sender, EventArgs e)
-        {
-            GenerateChart();
-        }
-
-        private void PopulateOrderByDropdown()
-        {
-            orderByDropdown.Items.Add(new ListItem("CustomerID", "CustomerID"));
-        }
-
-        private void GenerateChart()
-        {
-            List<string> labels = new List<string>();
-            List<int> values = new List<int>();
-
-            using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString))
-            {
-                conn.Open();
-                MySqlCommand cmd = new MySqlCommand(@"SELECT c.CustomerID, COUNT(*) AS NumPackages
-                                                      FROM customer AS c
-                                                      JOIN package AS p ON c.CustomerID = p.CustomerID
-                                                      GROUP BY c.CustomerID", conn);
-
-                MySqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    labels.Add(reader["CustomerID"].ToString());
-                    values.Add(int.Parse(reader["NumPackages"].ToString()));
-                }
-            }
-
-            // Convert chart data to JSON format for rendering in JavaScript
-            var jsonData = new
-            {
-                labels = labels,
-                values = values
-            };
-            chartData.Value = JsonConvert.SerializeObject(jsonData); // Set JSON data for hidden field
+            // Page load logic if needed
         }
 
         protected void ViewReport_Click(object sender, EventArgs e)
