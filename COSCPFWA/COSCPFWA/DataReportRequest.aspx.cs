@@ -16,9 +16,7 @@ namespace COSCPFWA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            // Page load logic if needed
-=======
+
             if(!IsPostBack)
             {
                 PopulateOrderByDropdown();
@@ -33,7 +31,7 @@ namespace COSCPFWA
 
         private void PopulateOrderByDropdown()
         {
-            orderByDropdown.Items.Add(new ListItem("CustomerID", "CustomerID"));
+            //orderByDropdown.Items.Add(new ListItem("CustomerID", "CustomerID"));
         }
 
         private void GenerateChart()
@@ -63,8 +61,8 @@ namespace COSCPFWA
                 labels = labels,
                 values = values
             };
-            chartData.Value = JsonConvert.SerializeObject(jsonData); // Set JSON data for hidden field
->>>>>>> parent of eec488e (Data Visualization & Table Generated)
+            //chartData.Value = JsonConvert.SerializeObject(jsonData); // Set JSON data for hidden field
+
         }
 
         protected void ViewReport_Click(object sender, EventArgs e)
