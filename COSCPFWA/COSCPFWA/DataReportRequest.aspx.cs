@@ -6,7 +6,10 @@ using System.Data;
 using System.Web.Configuration;
 using System.Web.UI;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using Org.BouncyCastle.Asn1.Ocsp;
+using Newtonsoft.Json;
+using System.Web.UI.WebControls;
 
 //I made some changes to the code, if you can see this that means you can see all the changes I made
 namespace COSCPFWA
@@ -16,8 +19,7 @@ namespace COSCPFWA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
                 PopulateOrderByDropdown();
             }
@@ -31,7 +33,7 @@ namespace COSCPFWA
 
         private void PopulateOrderByDropdown()
         {
-            //orderByDropdown.Items.Add(new ListItem("CustomerID", "CustomerID"));
+            orderByDropdown.Items.Add(new ListItem("CustomerID", "CustomerID"));
         }
 
         private void GenerateChart()
@@ -61,8 +63,7 @@ namespace COSCPFWA
                 labels = labels,
                 values = values
             };
-            //chartData.Value = JsonConvert.SerializeObject(jsonData); // Set JSON data for hidden field
-
+            chartData.Value = JsonConvert.SerializeObject(jsonData); // Set JSON data for hidden field
         }
 
         protected void ViewReport_Click(object sender, EventArgs e)
