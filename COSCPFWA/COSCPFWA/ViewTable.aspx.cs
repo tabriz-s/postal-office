@@ -177,7 +177,7 @@ namespace COSCPFWA
                 }
                 catch (Exception ex)
                 {
-                    Response.Write("<script>alert('Error deleting record.');</script>");
+                    Response.Write("<script>alert('Error deleting record: " + ex.Message + " ');</script>");
                 }
             }
         }

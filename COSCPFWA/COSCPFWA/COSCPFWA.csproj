@@ -166,11 +166,15 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="AdminDashboard.aspx" />
+    <Content Include="EmployeeDashboard.aspx" />
     <Content Include="DataReportRequest.aspx" />
-    <Content Include="Default.aspx" />
+    <Content Include="CustomerDashboard.aspx" />
+    <Content Include="Home.aspx" />
     <Content Include="Employee.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="RegisterCustomer.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="PackageDetails.aspx" />
     <Content Include="Refunds.aspx" />
@@ -255,6 +259,20 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminDashboard.aspx.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard.aspx.designer.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDashboard.aspx.cs">
+      <DependentUpon>EmployeeDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeDashboard.aspx.designer.cs">
+      <DependentUpon>EmployeeDashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DataReportRequest.aspx.cs">
       <DependentUpon>DataReportRequest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -262,12 +280,19 @@
     <Compile Include="DataReportRequest.aspx.designer.cs">
       <DependentUpon>DataReportRequest.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="CustomerDashboard.aspx.cs">
+      <DependentUpon>CustomerDashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="CustomerDashboard.aspx.designer.cs">
+      <DependentUpon>CustomerDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Employee.aspx.cs">
       <DependentUpon>Employee.aspx</DependentUpon>
@@ -278,6 +303,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterCustomer.aspx.cs">
+      <DependentUpon>RegisterCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegisterCustomer.aspx.designer.cs">
+      <DependentUpon>RegisterCustomer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

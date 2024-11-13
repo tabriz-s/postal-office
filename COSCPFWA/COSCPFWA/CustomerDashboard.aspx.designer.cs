@@ -11,7 +11,7 @@ namespace COSCPFWA
 {
 
 
-    public partial class _Default
+    public partial class CustomerDashboard
     {
     }
 }
