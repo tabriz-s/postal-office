@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WeeklyRiskNotification")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+352d4632c952d81742a7c15880b3bfbac0dad680")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e60724383ef1a69bc8cc3d2946b64e726184f112")]
->>>>>>> parent of eec488e (Data Visualization & Table Generated)
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+20d1bbc6d289e2e4c9551c5cf6c5b477b1d129d5")]
 [assembly: System.Reflection.AssemblyProductAttribute("WeeklyRiskNotification")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WeeklyRiskNotification")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

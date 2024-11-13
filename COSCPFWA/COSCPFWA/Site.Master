@@ -40,19 +40,43 @@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" runat="server" href="~/">Postal Office Portal</a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                    title="Toggle navigation" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Shipping">Shipping</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/DataReportRequest">Data Report Request</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Refunds">Refunds</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/ViewTable">View Tables</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Home">Home</a></li>
+
+                        <!-- Customer Navigation Placeholder -->
+                        <asp:PlaceHolder ID="phCustomerNav" runat="server">
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/CustomerDashboard">Dashboard</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/Shipping">Shipping</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/Tracking">Tracking</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/Services">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/Store">Store</a></li>
+                        </asp:PlaceHolder>
+
+                        <!-- Employee Navigation Placeholder -->
+                        <asp:PlaceHolder ID="phEmployeeNav" runat="server">
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/EmployeeDashboard">Dashboard</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/Shipping">Shipping</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/ViewTable">View Tables</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/Refunds">Refunds Activity</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/DataReportRequest">Data Report Request</a></li>
+                        </asp:PlaceHolder>
+
+                        <!-- Admin Navigation Placeholder -->
+                        <asp:PlaceHolder ID="phAdminNav" runat="server">
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/AdminDashboard">Dashboard</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/UserManagement">User Management</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/DataReportRequest">Reports</a></li>
+                        </asp:PlaceHolder>
+
+                        <!-- Common Links -->
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/About">About</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contact</a></li>
+                        <li class="nav-item"><asp:Button ID="btnLogic" runat="server" Text="Log Out" OnClick="Logout" /></li> <!-- Logout Btn -->
                     </ul>
                 </div>
             </div>

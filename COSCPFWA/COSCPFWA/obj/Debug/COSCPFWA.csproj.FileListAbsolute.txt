@@ -396,3 +396,5 @@ C:\Users\tsadr\Source\Repos\WebappCOSC_v2\COSCPFWA\COSCPFWA\bin\Microsoft.AspNet
 C:\Users\tsadr\Source\Repos\WebappCOSC_v2\COSCPFWA\COSCPFWA\obj\Debug\COSCPFWA.csproj.Up2Date
 C:\Users\tsadr\Source\Repos\WebappCOSC_v2\COSCPFWA\COSCPFWA\obj\Debug\COSCPFWA.dll
 C:\Users\tsadr\Source\Repos\WebappCOSC_v2\COSCPFWA\COSCPFWA\obj\Debug\COSCPFWA.pdb
+C:\Users\tsadr\Source\Repos\WebappCOSC_V3\COSCPFWA\COSCPFWA\obj\Debug\COSCPFWA.csproj.AssemblyReference.cache
+C:\Users\tsadr\Source\Repos\WebappCOSC_V3\COSCPFWA\COSCPFWA\obj\Debug\COSCPFWA.csproj.CoreCompileInputs.cache

@@ -2100,11 +2100,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tsadr\\Source\\Repos\\WebappCOSC_v2\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
+      "projectUniqueName": "C:\\Users\\tsadr\\Source\\Repos\\WebappCOSC_V3\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
       "projectName": "WeeklyRiskNotification",
-      "projectPath": "C:\\Users\\tsadr\\Source\\Repos\\WebappCOSC_v2\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
+      "projectPath": "C:\\Users\\tsadr\\Source\\Repos\\WebappCOSC_V3\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
       "packagesPath": "C:\\Users\\tsadr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tsadr\\Source\\Repos\\WebappCOSC_v2\\COSCPFWA\\WeeklyRiskNotification\\obj\\",
+      "outputPath": "C:\\Users\\tsadr\\Source\\Repos\\WebappCOSC_V3\\COSCPFWA\\WeeklyRiskNotification\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tsadr\\AppData\\Roaming\\NuGet\\NuGet.Config",

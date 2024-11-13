@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HGcg/ZJqGyc=",
+  "dgSpecHash": "myoy82Xb7HY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\tsadr\\Source\\Repos\\WebappCOSC_v2\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
+  "projectFilePath": "C:\\Users\\tsadr\\Source\\Repos\\WebappCOSC_V3\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tsadr\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\tsadr\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",

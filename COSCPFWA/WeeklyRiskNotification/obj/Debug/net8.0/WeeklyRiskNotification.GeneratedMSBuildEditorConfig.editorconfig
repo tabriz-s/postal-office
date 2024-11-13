@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WeeklyRiskNotification
-build_property.ProjectDir = C:\Users\tsadr\Source\Repos\WebappCOSC_v2\COSCPFWA\WeeklyRiskNotification\
+build_property.ProjectDir = C:\Users\tsadr\Source\Repos\WebappCOSC_V3\COSCPFWA\WeeklyRiskNotification\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
