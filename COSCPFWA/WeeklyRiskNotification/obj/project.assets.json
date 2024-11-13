@@ -2095,19 +2095,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\araul\\.nuget\\packages\\": {}
+    "C:\\Users\\dotha\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
+      "projectUniqueName": "C:\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
       "projectName": "WeeklyRiskNotification",
-      "projectPath": "C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
-      "packagesPath": "C:\\Users\\araul\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\obj\\",
+      "projectPath": "C:\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
+      "packagesPath": "C:\\Users\\dotha\\.nuget\\packages\\",
+      "outputPath": "C:\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\araul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dotha\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
