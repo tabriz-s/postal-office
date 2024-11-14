@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_V3\\COSCPFWA\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\Users\\tsadr\\source\\repos\\WebappCOSC_V3\\COSCPFWA\\coscpfwa\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\Users\\tsadr\\source\\repos\\WebappCOSC_V3\\COSCPFWA\\coscpfwa\\registercustomer.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\registercustomer.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\Users\\tsadr\\source\\repos\\WebappCOSC_V3\\COSCPFWA\\coscpfwa\\registercustomer.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\registercustomer.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\Users\\tsadr\\source\\repos\\WebappCOSC_V3\\COSCPFWA\\coscpfwa\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\Users\\tsadr\\source\\repos\\WebappCOSC_V3\\COSCPFWA\\coscpfwa\\admindashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
@@ -70,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 24,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Bookmark",
@@ -138,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Login.aspx",
               "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_V3\\COSCPFWA\\COSCPFWA\\Login.aspx",
               "RelativeDocumentMoniker": "COSCPFWA\\Login.aspx",
@@ -203,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "RegisterCustomer.aspx",
               "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_V3\\COSCPFWA\\COSCPFWA\\RegisterCustomer.aspx",
               "RelativeDocumentMoniker": "COSCPFWA\\RegisterCustomer.aspx",
@@ -242,13 +242,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "RegisterCustomer.aspx.cs",
               "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_V3\\COSCPFWA\\COSCPFWA\\RegisterCustomer.aspx.cs",
               "RelativeDocumentMoniker": "COSCPFWA\\RegisterCustomer.aspx.cs",
-              "ToolTip": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_V3\\COSCPFWA\\COSCPFWA\\RegisterCustomer.aspx.cs*",
-              "RelativeToolTip": "COSCPFWA\\RegisterCustomer.aspx.cs*",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowHIAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_V3\\COSCPFWA\\COSCPFWA\\RegisterCustomer.aspx.cs",
+              "RelativeToolTip": "COSCPFWA\\RegisterCustomer.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T06:16:58.657Z",
               "EditorCaption": ""

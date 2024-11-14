@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\COSCPFWA",
+    "\\COSCPFWA\\COSCPFWA"
   ],
+<<<<<<< HEAD
   "SelectedNode": "\\COSCPFWA.sln",
+=======
+  "SelectedNode": "\\COSCPFWA\\COSCPFWA\\Login.aspx",
+>>>>>>> 2d99c1a8256aa4b681825976e6cc40c3e9276c79
   "PreviewInSolutionExplorer": false
 }
