@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 using Org.BouncyCastle.Asn1.Ocsp;
 using Newtonsoft.Json;
 using System.Web.UI.WebControls;
+using Mysqlx.Crud;
 
 //I made some changes to the code, if you can see this that means you can see all the changes I made
 namespace COSCPFWA
@@ -38,22 +39,81 @@ namespace COSCPFWA
 
         private void GenerateChart()
         {
+            //Attaches the HTML form values to temporary varaibles
+            string firstName = customerFirstName.Text;
+            string lastName = customerLastName.Text;
+            string table = reportType.SelectedValue;
+            string type = packageType.SelectedValue;
+            string dateFrom = activityDateFrom.Text;
+            string dateTo = activityDateTo.Text;
+
+            //Retrieves user selection for the graph's x & y axis
+            string xAxisSelected = xAxis.SelectedValue;
+            string yAxisSelected = yAxis.SelectedValue;
+
+            //This stores query results to a chart
             List<string> labels = new List<string>();
             List<int> values = new List<int>();
 
-            using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString))
+            string connString = ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString;
+
+
+            using (MySqlConnection conn = new MySqlConnection(connString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand(@"SELECT c.CustomerID, COUNT(*) AS NumPackages
-                                                      FROM customer AS c
-                                                      JOIN package AS p ON c.CustomerID = p.CustomerID
-                                                      GROUP BY c.CustomerID", conn);
+                //Figure dynamic query queue
+                string query = @"SELECT p.ServiceType, COUNT(p.PackageID) AS NumPackages
+                                    FROM package as p
+                                    JOIN customer as c ON p.CustomerID = c.CustomerID
+                                    LEFT JOIN shippingdetails as sd ON sd.PackageID = p.PackageID
+                                    LEFT JOIN smartlocker as sl ON sl.PackageID = p.PackageID
+                                    WHERE 1=1";
 
-                MySqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
+                using (MySqlCommand cmd = new MySqlCommand())
                 {
-                    labels.Add(reader["CustomerID"].ToString());
-                    values.Add(int.Parse(reader["NumPackages"].ToString()));
+                    cmd.Connection = conn;
+
+
+                    //Add parameters later
+                    if (!string.IsNullOrEmpty(type))
+                    {
+                        query+= " AND p.ServiceType = @PackageType";
+                        cmd.Parameters.AddWithValue("@PackageType", type);
+                    }
+
+                    if (!string.IsNullOrEmpty(firstName))
+                    {
+                        query+= " AND c.FirstName = @CustomerFirstName";
+                        cmd.Parameters.AddWithValue("@CustomerFirstName", firstName);
+                    }
+
+                    if (!string.IsNullOrEmpty(lastName))
+                    {
+                        query+= " AND c.LastName = @CustomerLastName";
+                        cmd.Parameters.AddWithValue("@CustomerLastName", lastName);
+                    }
+
+                    if (!string.IsNullOrEmpty(dateFrom) && !string.IsNullOrEmpty(dateTo))
+                    {
+                        query+= " AND p.CreatedAt > @FromDate";
+                        query+= " AND p.CreatedAt < @ToDate";
+                        cmd.Parameters.AddWithValue("@FromDate", dateFrom);
+                        cmd.Parameters.AddWithValue("ToDate", dateTo);
+                    }
+
+                    query+= " GROUP BY p.ServiceType";
+                    cmd.CommandText = query;
+                    //System.Diagnostics.Debug.WriteLine("Final Query: " + query);
+
+                    //Executes query
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            labels.Add(reader["ServiceType"].ToString());
+                            values.Add(int.Parse(reader["NumPackages"].ToString()));
+                        }
+                    }
                 }
             }
 
@@ -68,9 +128,11 @@ namespace COSCPFWA
 
         protected void ViewReport_Click(object sender, EventArgs e)
         {
-            string name = employeeName.SelectedValue; //Will add more variables soon
-            string table = projectSource.SelectedValue;
-            string type = deliveryType.SelectedValue;
+            //Attaches the HTML form values to temporary variables
+            string firstName = customerFirstName.Text;
+            string lastName = customerLastName.Text;
+            string table = reportType.SelectedValue;
+            string type = packageType.SelectedValue;
             string dateFrom = activityDateFrom.Text;
             string dateTo = activityDateTo.Text;
 
@@ -83,21 +145,54 @@ namespace COSCPFWA
                 {
                     conn.Open();
                     // Right now query just returns employee info with the packageID and its recipients info based on if its a delivery
-                    string query = @"
-                    SELECT e.Name, e.EmployeeID, p.PackageID, s.RecipientFirstName, s.RecipientLastName, p.ServiceType, s.RecievingAddress
-                    FROM package as p
-                    JOIN employee as e ON p.EmployeeID = e.EmployeeID
-                    JOIN shippingdetails as s ON s.PackageID = p.PackageID
+                    string query = @"SELECT c.FirstName, c.LastName, c.CustomerID, p.PackageID, p.ServiceType, p.CreatedAt
+                    FROM package as P
                     JOIN customer as c ON p.CustomerID = c.CustomerID
-                    WHERE e.Name = @EmployeeName AND p.ServiceType = @DeliveryType;";
+                    LEFT JOIN shippingdetails as sd ON sd.PackageID = p.PackageID
+                    LEFT JOIN smartlocker as sl ON sl.packageID = p.PackageID
+                    WHERE 1=1";
+                    //JOIN smartlocker as l ON l.PackageID = p.PackageID
 
 
-                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    /* @"
+                SELECT c.FirstName, c.LastName, c.CustomerID, p.PackageID, p.ServiceType,
+                FROM package as p, customer as c, shippingdetails as s
+                WHERE p.CustomerID = c.CustomerID AND p.ServiceType = @PackageType AND s.PackageID = p.PackageID
+                AND p.Name=@CustomerName;"; */
+
+
+                    using (MySqlCommand cmd = new MySqlCommand())
                     {
-                        cmd.Parameters.AddWithValue("@EmployeeName", name);
-                        cmd.Parameters.AddWithValue("@DeliveryType", type);
-                        //cmd.Parameters.AddWithValue("@DateFrom", dateFrom);
-                        //cmd.Parameters.AddWithValue("@DateTo", dateTo);
+                        cmd.Connection = conn;
+
+                        if (!string.IsNullOrEmpty(type))
+                        {
+                            query+= " AND p.ServiceType = @PackageType";
+                            cmd.Parameters.AddWithValue("@PackageType", type);
+                        }
+
+                        if (!string.IsNullOrEmpty(firstName))
+                        {
+                            query+= " AND c.FirstName = @CustomerFirstName";
+                            cmd.Parameters.AddWithValue("@CustomerFirstName", firstName);
+                        }
+
+                        if (!string.IsNullOrEmpty(lastName))
+                        {
+                            query+= " AND c.LastName = @CustomerLastName";
+                            cmd.Parameters.AddWithValue("@CustomerLastName", lastName);
+                        }
+
+                        if (!string.IsNullOrEmpty(dateFrom) && !string.IsNullOrEmpty(dateTo))
+                        {
+                            query+= " AND p.CreatedAt > @FromDate";
+                            query+= " AND p.CreatedAt < @ToDate";
+                            cmd.Parameters.AddWithValue("@FromDate", dateFrom);
+                            cmd.Parameters.AddWithValue("ToDate", dateTo);
+                        }
+
+                        cmd.CommandText = query;
+                        //System.Diagnostics.Debug.WriteLine("Final Query: " + query);
 
                         using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
                         {
