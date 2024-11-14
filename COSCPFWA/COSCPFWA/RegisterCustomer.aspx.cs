@@ -1,11 +1,7 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
 using System.Configuration;
-using System.Data;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Data.SqlClient;
 
 namespace COSCPFWA
 {
@@ -13,19 +9,18 @@ namespace COSCPFWA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            // Retrieve user inputs
+            // Get user inputs
             string fullName = txtFullName.Text.Trim();
             string email = txtEmail.Text.Trim();
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
             string confirmPassword = txtConfirmPassword.Text.Trim();
 
-            // Split full name into first and last
+            // seperate full name into first and last name 
             string[] nameParts = fullName.Split(' ');
             string firstName = nameParts[0];
             string lastName = nameParts.Length > 1 ? string.Join(" ", nameParts, 1, nameParts.Length - 1) : "";
@@ -44,7 +39,6 @@ namespace COSCPFWA
 
             try
             {
-                // check for duplicate usernames or emails
                 string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"].ConnectionString;
                 using (MySqlConnection conn = new MySqlConnection(connString))
                 {
@@ -57,7 +51,7 @@ namespace COSCPFWA
                         checkCmd.Parameters.AddWithValue("@Username", username);
                         checkCmd.Parameters.AddWithValue("@Email", email);
 
-                        int existingUserCount = (int)checkCmd.ExecuteScalar();
+                        long existingUserCount = Convert.ToInt64(checkCmd.ExecuteScalar());
                         if (existingUserCount > 0)
                         {
                             lblMessage.Text = "Username or Email already exists. Please choose another.";
@@ -65,12 +59,10 @@ namespace COSCPFWA
                         }
                     }
 
-                    // insert new user
                     string insertUserQuery = @"INSERT INTO user_logins (FirstName, LastName, Email, Username, Password) 
                                                VALUES (@FirstName, @LastName, @Email, @Username, @Password)";
                     using (MySqlCommand insertCmd = new MySqlCommand(insertUserQuery, conn))
                     {
-
                         insertCmd.Parameters.AddWithValue("@FirstName", firstName);
                         insertCmd.Parameters.AddWithValue("@LastName", lastName);
                         insertCmd.Parameters.AddWithValue("@Email", email);
@@ -81,12 +73,12 @@ namespace COSCPFWA
                         if (rowsAffected > 0)
                         {
                             long newUserId = insertCmd.LastInsertedId;
-                            string insertRoleQuery = "INSERT INTO user_roles (UserID, RoleID) VALUES (@UserID, @RoleID)";
 
+                            string insertRoleQuery = "INSERT INTO user_roles (UserID, RoleID) VALUES (@UserID, @RoleID)";
                             using (MySqlCommand roleCmd = new MySqlCommand(insertRoleQuery, conn))
                             {
                                 roleCmd.Parameters.AddWithValue("@UserID", newUserId);
-                                roleCmd.Parameters.AddWithValue("@RoleID", 1); // 1 represents the "Customer" role
+                                roleCmd.Parameters.AddWithValue("@RoleID", 1); // 1 is "Customer" 2, is "Employee", 3 is "Admin"
 
                                 int roleRowsAffected = roleCmd.ExecuteNonQuery();
                                 if (roleRowsAffected > 0)
@@ -97,7 +89,7 @@ namespace COSCPFWA
                                 }
                                 else
                                 {
-                                    lblMessage.Text = "Error assigning role to user. Please try again.";
+                                    lblMessage.Text = "Error assigning role. Please try again.";
                                 }
                             }
                         }
@@ -110,7 +102,7 @@ namespace COSCPFWA
             }
             catch (Exception ex)
             {
-                lblMessage.Text = "An error occurred during registration." + ex.Message;
+                lblMessage.Text = "An error occurred during registration: " + ex.Message;
             }
         }
     }
