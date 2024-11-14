@@ -11,61 +11,52 @@ namespace COSCPFWA
 {
 
 
-    public partial class SiteMaster
+    public partial class SchedulePickup
     {
 
         /// <summary>
-        /// HeadContent control.
+        /// lblMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
+        protected global::System.Web.UI.WebControls.Label lblMessage;
 
         /// <summary>
-        /// phCustomerNav control.
+        /// txtPickupDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phCustomerNav;
+        protected global::System.Web.UI.WebControls.TextBox txtPickupDate;
 
         /// <summary>
-        /// phEmployeeNav control.
+        /// txtPickupTime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phEmployeeNav;
+        protected global::System.Web.UI.WebControls.TextBox txtPickupTime;
 
         /// <summary>
-        /// phAdminNav control.
+        /// txtLocation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phAdminNav;
+        protected global::System.Web.UI.WebControls.TextBox txtLocation;
 
         /// <summary>
-        /// btnLogic control.
+        /// btnSchedulePickup control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogic;
-
-        /// <summary>
-        /// MainContent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Button btnSchedulePickup;
     }
 }

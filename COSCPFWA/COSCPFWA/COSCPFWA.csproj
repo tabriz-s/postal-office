@@ -177,6 +177,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\dashboard.css" />
+    <Content Include="SubscribeSmartLocker.aspx" />
+    <Content Include="SchedulePickup.aspx" />
+    <Content Include="TrackShipment.aspx" />
+    <Content Include="CreateShipment.aspx" />
     <Content Include="RegisterCustomer.aspx" />
     <Content Include="EmployeeDashboard.aspx" />
     <Content Include="CustomerDashboard.aspx" />
@@ -273,6 +278,34 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SubscribeSmartLocker.aspx.cs">
+      <DependentUpon>SubscribeSmartLocker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubscribeSmartLocker.aspx.designer.cs">
+      <DependentUpon>SubscribeSmartLocker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchedulePickup.aspx.cs">
+      <DependentUpon>SchedulePickup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchedulePickup.aspx.designer.cs">
+      <DependentUpon>SchedulePickup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrackShipment.aspx.cs">
+      <DependentUpon>TrackShipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrackShipment.aspx.designer.cs">
+      <DependentUpon>TrackShipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateShipment.aspx.cs">
+      <DependentUpon>CreateShipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateShipment.aspx.designer.cs">
+      <DependentUpon>CreateShipment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RegisterCustomer.aspx.cs">
       <DependentUpon>RegisterCustomer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

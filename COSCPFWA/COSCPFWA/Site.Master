@@ -15,6 +15,7 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body>
     <form runat="server">
@@ -46,10 +47,10 @@
                 </button>
                 <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Home">Home</a></li>
 
-                        <!-- Customer Navigation Placeholder -->
+                        <!-- Customer Navigation -->
                         <asp:PlaceHolder ID="phCustomerNav" runat="server">
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/Home">Home</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/CustomerDashboard">Dashboard</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Shipping">Shipping</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Tracking">Tracking</a></li>
@@ -57,7 +58,7 @@
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Store">Store</a></li>
                         </asp:PlaceHolder>
 
-                        <!-- Employee Navigation Placeholder -->
+                        <!-- Employee Navigation -->
                         <asp:PlaceHolder ID="phEmployeeNav" runat="server">
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/EmployeeDashboard">Dashboard</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Shipping">Shipping</a></li>
@@ -66,17 +67,16 @@
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/DataReportRequest">Data Report Request</a></li>
                         </asp:PlaceHolder>
 
-                        <!-- Admin Navigation Placeholder -->
+                        <!-- Admin Navigation -->
                         <asp:PlaceHolder ID="phAdminNav" runat="server">
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/AdminDashboard">Dashboard</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/UserManagement">User Management</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/DataReportRequest">Reports</a></li>
                         </asp:PlaceHolder>
 
-                        <!-- Common Links -->
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/About">About</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contact</a></li>
-                        <li class="nav-item"><asp:Button ID="btnLogic" runat="server" Text="Log Out" OnClick="Logout" /></li> <!-- Logout Btn -->
+                        <li class="nav-item"><asp:Button ID="btnLogic" runat="server" Text="Log Out" OnClick="Logout" /></li> 
                     </ul>
                 </div>
             </div>
