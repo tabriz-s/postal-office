@@ -187,12 +187,20 @@
 
                 </div>
 
+                <div id="employeeReport" style="display: none;">
+                    <div class="form-group">
+                        <label for="employeeName">Customer First Name</label>
+                        <asp:TextBox ID="employeeName" runat="server" CssClass="form-control" placeholder="Enter Employee Name" ></asp:TextBox>
+                    </div>
+                </div>
+
                 <!-- Added Chart.js library for data visualization -->
                 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
                 <script type="text/javascript">
                     // Function to render chart using Chart.js and JSON data from server
-                    function renderChart(data) {
+                    function renderChart(data)
+                    {
                         var ctx = document.getElementById('myChart').getContext('2d');
                         var chartData = JSON.parse(data);
                         new Chart(ctx, {
@@ -218,19 +226,27 @@
                     }
 
                     // Toggle visibility of form sections based on report type
-                    function toggleForms() {
+                    function toggleForms()
+                    {
                         var reportType = document.getElementById('<%= reportType.ClientID %>').value;
                         var customerReport = document.getElementById("customerReport");
                         customerReport.style.display = "none";
+                        employeeReport.style.display = "none";
 
                         // Show relevant section based on report type
-                        if (reportType === "Customer") {
+                        if (reportType === "Customer")
+                        {
                             customerReport.style.display = "block";
+                        }
+                        else if (reportType == "Employee")
+                        {
+                            employeeReport.style.display = "block";
                         }
                     }
 
                     // Initialize form toggle and chart rendering on page load
-                    window.onload = function () {
+                    window.onload = function ()
+                    {
                         toggleForms();
                         var chartData = document.getElementById('<%= chartData.ClientID %>').value;
                         if (chartData) {
