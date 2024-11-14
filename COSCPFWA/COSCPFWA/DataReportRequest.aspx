@@ -100,72 +100,92 @@
             <h2>Employee/Customer Report Request</h2>
             
             <form id="form1">
+
                 <div class="form-group">
-                    <label for="groupBy">Group By</label>
-                    <asp:TextBox ID="groupBy" runat="server" CssClass="form-control" placeholder="Enter grouping criteria" required="required"></asp:TextBox>
-                </div>
-                
-                <div class="form-group">
-                    <label for="employeeName">Employee Name</label>
-                    <asp:DropDownList ID="employeeName" runat="server" CssClass="form-select">
-                        <asp:ListItem value="Ryan Araula">Ryan Araula</asp:ListItem>
-                        <asp:ListItem value="Santiago Gamboa">Santiago Gamboa</asp:ListItem>
-                        <asp:ListItem value="Huy Nguyen">Huy Nguyen</asp:ListItem>
-                        <asp:ListItem value="Tabriz Sadredinov">Tabriz Sadredinov</asp:ListItem>
-                        <asp:ListItem value="Abubakar Memon">Abubakar Memon</asp:ListItem>
-                    </asp:DropDownList>
-                </div>
-                
-                <div class="form-group">
-                    <label for="additionalPersonnel">Additional Personnel</label>
-                    <asp:TextBox ID="additionalPersonnel" runat="server" CssClass="form-control" placeholder="Optional"></asp:TextBox>
-                </div>
-                
-                <div class="form-group">
-                    <label for="projectSource">Projects (Customer & Employee)</label>
-                    <asp:DropDownList ID="projectSource" runat="server" CssClass="form-select" required="required">
-                        <asp:ListItem Value="" Text="Select Project Source" Disabled="true" Selected="true"></asp:ListItem>
+                    <label for="reportType">Report Type (Customer, Employee, or Revenue)</label>
+                    <asp:DropDownList ID="reportType" runat="server" CssClass="form-select" required="required" AutoPostBack="false" onchange="toggleForms()">
+                        <asp:ListItem Value="" Text="Select Report Type" Disabled="true" Selected="true"></asp:ListItem>
                         <asp:ListItem Value="Customer" Text="Customer"></asp:ListItem>
                         <asp:ListItem Value="Employee" Text="Employee"></asp:ListItem>
+                        <asp:ListItem Value="'Revenue" Text="Revenue"></asp:ListItem>
                     </asp:DropDownList>
                 </div>
 
-                <div class="form-group">
-                    <label for="deliveryType">Delivery Type</label>
-                    <asp:DropDownList ID="deliveryType" runat="server" CssClass="form-select">
-                        <asp:ListItem value="Delivery">Delivery</asp:ListItem>
-                        <asp:ListItem value="SmartLocker">SmartLocker</asp:ListItem>
-                    </asp:DropDownList>
-                </div>
+                <!-- Divide visibility for different results form reportType -->
+                <div id="customerReport" style="display: none;">
+
+                    <div class="form-group">
+                        <label for="customerFirstName">Customer First Name</label>
+                        <asp:TextBox ID="customerFirstName" runat="server" CssClass="form-control" placeholder="Enter First Name" ></asp:TextBox>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerLastName">Customer Last Name</label>
+                        <asp:TextBox ID="customerLastName" runat="server" CssClass="form-control" placeholder="Enter Last Name" ></asp:TextBox>
+                    </div>
+
                 
-                <div class="form-group">
-                    <label for="activityDateFrom">Activity Date From</label>
-                    <asp:TextBox ID="activityDateFrom" runat="server" CssClass="form-control" TextMode="Date" required="required"></asp:TextBox>
-                </div>
+                    <div class="form-group">
+                        <label for="additionalPersonnel">Additional Personnel</label>
+                        <asp:TextBox ID="additionalPersonnel" runat="server" CssClass="form-control" placeholder="Optional"></asp:TextBox>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="packageType">Package Type</label>
+                        <asp:DropDownList ID="packageType" runat="server" CssClass="form-select">
+                            <asp:ListItem value="">Select Package Type</asp:ListItem>
+                            <asp:ListItem value="Delivery">Delivery</asp:ListItem>
+                            <asp:ListItem value="SmartLocker">SmartLocker</asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
                 
-                <div class="form-group">
-                    <label for="activityDateTo">Activity Date To</label>
-                    <asp:TextBox ID="activityDateTo" runat="server" CssClass="form-control" TextMode="Date" required="required"></asp:TextBox>
+                    <div class="form-group">
+                        <label for="activityDateFrom">Activity Date From</label>
+                        <asp:TextBox ID="activityDateFrom" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="activityDateTo">Activity Date To</label>
+                        <asp:TextBox ID="activityDateTo" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+                    </div>
+
+                    <asp:Button ID="ViewReportBtn" runat="server" Text="View Report" CssClass="submit-btn" OnClick="ViewReport_Click" />
+
+                    <!-- Using the user inputs from all the forms before this, now generates a chart where the user gets to select the x & y axis -->
+                    <h2>Data Visualization</h2>
+
+                    <!-- X-axis -->
+                    <div class="form-group">
+                        <label for="xAxis">Select X-axis</label>
+                        <asp:DropDownList ID="xAxis" runat="server" CssClass="form-select">
+                            <asp:ListItem Text="ServiceType" Value="ServiceType"></asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
+
+                    <!-- Y-axis -->
+                    <div class="form-group">
+                        <label for="yAxis">Select Y-axis</label>
+                        <asp:DropDownList ID="yAxis" runat="server" CssClass="form-select">
+                            <asp:ListItem Text="# of Customers" Value="CustomerCount"></asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
+
+                    <!-- Delete later and fix changes to C# if deleted -->
+                    <label for="orderByDropdown">Order By:</label> <!-- Updated label to "Order By" -->
+                    <asp:DropDownList ID="orderByDropdown" runat="server"></asp:DropDownList> <!-- Renamed to "orderByDropdown" -->
+
+                    <!-- Generate Chart button -->
+                    <asp:Button ID="btnGenerateChart" runat="server" Text="Generate Chart" OnClick="btnGenerateChart_Click" CssClass="btnStacked" />
+
+                    <!-- Canvas element to display the generated chart -->
+                    <div>
+                        <canvas id="myChart" width="400" height="200"></canvas>
+                    </div>
+
+                    <!-- Hidden field to store JSON data for chart rendering -->
+                    <asp:HiddenField ID="chartData" runat="server" />
+
                 </div>
-
-                <asp:Button ID="ViewReportBtn" runat="server" Text="View Report" CssClass="submit-btn" OnClick="ViewReport_Click" />
-
-                <!-- NEW form for selecting CustomerID and package count for chart generation -->
-                <h2>Generate Customer/Package Reports</h2>
-
-                <label for="orderByDropdown">Order By:</label> <!-- Updated label to "Order By" -->
-                <asp:DropDownList ID="orderByDropdown" runat="server"></asp:DropDownList> <!-- Renamed to "orderByDropdown" -->
-
-                <!-- Generate Chart button -->
-                <asp:Button ID="btnGenerateChart" runat="server" Text="Generate Chart" OnClick="btnGenerateChart_Click" CssClass="btnStacked" />
-
-                <!-- Canvas element to display the generated chart -->
-                <div>
-                    <canvas id="myChart" width="400" height="200"></canvas>
-                </div>
-
-                <!-- Hidden field to store JSON data for chart rendering -->
-                <asp:HiddenField ID="chartData" runat="server" />
 
                 <!-- Added Chart.js library for data visualization -->
                 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -197,8 +217,21 @@
                         });
                     }
 
-                    // Automatically call renderChart on page load if chartData is present - [New]
+                    // Toggle visibility of form sections based on report type
+                    function toggleForms() {
+                        var reportType = document.getElementById('<%= reportType.ClientID %>').value;
+                        var customerReport = document.getElementById("customerReport");
+                        customerReport.style.display = "none";
+
+                        // Show relevant section based on report type
+                        if (reportType === "Customer") {
+                            customerReport.style.display = "block";
+                        }
+                    }
+
+                    // Initialize form toggle and chart rendering on page load
                     window.onload = function () {
+                        toggleForms();
                         var chartData = document.getElementById('<%= chartData.ClientID %>').value;
                         if (chartData) {
                             renderChart(chartData);

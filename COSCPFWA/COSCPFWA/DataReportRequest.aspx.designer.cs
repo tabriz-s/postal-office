@@ -15,22 +15,31 @@ namespace COSCPFWA
     {
 
         /// <summary>
-        /// groupBy control.
+        /// reportType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox groupBy;
+        protected global::System.Web.UI.WebControls.DropDownList reportType;
 
         /// <summary>
-        /// employeeName control.
+        /// customerFirstName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList employeeName;
+        protected global::System.Web.UI.WebControls.TextBox customerFirstName;
+
+        /// <summary>
+        /// customerLastName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox customerLastName;
 
         /// <summary>
         /// additionalPersonnel control.
@@ -42,22 +51,13 @@ namespace COSCPFWA
         protected global::System.Web.UI.WebControls.TextBox additionalPersonnel;
 
         /// <summary>
-        /// projectSource control.
+        /// packageType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList projectSource;
-
-        /// <summary>
-        /// deliveryType control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList deliveryType;
+        protected global::System.Web.UI.WebControls.DropDownList packageType;
 
         /// <summary>
         /// activityDateFrom control.
@@ -85,6 +85,24 @@ namespace COSCPFWA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ViewReportBtn;
+
+        /// <summary>
+        /// xAxis control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList xAxis;
+
+        /// <summary>
+        /// yAxis control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList yAxis;
 
         /// <summary>
         /// orderByDropdown control.
