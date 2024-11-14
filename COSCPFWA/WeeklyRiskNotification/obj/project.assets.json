@@ -2095,34 +2095,19 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\tsadr\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\araul\\.nuget\\packages\\": {}
->>>>>>> a486ccd8e20f6d1f0dc8cffba0566a9b457a1d7f
+    "C:\\Users\\sjgam\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\tsadr\\Source\\Repos\\WebappCOSC_V3\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
+      "projectUniqueName": "C:\\Users\\sjgam\\Documents\\GitHub\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
       "projectName": "WeeklyRiskNotification",
-      "projectPath": "C:\\Users\\tsadr\\Source\\Repos\\WebappCOSC_V3\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
-      "packagesPath": "C:\\Users\\tsadr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tsadr\\Source\\Repos\\WebappCOSC_V3\\COSCPFWA\\WeeklyRiskNotification\\obj\\",
+      "projectPath": "C:\\Users\\sjgam\\Documents\\GitHub\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
+      "packagesPath": "C:\\Users\\sjgam\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sjgam\\Documents\\GitHub\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\tsadr\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
-      "projectName": "WeeklyRiskNotification",
-      "projectPath": "C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\WeeklyRiskNotification.csproj",
-      "packagesPath": "C:\\Users\\araul\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\araul\\source\\repos\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\araul\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> a486ccd8e20f6d1f0dc8cffba0566a9b457a1d7f
+        "C:\\Users\\sjgam\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2190,5 +2175,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\sjgam\\Documents\\GitHub\\WebappCOSC\\COSCPFWA\\WeeklyRiskNotification\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
