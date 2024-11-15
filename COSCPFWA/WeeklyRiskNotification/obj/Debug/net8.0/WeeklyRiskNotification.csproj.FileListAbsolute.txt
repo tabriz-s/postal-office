@@ -53,3 +53,12 @@ C:\Users\araul\source\repos\WebappCOSC\COSCPFWA\WeeklyRiskNotification\bin\Debug
 C:\Users\araul\source\repos\WebappCOSC\COSCPFWA\WeeklyRiskNotification\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
 C:\Users\araul\source\repos\WebappCOSC\COSCPFWA\WeeklyRiskNotification\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 C:\Users\araul\source\repos\WebappCOSC\COSCPFWA\WeeklyRiskNotification\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+C:\Users\sjgam\Documents\GitHub\WebappCOSC\COSCPFWA\WeeklyRiskNotification\obj\Debug\net8.0\WeeklyRiskNotification.csproj.AssemblyReference.cache
+C:\Users\sjgam\Documents\GitHub\WebappCOSC\COSCPFWA\WeeklyRiskNotification\obj\Debug\net8.0\WeeklyRiskNotification.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sjgam\Documents\GitHub\WebappCOSC\COSCPFWA\WeeklyRiskNotification\obj\Debug\net8.0\WeeklyRiskNotification.AssemblyInfoInputs.cache
+C:\Users\sjgam\Documents\GitHub\WebappCOSC\COSCPFWA\WeeklyRiskNotification\obj\Debug\net8.0\WeeklyRiskNotification.AssemblyInfo.cs
+C:\Users\sjgam\Documents\GitHub\WebappCOSC\COSCPFWA\WeeklyRiskNotification\obj\Debug\net8.0\WeeklyRiskNotification.csproj.CoreCompileInputs.cache
+C:\Users\sjgam\Documents\GitHub\WebappCOSC\COSCPFWA\WeeklyRiskNotification\obj\Debug\net8.0\WeeklyRiskNotification.sourcelink.json
+C:\Users\sjgam\Documents\GitHub\WebappCOSC\COSCPFWA\WeeklyRiskNotification\obj\Debug\net8.0\WeeklyRiskNotification.dll
+C:\Users\sjgam\Documents\GitHub\WebappCOSC\COSCPFWA\WeeklyRiskNotification\obj\Debug\net8.0\refint\WeeklyRiskNotification.dll
+C:\Users\sjgam\Documents\GitHub\WebappCOSC\COSCPFWA\WeeklyRiskNotification\obj\Debug\net8.0\WeeklyRiskNotification.pdb
