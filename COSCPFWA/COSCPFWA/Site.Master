@@ -84,6 +84,7 @@
                                     <li><a class="dropdown-item" runat="server" href="~/TrackPackage">Track Shipment</a></li>
                                 </ul>
                             </li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/Checkpackage">Check Packages</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/ViewTable">View Tables</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Refunds">Refunds Activity</a></li>
                         </asp:PlaceHolder>
