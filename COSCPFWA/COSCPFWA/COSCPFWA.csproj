@@ -180,6 +180,7 @@
     <Content Include="Content\dashboard.css" />
     <Content Include="SubscribeSmartLocker.aspx" />
     <Content Include="SchedulePickup.aspx" />
+    <Content Include="TrackCustomerPackage.aspx" />
     <Content Include="TrackShipment.aspx" />
     <Content Include="CreateShipment.aspx" />
     <Content Include="RegisterCustomer.aspx" />
@@ -292,6 +293,13 @@
     </Compile>
     <Compile Include="SchedulePickup.aspx.designer.cs">
       <DependentUpon>SchedulePickup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrackCustomerPackage.aspx.cs">
+      <DependentUpon>TrackCustomerPackage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrackCustomerPackage.aspx.designer.cs">
+      <DependentUpon>TrackCustomerPackage.aspx</DependentUpon>
     </Compile>
     <Compile Include="TrackShipment.aspx.cs">
       <DependentUpon>TrackShipment.aspx</DependentUpon>

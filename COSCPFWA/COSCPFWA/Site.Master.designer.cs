@@ -24,6 +24,15 @@ namespace COSCPFWA
         protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
 
         /// <summary>
+        /// navbarBrand control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor navbarBrand;
+
+        /// <summary>
         /// phCustomerNav control.
         /// </summary>
         /// <remarks>
@@ -51,13 +60,13 @@ namespace COSCPFWA
         protected global::System.Web.UI.WebControls.PlaceHolder phAdminNav;
 
         /// <summary>
-        /// btnLogic control.
+        /// btnLogout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogic;
+        protected global::System.Web.UI.WebControls.Button btnLogout;
 
         /// <summary>
         /// MainContent control.
@@ -67,5 +76,14 @@ namespace COSCPFWA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+
+        /// <summary>
+        /// ScriptsContent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ScriptsContent;
     }
 }

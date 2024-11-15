@@ -37,6 +37,8 @@ namespace COSCPFWA
                     Response.Redirect("~/Login.aspx");
                 }
             }
+
+            SetDashboardLink();
         }
         protected void Logout(object sender, EventArgs e)
         {
@@ -44,6 +46,27 @@ namespace COSCPFWA
             Session.Clear();
             Session.Abandon();
             Response.Redirect("~/Login.aspx");
+        }
+
+        private void SetDashboardLink()
+        {
+            var userRole = Session["RoleName"] as string;
+
+            switch (userRole)
+            {
+                case "Customer":
+                    navbarBrand.HRef = "~/CustomerDashboard";
+                    break;
+                case "Employee":
+                    navbarBrand.HRef = "~/EmployeeDashboard";
+                    break;
+                case "Admin":
+                    navbarBrand.HRef = "~/AdminDashboard";
+                    break;
+                default:
+                    navbarBrand.HRef = "~/Home"; // Fallback to home page if role is unknown
+                    break;
+            }
         }
     }
 }
