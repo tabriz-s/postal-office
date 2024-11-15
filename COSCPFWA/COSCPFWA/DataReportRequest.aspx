@@ -126,8 +126,8 @@
 
                 
                     <div class="form-group">
-                        <label for="additionalPersonnel">Additional Personnel</label>
-                        <asp:TextBox ID="additionalPersonnel" runat="server" CssClass="form-control" placeholder="Optional"></asp:TextBox>
+                        <label for="additionalCustomer">Additional Customer</label>
+                        <asp:TextBox ID="additionalCustomer" runat="server" CssClass="form-control" placeholder="Optional"></asp:TextBox>
                     </div>
 
                     <div class="form-group">
@@ -186,13 +186,78 @@
                     <asp:HiddenField ID="chartData" runat="server" />
 
                 </div>
-
+                <!-- Employee Report Section -->
                 <div id="employeeReport" style="display: none;">
                     <div class="form-group">
-                        <label for="employeeName">Customer First Name</label>
+                        <label for="employeeName">Enter Employee Name</label>
                         <asp:TextBox ID="employeeName" runat="server" CssClass="form-control" placeholder="Enter Employee Name" ></asp:TextBox>
                     </div>
+
+                                    
+                    <div class="form-group">
+                        <label for="additionalEmployees">Additional Employee</label>
+                        <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" placeholder="Optional"></asp:TextBox>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="packageType">Package Type</label>
+                        <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-select">
+                            <asp:ListItem value="">Select Package Type</asp:ListItem>
+                            <asp:ListItem value="Delivery">Delivery</asp:ListItem>
+                            <asp:ListItem value="SmartLocker">SmartLocker</asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="activityDateFrom">Activity Date From</label>
+                        <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="activityDateTo">Activity Date To</label>
+                        <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+                    </div>
+
+                    <asp:Button ID="Button1" runat="server" Text="View Report" CssClass="submit-btn" OnClick="ViewReport_Click" />
+
+                    
+                    <!-- Using the user inputs from all the forms before this, now generates a chart where the user gets to select the x & y axis -->
+                    <h2>Data Visualization</h2>
+
+                    <!-- X-axis -->
+                    <div class="form-group">
+                        <label for="xAxis">Select X-axis</label>
+                        <asp:DropDownList ID="DropDownList2" runat="server" CssClass="form-select">
+                            <asp:ListItem Text="ServiceType" Value="ServiceType"></asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
+
+                    <!-- Y-axis -->
+                    <div class="form-group">
+                        <label for="yAxis">Select Y-axis</label>
+                        <asp:DropDownList ID="DropDownList3" runat="server" CssClass="form-select">
+                            <asp:ListItem Text="# of Customers" Value="CustomerCount"></asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
+
+                    <!-- Delete later and fix changes to C# if deleted -->
+                    <label for="orderByDropdown">Order By:</label> <!-- Updated label to "Order By" -->
+                    <asp:DropDownList ID="DropDownList4" runat="server"></asp:DropDownList> <!-- Renamed to "orderByDropdown" -->
+
+                    <!-- Generate Chart button -->
+                    <asp:Button ID="Button2" runat="server" Text="Generate Chart" OnClick="btnGenerateChart_Click" CssClass="btnStacked" />
+
+                    <!-- Canvas element to display the generated chart -->
+                    <div>
+                        <canvas id="myChart" width="400" height="200"></canvas>
+                    </div>
+
+                    <!-- Hidden field to store JSON data for chart rendering -->
+                    <asp:HiddenField ID="HiddenField1" runat="server" />
+
+
                 </div>
+                <!-- Create revenue report section -->
 
                 <!-- Added Chart.js library for data visualization -->
                 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

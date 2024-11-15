@@ -40,6 +40,7 @@ namespace COSCPFWA
         private void GenerateChart()
         {
             //Attaches the HTML form values to temporary varaibles
+            string typeReport = reportType.SelectedValue;
             string firstName = customerFirstName.Text;
             string lastName = customerLastName.Text;
             string table = reportType.SelectedValue;
@@ -56,18 +57,30 @@ namespace COSCPFWA
             List<int> values = new List<int>();
 
             string connString = ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString;
-
+            string query = "";
 
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
                 conn.Open();
                 //Figure dynamic query queue
-                string query = @"SELECT p.ServiceType, COUNT(p.PackageID) AS NumPackages
+                
+                if (typeReport == "Customer")
+                {
+                    query = @"SELECT p.ServiceType, COUNT(p.PackageID) AS NumPackages
                                     FROM package as p
                                     JOIN customer as c ON p.CustomerID = c.CustomerID
                                     LEFT JOIN shippingdetails as sd ON sd.PackageID = p.PackageID
                                     LEFT JOIN smartlocker as sl ON sl.PackageID = p.PackageID
                                     WHERE 1=1";
+                } else if(typeReport == "Employee")
+                {
+                    query = @"SELECT p.ServiceType, COUNT(p.PackageID) AS NumPackages
+                                    FROM package as p
+                                    JOIN customer as c ON p.CustomerID = c.CustomerID
+                                    LEFT JOIN shippingdetails as sd ON sd.PackageID = p.PackageID
+                                    LEFT JOIN smartlocker as sl ON sl.PackageID = p.PackageID
+                                    WHERE 1=1";
+                }
 
                 using (MySqlCommand cmd = new MySqlCommand())
                 {

@@ -178,6 +178,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\dashboard.css" />
+    <Content Include="ShippingHistory.aspx" />
     <Content Include="SubscribeSmartLocker.aspx" />
     <Content Include="SchedulePickup.aspx" />
     <Content Include="TrackCustomerPackage.aspx" />
@@ -280,6 +281,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ShippingHistory.aspx.cs">
+      <DependentUpon>ShippingHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShippingHistory.aspx.designer.cs">
+      <DependentUpon>ShippingHistory.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SubscribeSmartLocker.aspx.cs">
       <DependentUpon>SubscribeSmartLocker.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
