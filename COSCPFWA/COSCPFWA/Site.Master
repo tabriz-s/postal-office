@@ -94,10 +94,12 @@
                         <asp:PlaceHolder ID="phAdminNav" runat="server">
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Employee">Employee</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/DataReportRequest">Reports</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/EditEmployee">Check Employees</a></li>
                         </asp:PlaceHolder>
 
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/About">About</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contact</a></li>
+
                     </ul>
                     <div class="d-flex ms-auto">
                         <asp:Button ID="btnLogout" CssClass="btn btn-outline-light" runat="server" Text="Log Out" OnClick="Logout" />
