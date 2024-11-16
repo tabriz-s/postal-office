@@ -35,9 +35,9 @@
         }
 
         .login-logo {
-            max-width: 500px;
+            max-width: 10000px;
             height: auto;
-            margin-bottom: 20px;
+            margin-bottom: 50px;
         }
 
         .btn-postal {
