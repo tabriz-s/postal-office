@@ -17,49 +17,94 @@ namespace COSCPFWA
 
             string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"].ConnectionString;
 
-            // Retrieve form values
-            string country = Request.Form["country"];
-            string firstName = Request.Form["firstName"];
-            string lastName = Request.Form["lastName"];
-            string phoneNumber = Request.Form["phone"];
-            string email = Request.Form["email"];
-            string zipcode = Request.Form["zipcode"];
-            string city = Request.Form["city"];
-            string state = Request.Form["state"];
-            string address = Request.Form["address"];
+            // Retrieve Shipping From values
+            string country_from = CountryFrom.SelectedValue;
+            string firstName_from = firstNameFrom.Text;
+            string lastName_from = lastNameFrom.Text;
+            string phone_from = phoneFrom.Text;
+            string email_from = emailFrom.Text;
+            string zipcode_from = zipcodeFrom.Text;
+            string city_from = cityFrom.Text;
+            string state_from = stateFrom.Text;
+            string address_from = addressFrom.Text;
 
-            //string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"].ConnectionString;
+            // Retrieve Shipping To values
+            string country_to = countryTo.SelectedValue;
+            string firstName_to = firstNameTo.Text;
+            string lastName_to = lastNameTo.Text;
+            string phone_to = phoneTo.Text;
+            string email_to = emailTo.Text;
+            string zipcode_to = zipcodeTo.Text;
+            string city_to = cityTo.Text;
+            string state_to = stateTo.Text;
+            string address_to = addressTo.Text;
+
+            //Retrieving Packaging Detaisl
+            string Weight = weight.Text;
+            string Length = length.Text;
+            string Width = width.Text;
+            string Height = height.Text;
+
+            string Dimensions = $"{Weight} x {Length} x {Height}";
+
+            //Retrieving Service Type
+            string ServiceType = "";
+            if(delivery.Checked)
+            {
+                ServiceType = "Delivery";
+            }
+            else if(pickup.Checked)
+            {
+                ServiceType = "Pickup";
+            }
+
+            //Retrieving Additional Details
+            string Contents = content.Text;
+
+            //Payment method isn't really checked or run through database. Should we though?
+            //Nah man sensitive information, we can go to hell if we did that. Therefore, Professor would surely not want us to.
+            //Bruh
+
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
                 //Removed empty try-catch block. Why was this here?
                 try
                 {
                     conn.Open();
-                    string query = @"INSERT INTO customer (FirstName, LastName, City, State, PhoneNumber, Email, Address, ZipCode) VALUES (@FirstName, @LastName, @City, @State, @PhoneNumber, @Email, @Address, @ZipCode)";
+                    // Insert Package
+                    string query = @"INSERT INTO package(CustomerID, RecievedDate, ServiceType, CurrentStatus, Contents, Weight_lbs, Dimensions) 
+                                     VALUES (1, CURRENT_TIMESTAMP, @ServiceType, 'Recieved', @Contents, @Weight, @Dimensions);";
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
-                        // Define parameters to prevent SQL injection
-                        cmd.Parameters.AddWithValue("@FirstName", firstName);
-                        cmd.Parameters.AddWithValue("@LastName", lastName);
-                        cmd.Parameters.AddWithValue("@City", city);
-                        cmd.Parameters.AddWithValue("@State", state);
-                        cmd.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
-                        cmd.Parameters.AddWithValue("@Email", email);
-                        cmd.Parameters.AddWithValue("@Address", address);
-                        cmd.Parameters.AddWithValue("@ZipCode", zipcode);
+                        cmd.Parameters.AddWithValue("@ServiceType", ServiceType);
+                        cmd.Parameters.AddWithValue("@Contents", Contents);
+                        cmd.Parameters.AddWithValue("@Weight", Weight);
+                        cmd.Parameters.AddWithValue("@Dimensions", Dimensions);
+                        cmd.ExecuteNonQuery();
+                    }
 
-                        // Execute the command
-                        //cmd.ExecuteNonQuery();
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        if (rowsAffected > 0)
+                    // Conditional Insertion
+                    if (ServiceType == "Delivery")
+                    {
+                        query = @"INSERT INTO shippingdetails(SenderID, SendingAddress, PackageID, RecievingAddress, RecipientFirstName, RecipientLastName)
+                                  VALUES (1, @AddressFrom, LAST_INSERT_ID(), @AddressTo, @FirstNameTo, @LastNameTo);";
+                    }
+                    else if (ServiceType == "Pickup")
+                    {
+                        query = @"INSERT INTO pickupdetails(SenderID, SenderAddress, PackageID, RecipientAddress, RecipientFirstName, RecipientLastName) 
+                                  VALUES (1, @AddressFrom, LAST_INSERT_ID(), @AddressTo, @FirstNameTo, @LastNameTo);";
+                    }
+
+                    if (!string.IsNullOrEmpty(query))
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand(query, conn))
                         {
-                            Response.Write("<script>alert('Customer information saved successfully.');</script>");
+                            cmd.Parameters.AddWithValue("@AddressFrom", address_from);
+                            cmd.Parameters.AddWithValue("@AddressTo", address_to);
+                            cmd.Parameters.AddWithValue("@FirstNameTo", firstName_to);
+                            cmd.Parameters.AddWithValue("@LastNameTo", lastName_to);
+                            cmd.ExecuteNonQuery();
                         }
-                        else
-                        {
-                            Response.Write("<script>alert('No rows were inserted. Please check your data.');</script>");
-                        }
-                        Response.Write("<script>alert('Customer information saved successfully.');</script>");
                     }
                 }
                 catch (MySqlException ex)
