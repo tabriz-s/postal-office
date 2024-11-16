@@ -1,10 +1,7 @@
-﻿<%@ Page Title="Edit Employee" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditEmployee.aspx.cs" Inherits="COSCPFWA.EditEmployee" %>
+﻿<%@ Page Title="Manage Employees" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditEmployee.aspx.cs" Inherits="COSCPFWA.EditEmployee" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:Label ID="Label1" runat="server" Text="Employee ID:"></asp:Label>
-    <asp:TextBox ID="EmployeeIDTextBox" runat="server"></asp:TextBox>
-    <asp:Button ID="CheckEmployeeButton" runat="server" Text="Check Employee" OnClick="CheckEmployeeButton_Click" />
-
+    <asp:Button ID="LoadAllEmployeesButton" runat="server" Text="Load All Employees" OnClick="LoadAllEmployeesButton_Click" />
     <asp:GridView ID="EmployeeGridView" runat="server" AutoGenerateColumns="false" DataKeyNames="EmployeeID"
         OnRowEditing="EmployeeGridView_RowEditing"
         OnRowUpdating="EmployeeGridView_RowUpdating"

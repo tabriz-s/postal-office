@@ -9,15 +9,26 @@ namespace COSCPFWA
 {
     public partial class EditEmployee : System.Web.UI.Page
     {
-        protected void CheckEmployeeButton_Click(object sender, EventArgs e)
+        protected void Page_Load(object sender, EventArgs e)
         {
-            string employeeID = EmployeeIDTextBox.Text;
+            if (!IsPostBack)
+            {
+                LoadAllEmployees();
+            }
+        }
+
+        protected void LoadAllEmployeesButton_Click(object sender, EventArgs e)
+        {
+            LoadAllEmployees();
+        }
+
+        private void LoadAllEmployees()
+        {
             string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"]?.ConnectionString;
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
-                string query = "SELECT * FROM employee WHERE EmployeeID = @EmployeeID";
+                string query = "SELECT * FROM employee";
                 MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
-                da.SelectCommand.Parameters.AddWithValue("@EmployeeID", employeeID);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 EmployeeGridView.DataSource = dt;
@@ -28,7 +39,7 @@ namespace COSCPFWA
         protected void EmployeeGridView_RowEditing(object sender, GridViewEditEventArgs e)
         {
             EmployeeGridView.EditIndex = e.NewEditIndex;
-            CheckEmployeeButton_Click(sender, e); 
+            LoadAllEmployees(); 
         }
 
         protected void EmployeeGridView_RowUpdating(object sender, GridViewUpdateEventArgs e)
@@ -66,7 +77,7 @@ namespace COSCPFWA
                 conn.Close();
 
                 EmployeeGridView.EditIndex = -1;
-                CheckEmployeeButton_Click(sender, e); 
+                LoadAllEmployees(); 
             }
         }
 
@@ -84,14 +95,14 @@ namespace COSCPFWA
                 cmd.ExecuteNonQuery();
                 conn.Close();
 
-                CheckEmployeeButton_Click(sender, e);
+                LoadAllEmployees(); 
             }
         }
 
         protected void EmployeeGridView_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             EmployeeGridView.EditIndex = -1;
-            CheckEmployeeButton_Click(sender, e); 
+            LoadAllEmployees(); 
         }
     }
 }
