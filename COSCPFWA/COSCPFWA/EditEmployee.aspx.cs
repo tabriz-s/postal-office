@@ -9,26 +9,15 @@ namespace COSCPFWA
 {
     public partial class EditEmployee : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void CheckEmployeeButton_Click(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                LoadAllEmployees();
-            }
-        }
-
-        protected void LoadAllEmployeesButton_Click(object sender, EventArgs e)
-        {
-            LoadAllEmployees();
-        }
-
-        private void LoadAllEmployees()
-        {
+            string employeeID = EmployeeIDTextBox.Text;
             string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"]?.ConnectionString;
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
-                string query = "SELECT * FROM employee";
+                string query = "SELECT * FROM employee WHERE EmployeeID = @EmployeeID";
                 MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+                da.SelectCommand.Parameters.AddWithValue("@EmployeeID", employeeID);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 EmployeeGridView.DataSource = dt;
@@ -39,7 +28,7 @@ namespace COSCPFWA
         protected void EmployeeGridView_RowEditing(object sender, GridViewEditEventArgs e)
         {
             EmployeeGridView.EditIndex = e.NewEditIndex;
-            LoadAllEmployees(); 
+            CheckEmployeeButton_Click(sender, e);
         }
 
         protected void EmployeeGridView_RowUpdating(object sender, GridViewUpdateEventArgs e)
@@ -57,27 +46,35 @@ namespace COSCPFWA
             string managerID = ((TextBox)row.Cells[9].Controls[0]).Text;
 
             string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"]?.ConnectionString;
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            try
             {
-                string query = "UPDATE employee SET Email=@Email, Address=@Address, Role=@Role, Salary=@Salary, HoursWorked=@HoursWorked, IncidentCount=@IncidentCount, PackagesDelivered=@PackagesDelivered, HourlyDeliveryRate=@HourlyDeliveryRate, ManagerID=@ManagerID WHERE EmployeeID=@EmployeeID";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@Email", email);
-                cmd.Parameters.AddWithValue("@Address", address);
-                cmd.Parameters.AddWithValue("@Role", role);
-                cmd.Parameters.AddWithValue("@Salary", salary);
-                cmd.Parameters.AddWithValue("@HoursWorked", hoursWorked);
-                cmd.Parameters.AddWithValue("@IncidentCount", incidentCount);
-                cmd.Parameters.AddWithValue("@PackagesDelivered", packagesDelivered);
-                cmd.Parameters.AddWithValue("@HourlyDeliveryRate", hourlyDeliveryRate);
-                cmd.Parameters.AddWithValue("@ManagerID", managerID);
-                cmd.Parameters.AddWithValue("@EmployeeID", employeeID);
+                using (MySqlConnection conn = new MySqlConnection(connString))
+                {
+                    string query = "UPDATE employee SET Email=@Email, Address=@Address, Role=@Role, Salary=@Salary, HoursWorked=@HoursWorked, IncidentCount=@IncidentCount, PackagesDelivered=@PackagesDelivered, HourlyDeliveryRate=@HourlyDeliveryRate, ManagerID=@ManagerID WHERE EmployeeID=@EmployeeID";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@Email", email);
+                    cmd.Parameters.AddWithValue("@Address", address);
+                    cmd.Parameters.AddWithValue("@Role", role);
+                    cmd.Parameters.AddWithValue("@Salary", salary);
+                    cmd.Parameters.AddWithValue("@HoursWorked", hoursWorked);
+                    cmd.Parameters.AddWithValue("@IncidentCount", incidentCount);
+                    cmd.Parameters.AddWithValue("@PackagesDelivered", packagesDelivered);
+                    cmd.Parameters.AddWithValue("@HourlyDeliveryRate", hourlyDeliveryRate);
+                    cmd.Parameters.AddWithValue("@ManagerID", managerID);
+                    cmd.Parameters.AddWithValue("@EmployeeID", employeeID);
 
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
 
-                EmployeeGridView.EditIndex = -1;
-                LoadAllEmployees(); 
+                    EmployeeGridView.EditIndex = -1;
+                    CheckEmployeeButton_Click(sender, e);
+                    ErrorMessageLabel.Visible = false; //Use the notification template for error message
+                }
+            }
+            catch (MySqlException ex)
+            {
+                SalaryTrigger(ex);
             }
         }
 
@@ -85,24 +82,44 @@ namespace COSCPFWA
         {
             string employeeID = EmployeeGridView.DataKeys[e.RowIndex].Value.ToString();
             string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"]?.ConnectionString;
-            using (MySqlConnection conn = new MySqlConnection(connString))
+            try
             {
-                string query = "DELETE FROM employee WHERE EmployeeID = @EmployeeID";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@EmployeeID", employeeID);
+                using (MySqlConnection conn = new MySqlConnection(connString))
+                {
+                    string query = "DELETE FROM employee WHERE EmployeeID = @EmployeeID";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@EmployeeID", employeeID);
 
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
 
-                LoadAllEmployees(); 
+                    CheckEmployeeButton_Click(sender, e);
+                }
+            }
+            catch (MySqlException ex)
+            {
+                SalaryTrigger(ex);
             }
         }
 
         protected void EmployeeGridView_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             EmployeeGridView.EditIndex = -1;
-            LoadAllEmployees(); 
+            CheckEmployeeButton_Click(sender, e);
+        }
+
+        private void SalaryTrigger(MySqlException ex)
+        {
+            if (ex.Number == 1644)
+            {
+                ErrorMessageLabel.Text =  ex.Message;
+            }
+            else
+            {
+                ErrorMessageLabel.Text = "Damn we did not prepare for this" + ex.Message;
+            }
+            ErrorMessageLabel.Visible = true;
         }
     }
 }
