@@ -42,13 +42,21 @@ namespace COSCPFWA
 
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
-                string query = "UPDATE package SET EmployeeID=@EmployeeID, Contents=@Contents, Weight_lbs=@Weight_lbs, ServiceType=@ServiceType WHERE PackageID=@PackageID";
+                string query = "UPDATE package SET EmployeeID=@EmployeeID, Contents=@Contents, Weight_lbs=@Weight_lbs, ServiceType=@ServiceType WHERE PackageID=@PackageID;";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@PackageID", packageID);
                 cmd.Parameters.AddWithValue("@EmployeeID", employeeID);
                 cmd.Parameters.AddWithValue("@Contents", contents);
                 cmd.Parameters.AddWithValue("@Weight_lbs", weight_lbs);
                 cmd.Parameters.AddWithValue("@ServiceType", serviceType);
+
+                System.Diagnostics.Debug.WriteLine("Query: " + cmd.CommandText);
+                foreach (MySqlParameter param in cmd.Parameters)
+                {
+                    System.Diagnostics.Debug.WriteLine($"{param.ParameterName}: {param.Value}");
+                }
+
+                System.Diagnostics.Debug.WriteLine($"PackageID: {PackagesGridView.DataKeys[e.RowIndex].Value}");
 
                 conn.Open();
                 cmd.ExecuteNonQuery();

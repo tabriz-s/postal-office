@@ -64,6 +64,7 @@
                                 <a class="nav-link dropdown-toggle" href="#" id="trackingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tracking</a>
                                 <ul class="dropdown-menu" aria-labelledby="trackingDropdown">
                                     <li><a class="dropdown-item" runat="server" href="~/TrackCustomerPackage">Track a Package</a></li>
+                                    <li><a class="dropdown-item" runat="server" href="~/ShippingHistory">Shipping History</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
@@ -84,7 +85,7 @@
                                     <li><a class="dropdown-item" runat="server" href="~/TrackPackage">Track Shipment</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a class="nav-link" runat="server" href="~/Checkpackage">Check Packages</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/Checkpackages">Check Packages</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/ViewTable">View Tables</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Refunds">Refunds Activity</a></li>
                         </asp:PlaceHolder>
@@ -92,7 +93,7 @@
                         <!-- Admin Navigation -->
                         <asp:PlaceHolder ID="phAdminNav" runat="server">
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Employee">Employee</a></li>
-                            <li class="nav-item"><a class="nav-link" runat="server" href="~/Reports">Reports</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/DataReportRequest">Reports</a></li>
                         </asp:PlaceHolder>
 
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/About">About</a></li>
