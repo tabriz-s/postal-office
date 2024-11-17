@@ -71,6 +71,7 @@
                                 <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
                                 <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                                     <li><a class="dropdown-item" runat="server" href="~/SubscribeSmartLocker">Subscribe to Smart Locker</a></li>
+                                    <li><a class="dropdown-item" runat="server" href="~/CalculateShippingCost">Calculate Shipping Cost</a></li>
                                 </ul>
                             </li>
 
@@ -94,10 +95,12 @@
                         <asp:PlaceHolder ID="phAdminNav" runat="server">
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Employee">Employee</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/DataReportRequest">Reports</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/EditEmployee">Check Employees</a></li>
                         </asp:PlaceHolder>
 
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/About">About</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contact</a></li>
+
                     </ul>
                     <div class="d-flex ms-auto">
                         <asp:Button ID="btnLogout" CssClass="btn btn-outline-light" runat="server" Text="Log Out" OnClick="Logout" />
