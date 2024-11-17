@@ -9,15 +9,35 @@ namespace COSCPFWA
 {
     public partial class CheckPackages : System.Web.UI.Page
     {
-        protected void CheckPackagesButton_Click(object sender, EventArgs e)
+        protected void Page_Load(object sender, EventArgs e)
         {
-            string employeeID = EmployeeIDTextBox.Text;
+            if (!IsPostBack)
+            {
+                if (Session["RoleName"] != null && Session["RoleName"].ToString() == "Employee")
+                {
+                    if (Session["EmployeeID"] != null)
+                    {
+                        LoadPackagesForEmployee(Session["EmployeeID"].ToString());
+                    }
+                    else
+                    {
+                        Response.Redirect("~/Error.aspx");
+                    }
+                }
+                else
+                {
+                    Response.Redirect("~/Unauthorized.aspx");
+                }
+            }
+        }
+        private void LoadPackagesForEmployee(string employeeId)
+        {
             string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"]?.ConnectionString;
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
                 string query = "SELECT * FROM package WHERE EmployeeID = @EmployeeID";
                 MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
-                da.SelectCommand.Parameters.AddWithValue("@EmployeeID", employeeID);
+                da.SelectCommand.Parameters.AddWithValue("@EmployeeID", employeeId);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 PackagesGridView.DataSource = dt;
@@ -28,7 +48,7 @@ namespace COSCPFWA
         protected void PackagesGridView_RowEditing(object sender, GridViewEditEventArgs e)
         {
             PackagesGridView.EditIndex = e.NewEditIndex;
-            CheckPackagesButton_Click(sender, e); // Refresh GridView
+            ReloadPackages(); // Refresh GridView
         }
 
         protected void PackagesGridView_RowUpdating(object sender, GridViewUpdateEventArgs e)
@@ -63,7 +83,7 @@ namespace COSCPFWA
                 conn.Close();
 
                 PackagesGridView.EditIndex = -1;
-                CheckPackagesButton_Click(sender, e); // Refresh GridView
+                ReloadPackages(); // Refresh GridView
             }
         }
 
@@ -81,14 +101,22 @@ namespace COSCPFWA
                 cmd.ExecuteNonQuery();
                 conn.Close();
 
-                CheckPackagesButton_Click(sender, e); // Refresh GridView
+                ReloadPackages(); // Refresh GridView
             }
         }
 
         protected void PackagesGridView_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             PackagesGridView.EditIndex = -1;
-            CheckPackagesButton_Click(sender, e); // Refresh GridView
+            ReloadPackages(); // Refresh GridView
+        }
+
+        private void ReloadPackages()
+        {
+            if (Session["EmployeeID"] != null)
+            {
+                LoadPackagesForEmployee(Session["EmployeeID"].ToString());
+            }
         }
 
         private void AddClientConfirmation()

@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.Configuration;
+using System.Data;
+using MySql.Data.MySqlClient;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -11,81 +11,135 @@ namespace COSCPFWA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblMessage.Visible = false;
+            if (!IsPostBack)
+            {
+                lblMessage.Visible = false;
+                LoadLockerLocations();
+            }
+        }
+
+        private void LoadLockerLocations()
+        {
+            string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"].ConnectionString;
+
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                conn.Open();
+                string query = "SELECT LocationID, LocationName FROM lockerlocations";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        ddlLockerLocation.DataSource = reader;
+                        ddlLockerLocation.DataTextField = "LocationName";
+                        ddlLockerLocation.DataValueField = "LocationID";
+                        ddlLockerLocation.DataBind();
+                    }
+                }
+            }
+
+            ddlLockerLocation.Items.Insert(0, new ListItem("-- Select a Location --", ""));
         }
 
         protected void btnSubscribe_Click(object sender, EventArgs e)
         {
-            // Get selected locker location from the dropdown
-            string lockerLocation = ddlLockerLocation.SelectedValue;
-
-            // Validate input
-            if (string.IsNullOrEmpty(lockerLocation))
+            // get selected locker location from the dropdown
+            if (!int.TryParse(ddlLockerLocation.SelectedValue, out int locationId))
             {
-                lblMessage.Text = "Please select a locker location.";
-                lblMessage.CssClass = "alert alert-danger mb-4";
-                lblMessage.Visible = true;
+                DisplayMessage("Please select a locker location.", "alert-danger");
                 return;
             }
 
-            // Store the locker location in ViewState to access it after payment confirmation
-            ViewState["LockerLocation"] = lockerLocation;
-
-            // Show the payment modal for the user to enter payment details
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "openPaymentModal", "$('#paymentModal').modal('show');", true);
-        }
-
-        // This method is called when the payment is confirmed
-        protected void ConfirmPayment()
-        {
-            // Retrieve the locker location from ViewState
-            string lockerLocation = ViewState["LockerLocation"] as string;
-
-            if (string.IsNullOrEmpty(lockerLocation))
+            if (Session["CustomerID"] == null)
             {
-                lblMessage.Text = "Failed to retrieve locker location. Please try again.";
-                lblMessage.CssClass = "alert alert-danger mb-4";
-                lblMessage.Visible = true;
+                DisplayMessage("Customer session not found. Please log in again.", "alert-danger");
                 return;
             }
 
-            // Simulate the subscription process
-            bool isSubscribed = SubscribeCustomerToLocker(lockerLocation);
+            int customerId = Convert.ToInt32(Session["CustomerID"]);
 
-            // Show the result to the user
-            if (isSubscribed)
+            if (SubscribeCustomerToLocker(customerId, locationId))
             {
-                lblMessage.Text = "You have successfully subscribed to the SmartLocker at Location " + lockerLocation + ".";
-                lblMessage.CssClass = "alert alert-success mb-4";
+                DisplayMessage($"You have successfully subscribed to a SmartLocker at location {ddlLockerLocation.SelectedItem.Text}.", "alert-success");
             }
             else
             {
-                lblMessage.Text = "Failed to subscribe. Please try again later.";
-                lblMessage.CssClass = "alert alert-danger mb-4";
+                DisplayMessage("Failed to subscribe. No lockers are available at the selected location.", "alert-danger");
             }
-
-            lblMessage.Visible = true;
         }
 
-        private bool SubscribeCustomerToLocker(string lockerLocation)
+        private bool SubscribeCustomerToLocker(int customerId, int locationId)
         {
-            // This method simulates the logic of subscribing a customer to a smart locker.
-            // You would implement database insertion logic here.
+            bool success = false;
+            string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"].ConnectionString;
 
-            try
+            using (MySqlConnection conn = new MySqlConnection(connString))
             {
-                // Example: Insert the customer's subscription into the database
-                // (Code for database insertion goes here)
+                conn.Open();
 
-                // For now, simulate success:
-                return true;
+                using (MySqlTransaction transaction = conn.BeginTransaction())
+                {
+                    try
+                    {
+                        int lockerId = -1;
+
+                        // stored procedure to get the first available locker
+                        using (MySqlCommand cmd = new MySqlCommand("GetAvailableLocker", conn, transaction))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.AddWithValue("@SelectedLocationID", locationId);
+                            cmd.Parameters.Add(new MySqlParameter("@AvailableLockerID", MySqlDbType.Int32)
+                            {
+                                Direction = ParameterDirection.Output
+                            });
+
+                            cmd.ExecuteNonQuery();
+
+                            // retrieve the locker ID from the output parameter
+                            object lockerIdObj = cmd.Parameters["@AvailableLockerID"].Value;
+                            if (lockerIdObj == DBNull.Value || lockerIdObj == null)
+                            {
+                                return false; // No available lockers
+                            }
+
+                            lockerId = Convert.ToInt32(lockerIdObj);
+                        }
+
+                        // create a new assignment in the lockerassignment table
+                        string insertAssignmentQuery = @"
+                            INSERT INTO lockerassignment (LockerID, CustomerID, AssignedAt) 
+                            VALUES (@LockerID, @CustomerID, NOW())";
+
+                        using (MySqlCommand cmd = new MySqlCommand(insertAssignmentQuery, conn, transaction))
+                        {
+                            cmd.Parameters.AddWithValue("@LockerID", lockerId);
+                            cmd.Parameters.AddWithValue("@CustomerID", customerId);
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        // commit the transaction
+                        transaction.Commit();
+                        success = true;
+                    }
+                    catch
+                    {
+                        // Rollback the transaction on error
+                        transaction.Rollback();
+                        throw;
+                    }
+                }
             }
-            catch (Exception ex)
-            {
-                // Log the exception and return false
-                // (Code for logging the exception goes here)
-                return false;
-            }
+
+            return success;
+        }
+
+        private void DisplayMessage(string message, string cssClass)
+        {
+            lblMessage.Text = message;
+            lblMessage.CssClass = $"alert {cssClass} mb-4";
+            lblMessage.Visible = true;
         }
     }
 }
