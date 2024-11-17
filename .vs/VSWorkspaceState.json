@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\COSCPFWA",
+    "\\COSCPFWA\\COSCPFWA"
   ],
-  "SelectedNode": "\\COSCPFWA.sln",
+  "SelectedNode": "\\COSCPFWA\\COSCPFWA\\DataReportRequest.aspx",
   "PreviewInSolutionExplorer": false
 }

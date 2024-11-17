@@ -26,54 +26,42 @@ namespace COSCPFWA
                 using (MySqlConnection conn = new MySqlConnection(connString))
                 {
                     conn.Open();
-                    string query = "SELECT r.RoleName, COALESCE(e.EmployeeID, c.CustomerID) AS RoleSpecificID " +
-                        "FROM user_logins ul JOIN user_roles ur ON ul.UserID = ur.UserID " +
-                        "JOIN roles r ON ur.RoleID = r.RoleID " +
-                        "LEFT JOIN employee e ON ul.UserID = e.UserID " +
-                        "LEFT JOIN customer c ON ul.UserID = c.CustomerID " +
-                        "WHERE ul.Username = @Username AND ul.Password = @Password";
+                    string query = "SELECT RoleName FROM user_logins ul JOIN user_roles ur ON ul.UserID = ur.UserID JOIN roles r ON ur.RoleID = r.RoleID WHERE ul.Username = @Username AND ul.Password = @Password";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@Username", username);
                         cmd.Parameters.AddWithValue("@Password", password);
 
-                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        object roleObj = cmd.ExecuteScalar();
+
+                        if (roleObj != null)
                         {
-                            if (reader.Read())
+                            string role = roleObj.ToString();
+                            Session["Username"] = username;
+                            Session["RoleName"] = role;
+
+                            // Redirect based on user role
+                            if (role == "Admin")
                             {
-                                string role = reader["RoleName"].ToString();
-                                object roleSpecificID = reader["RoleSpecificID"];
-
-                                Session["Username"] = username;
-                                Session["RoleName"] = role;
-
-                                // Redirect based on user role
-                                if (role == "Admin")
-                                {
-                                    Session["EmployeeID"] = roleSpecificID?.ToString();
-                                    Response.Redirect("AdminDashboard.aspx");
-                                }
-                                else if (role == "Employee")
-                                {
-                                    Session["EmployeeID"] = roleSpecificID?.ToString();
-                                    Response.Redirect("EmployeeDashboard.aspx");
-                                }
-                                else if (role == "Customer")
-                                {
-                                    Session["CustomerID"] = roleSpecificID?.ToString();
-                                    Response.Redirect("CustomerDashboard.aspx");
-                                }
-                                else
-                                {
-                                    lblMessage.Text = "Unauthorized.";
-                                }
+                                Response.Redirect("AdminDashboard.aspx");
+                            }
+                            else if (role == "Employee")
+                            {
+                                Response.Redirect("EmployeeDashboard.aspx");
+                            }
+                            else if (role == "Customer")
+                            {
+                                Response.Redirect("CustomerDashboard.aspx");
                             }
                             else
                             {
-
-                                lblMessage.Text = "Invalid Username or Password.";
+                                lblMessage.Text = "Unauthorized.";
                             }
+                        }
+                        else
+                        {
+                            lblMessage.Text = "Invalid Username or Password.";
                         }
 
                     }

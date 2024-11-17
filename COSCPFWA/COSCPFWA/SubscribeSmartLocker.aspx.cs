@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Configuration;
-using System.Data;
-using MySql.Data.MySqlClient;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -11,135 +11,81 @@ namespace COSCPFWA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                lblMessage.Visible = false;
-                LoadLockerLocations();
-            }
-        }
-
-        private void LoadLockerLocations()
-        {
-            string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"].ConnectionString;
-
-            using (MySqlConnection conn = new MySqlConnection(connString))
-            {
-                conn.Open();
-                string query = "SELECT LocationID, LocationName FROM lockerlocations";
-
-                using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                {
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        ddlLockerLocation.DataSource = reader;
-                        ddlLockerLocation.DataTextField = "LocationName";
-                        ddlLockerLocation.DataValueField = "LocationID";
-                        ddlLockerLocation.DataBind();
-                    }
-                }
-            }
-
-            ddlLockerLocation.Items.Insert(0, new ListItem("-- Select a Location --", ""));
+            lblMessage.Visible = false;
         }
 
         protected void btnSubscribe_Click(object sender, EventArgs e)
         {
-            // get selected locker location from the dropdown
-            if (!int.TryParse(ddlLockerLocation.SelectedValue, out int locationId))
+            // Get selected locker location from the dropdown
+            string lockerLocation = ddlLockerLocation.SelectedValue;
+
+            // Validate input
+            if (string.IsNullOrEmpty(lockerLocation))
             {
-                DisplayMessage("Please select a locker location.", "alert-danger");
+                lblMessage.Text = "Please select a locker location.";
+                lblMessage.CssClass = "alert alert-danger mb-4";
+                lblMessage.Visible = true;
                 return;
             }
 
-            if (Session["CustomerID"] == null)
+            // Store the locker location in ViewState to access it after payment confirmation
+            ViewState["LockerLocation"] = lockerLocation;
+
+            // Show the payment modal for the user to enter payment details
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "openPaymentModal", "$('#paymentModal').modal('show');", true);
+        }
+
+        // This method is called when the payment is confirmed
+        protected void ConfirmPayment()
+        {
+            // Retrieve the locker location from ViewState
+            string lockerLocation = ViewState["LockerLocation"] as string;
+
+            if (string.IsNullOrEmpty(lockerLocation))
             {
-                DisplayMessage("Customer session not found. Please log in again.", "alert-danger");
+                lblMessage.Text = "Failed to retrieve locker location. Please try again.";
+                lblMessage.CssClass = "alert alert-danger mb-4";
+                lblMessage.Visible = true;
                 return;
             }
 
-            int customerId = Convert.ToInt32(Session["CustomerID"]);
+            // Simulate the subscription process
+            bool isSubscribed = SubscribeCustomerToLocker(lockerLocation);
 
-            if (SubscribeCustomerToLocker(customerId, locationId))
+            // Show the result to the user
+            if (isSubscribed)
             {
-                DisplayMessage($"You have successfully subscribed to a SmartLocker at location {ddlLockerLocation.SelectedItem.Text}.", "alert-success");
+                lblMessage.Text = "You have successfully subscribed to the SmartLocker at Location " + lockerLocation + ".";
+                lblMessage.CssClass = "alert alert-success mb-4";
             }
             else
             {
-                DisplayMessage("Failed to subscribe. No lockers are available at the selected location.", "alert-danger");
-            }
-        }
-
-        private bool SubscribeCustomerToLocker(int customerId, int locationId)
-        {
-            bool success = false;
-            string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"].ConnectionString;
-
-            using (MySqlConnection conn = new MySqlConnection(connString))
-            {
-                conn.Open();
-
-                using (MySqlTransaction transaction = conn.BeginTransaction())
-                {
-                    try
-                    {
-                        int lockerId = -1;
-
-                        // stored procedure to get the first available locker
-                        using (MySqlCommand cmd = new MySqlCommand("GetAvailableLocker", conn, transaction))
-                        {
-                            cmd.CommandType = CommandType.StoredProcedure;
-
-                            cmd.Parameters.AddWithValue("@SelectedLocationID", locationId);
-                            cmd.Parameters.Add(new MySqlParameter("@AvailableLockerID", MySqlDbType.Int32)
-                            {
-                                Direction = ParameterDirection.Output
-                            });
-
-                            cmd.ExecuteNonQuery();
-
-                            // retrieve the locker ID from the output parameter
-                            object lockerIdObj = cmd.Parameters["@AvailableLockerID"].Value;
-                            if (lockerIdObj == DBNull.Value || lockerIdObj == null)
-                            {
-                                return false; // No available lockers
-                            }
-
-                            lockerId = Convert.ToInt32(lockerIdObj);
-                        }
-
-                        // create a new assignment in the lockerassignment table
-                        string insertAssignmentQuery = @"
-                            INSERT INTO lockerassignment (LockerID, CustomerID, AssignedAt) 
-                            VALUES (@LockerID, @CustomerID, NOW())";
-
-                        using (MySqlCommand cmd = new MySqlCommand(insertAssignmentQuery, conn, transaction))
-                        {
-                            cmd.Parameters.AddWithValue("@LockerID", lockerId);
-                            cmd.Parameters.AddWithValue("@CustomerID", customerId);
-                            cmd.ExecuteNonQuery();
-                        }
-
-                        // commit the transaction
-                        transaction.Commit();
-                        success = true;
-                    }
-                    catch
-                    {
-                        // Rollback the transaction on error
-                        transaction.Rollback();
-                        throw;
-                    }
-                }
+                lblMessage.Text = "Failed to subscribe. Please try again later.";
+                lblMessage.CssClass = "alert alert-danger mb-4";
             }
 
-            return success;
-        }
-
-        private void DisplayMessage(string message, string cssClass)
-        {
-            lblMessage.Text = message;
-            lblMessage.CssClass = $"alert {cssClass} mb-4";
             lblMessage.Visible = true;
+        }
+
+        private bool SubscribeCustomerToLocker(string lockerLocation)
+        {
+            // This method simulates the logic of subscribing a customer to a smart locker.
+            // You would implement database insertion logic here.
+
+            try
+            {
+                // Example: Insert the customer's subscription into the database
+                // (Code for database insertion goes here)
+
+                // For now, simulate success:
+                return true;
+            }
+            catch (Exception ex)
+            {
+                // Log the exception and return false
+                // (Code for logging the exception goes here)
+                return false;
+            }
         }
     }
 }
