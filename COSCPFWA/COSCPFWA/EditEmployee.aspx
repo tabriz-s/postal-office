@@ -1,28 +1,97 @@
-﻿<%@ Page Title="Edit Employee" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditEmployee.aspx.cs" Inherits="COSCPFWA.EditEmployee" %>
+﻿<%@ Page Title="Edit Employee Salary" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditEmployee.aspx.cs" Inherits="COSCPFWA.EditEmployee" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:Label ID="Label1" runat="server" Text="Employee ID:"></asp:Label>
-    <asp:TextBox ID="EmployeeIDTextBox" runat="server"></asp:TextBox>
-    <asp:Button ID="CheckEmployeeButton" runat="server" Text="Check Employee" OnClick="CheckEmployeeButton_Click" />
-    <asp:Label ID="ErrorMessageLabel" runat="server" CssClass="alert alert-danger" Visible="false"></asp:Label>
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+        }
 
-    <asp:GridView ID="EmployeeGridView" runat="server" AutoGenerateColumns="false" DataKeyNames="EmployeeID"
-        OnRowEditing="EmployeeGridView_RowEditing"
-        OnRowUpdating="EmployeeGridView_RowUpdating"
-        OnRowDeleting="EmployeeGridView_RowDeleting"
-        OnRowCancelingEdit="EmployeeGridView_RowCancelingEdit">
-        <Columns>
-            <asp:BoundField DataField="EmployeeID" HeaderText="Employee ID" ReadOnly="true" />
-            <asp:BoundField DataField="Email" HeaderText="Email" />
-            <asp:BoundField DataField="Address" HeaderText="Address" />
-            <asp:BoundField DataField="Role" HeaderText="Role" />
-            <asp:BoundField DataField="Salary" HeaderText="Salary" />
-            <asp:BoundField DataField="HoursWorked" HeaderText="Hours Worked" />
-            <asp:BoundField DataField="IncidentCount" HeaderText="Incident Count" />
-            <asp:BoundField DataField="PackagesDelivered" HeaderText="Packages Delivered" />
-            <asp:BoundField DataField="HourlyDeliveryRate" HeaderText="Hourly Delivery Rate" />
-            <asp:BoundField DataField="ManagerID" HeaderText="Manager ID" />
-            <asp:CommandField ShowEditButton="true" ShowDeleteButton="true" />
-        </Columns>
-    </asp:GridView>
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            border-top: 8px solid #007bff;
+            box-sizing: border-box;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            color: #333;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .form-group input:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+    <div class="main-container">
+        <div class="form-container">
+            <h2>Update Employee Salary</h2>
+            <asp:Panel runat="server">
+                <div class="form-group">
+                    <label for="employeeID">Employee ID</label>
+                    <asp:TextBox ID="employeeID" runat="server" CssClass="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="salary">Salary</label>
+                    <asp:TextBox ID="salary" runat="server" CssClass="form-control" TextMode="Number" />
+                </div>
+                <asp:Button ID="SaveButton" runat="server" CssClass="submit-btn" Text="Save Changes" OnClick="SaveButton_Click" />
+            </asp:Panel>
+        </div>
+    </div>
 </asp:Content>

@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_V3\\COSCPFWA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\Users\\tsadr\\source\\repos\\WebappCOSC_V3\\COSCPFWA\\coscpfwa\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\users\\tsadr\\source\\repos\\webappcosc_v3\\coscpfwa\\coscpfwa\\subscribesmartlocker.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\subscribesmartlocker.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\users\\tsadr\\source\\repos\\webappcosc_v3\\coscpfwa\\coscpfwa\\subscribesmartlocker.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\subscribesmartlocker.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\users\\tsadr\\source\\repos\\webappcosc_v3\\coscpfwa\\coscpfwa\\subscribesmartlocker.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\subscribesmartlocker.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\Users\\tsadr\\source\\repos\\WebappCOSC_V3\\COSCPFWA\\coscpfwa\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,6 +27,10 @@
       "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\trackcustomerpackage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\Users\\tsadr\\source\\repos\\WebappCOSC_V3\\COSCPFWA\\coscpfwa\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\Users\\tsadr\\source\\repos\\WebappCOSC_V3\\COSCPFWA\\coscpfwa\\site.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\site.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -46,11 +46,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Site.Master",
               "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_V3\\COSCPFWA\\COSCPFWA\\Site.Master",
               "RelativeDocumentMoniker": "COSCPFWA\\Site.Master",
@@ -78,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "TrackCustomerPackage.aspx",
               "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_V3\\COSCPFWA\\COSCPFWA\\TrackCustomerPackage.aspx",
               "RelativeDocumentMoniker": "COSCPFWA\\TrackCustomerPackage.aspx",
@@ -92,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "TrackCustomerPackage.aspx.cs",
               "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_V3\\COSCPFWA\\COSCPFWA\\TrackCustomerPackage.aspx.cs",
               "RelativeDocumentMoniker": "COSCPFWA\\TrackCustomerPackage.aspx.cs",
@@ -106,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "SubscribeSmartLocker.aspx",
               "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_V3\\COSCPFWA\\COSCPFWA\\SubscribeSmartLocker.aspx",
               "RelativeDocumentMoniker": "COSCPFWA\\SubscribeSmartLocker.aspx",
@@ -126,7 +126,7 @@
               "RelativeDocumentMoniker": "COSCPFWA\\SubscribeSmartLocker.aspx.cs",
               "ToolTip": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_V3\\COSCPFWA\\COSCPFWA\\SubscribeSmartLocker.aspx.cs",
               "RelativeToolTip": "COSCPFWA\\SubscribeSmartLocker.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAQwFwAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-17T05:11:53.894Z",
               "IsPinned": true,
@@ -201,16 +201,8 @@
               "Name": "ST:137:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "EmployeeDashboard.aspx",
               "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_V3\\COSCPFWA\\COSCPFWA\\EmployeeDashboard.aspx",
               "RelativeDocumentMoniker": "COSCPFWA\\EmployeeDashboard.aspx",
@@ -223,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Login.aspx.cs",
               "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_V3\\COSCPFWA\\COSCPFWA\\Login.aspx.cs",
               "RelativeDocumentMoniker": "COSCPFWA\\Login.aspx.cs",

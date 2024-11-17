@@ -70,7 +70,7 @@ namespace COSCPFWA
                                     FROM package as p
                                     JOIN customer as c ON p.CustomerID = c.CustomerID
                                     LEFT JOIN shippingdetails as sd ON sd.PackageID = p.PackageID
-                                    LEFT JOIN package_to_locker as pl ON pl.PackageID = p.PackageID
+                                    LEFT JOIN smartlocker as sl ON sl.PackageID = p.PackageID
                                     WHERE 1=1";
                 } else if(typeReport == "Employee")
                 {
@@ -78,7 +78,7 @@ namespace COSCPFWA
                                     FROM package as p
                                     JOIN customer as c ON p.CustomerID = c.CustomerID
                                     LEFT JOIN shippingdetails as sd ON sd.PackageID = p.PackageID
-                                    LEFT JOIN package_to_locker AS plON pl.PackageID = p.PackageID
+                                    LEFT JOIN smartlocker as sl ON sl.PackageID = p.PackageID
                                     WHERE 1=1";
                 }
 
@@ -162,7 +162,7 @@ namespace COSCPFWA
                     FROM package as P
                     JOIN customer as c ON p.CustomerID = c.CustomerID
                     LEFT JOIN shippingdetails as sd ON sd.PackageID = p.PackageID
-                    LEFT JOIN package_to_locker AS sl ON sl.packageID = p.PackageID
+                    LEFT JOIN smartlocker as sl ON sl.packageID = p.PackageID
                     WHERE 1=1";
                     //JOIN smartlocker as l ON l.PackageID = p.PackageID
 

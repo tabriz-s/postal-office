@@ -11,7 +11,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
             height: 100vh;
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
@@ -32,12 +31,6 @@
             color: #333;
             font-weight: bold;
             margin-bottom: 20px;
-        }
-
-        .login-logo {
-            max-width: 10000px;
-            height: auto;
-            margin-bottom: 50px;
         }
 
         .btn-postal {
@@ -75,12 +68,8 @@
         }
     </style>
 </head>
-<!-- heheheh... he'll never find me -->
-    <img src="Images/PostOfficeLogo.png" alt="Logo" class="login-logo" />
-
 <body>
     <form id="form1" runat="server" class="login-container">
-
         <h2 class="login-header">Post Office Portal Login</h2>
 
         <asp:Label ID="lblMessage" runat="server" CssClass="text-danger"></asp:Label>

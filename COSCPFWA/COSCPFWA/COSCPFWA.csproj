@@ -177,16 +177,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CalculateShippingCost.aspx" />
     <Content Include="Checkpackages.aspx" />
     <Content Include="Content\dashboard.css" />
-    <Content Include="EditDepartment.aspx" />
     <Content Include="EditEmployee.aspx" />
     <Content Include="ShippingHistory.aspx" />
     <Content Include="SubscribeSmartLocker.aspx" />
     <Content Include="SchedulePickup.aspx" />
     <Content Include="TrackCustomerPackage.aspx" />
-    <Content Include="TrackPackage.aspx" />
     <Content Include="TrackShipment.aspx" />
     <Content Include="CreateShipment.aspx" />
     <Content Include="RegisterCustomer.aspx" />
@@ -286,26 +283,12 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalculateShippingCost.aspx.cs">
-      <DependentUpon>CalculateShippingCost.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CalculateShippingCost.aspx.designer.cs">
-      <DependentUpon>CalculateShippingCost.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Checkpackages.aspx.cs">
       <DependentUpon>Checkpackages.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Checkpackages.aspx.designer.cs">
       <DependentUpon>Checkpackages.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EditDepartment.aspx.cs">
-      <DependentUpon>EditDepartment.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EditDepartment.aspx.designer.cs">
-      <DependentUpon>EditDepartment.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditEmployee.aspx.cs">
       <DependentUpon>EditEmployee.aspx</DependentUpon>
@@ -341,13 +324,6 @@
     </Compile>
     <Compile Include="TrackCustomerPackage.aspx.designer.cs">
       <DependentUpon>TrackCustomerPackage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TrackPackage.aspx.cs">
-      <DependentUpon>TrackPackage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TrackPackage.aspx.designer.cs">
-      <DependentUpon>TrackPackage.aspx</DependentUpon>
     </Compile>
     <Compile Include="TrackShipment.aspx.cs">
       <DependentUpon>TrackShipment.aspx</DependentUpon>

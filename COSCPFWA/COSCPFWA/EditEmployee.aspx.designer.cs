@@ -15,48 +15,30 @@ namespace COSCPFWA
     {
 
         /// <summary>
-        /// Label1 control.
+        /// employeeID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.TextBox employeeID;
 
         /// <summary>
-        /// EmployeeIDTextBox control.
+        /// salary control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox EmployeeIDTextBox;
+        protected global::System.Web.UI.WebControls.TextBox salary;
 
         /// <summary>
-        /// CheckEmployeeButton control.
+        /// SaveButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CheckEmployeeButton;
-
-        /// <summary>
-        /// ErrorMessageLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ErrorMessageLabel;
-
-        /// <summary>
-        /// EmployeeGridView control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView EmployeeGridView;
+        protected global::System.Web.UI.WebControls.Button SaveButton;
     }
 }
