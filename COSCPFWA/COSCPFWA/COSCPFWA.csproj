@@ -180,6 +180,7 @@
     <Content Include="CalculateShippingCost.aspx" />
     <Content Include="Checkpackages.aspx" />
     <Content Include="Content\dashboard.css" />
+    <Content Include="EditDepartment.aspx" />
     <Content Include="EditEmployee.aspx" />
     <Content Include="ShippingHistory.aspx" />
     <Content Include="SubscribeSmartLocker.aspx" />
@@ -297,6 +298,13 @@
     </Compile>
     <Compile Include="Checkpackages.aspx.designer.cs">
       <DependentUpon>Checkpackages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditDepartment.aspx.cs">
+      <DependentUpon>EditDepartment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditDepartment.aspx.designer.cs">
+      <DependentUpon>EditDepartment.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditEmployee.aspx.cs">
       <DependentUpon>EditEmployee.aspx</DependentUpon>
