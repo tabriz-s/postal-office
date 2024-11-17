@@ -177,6 +177,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CalculateShippingCost.aspx" />
     <Content Include="Checkpackages.aspx" />
     <Content Include="Content\dashboard.css" />
     <Content Include="EditEmployee.aspx" />
@@ -283,6 +284,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculateShippingCost.aspx.cs">
+      <DependentUpon>CalculateShippingCost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CalculateShippingCost.aspx.designer.cs">
+      <DependentUpon>CalculateShippingCost.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Checkpackages.aspx.cs">
       <DependentUpon>Checkpackages.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

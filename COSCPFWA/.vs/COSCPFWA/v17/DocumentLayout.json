@@ -3,15 +3,47 @@
   "WorkspaceRootPath": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\coscpfwa\\shipping.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\shipping.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\github repositories\\cosc 3380 database systems project\\webappcosc\\coscpfwa\\coscpfwa\\calculateshippingcost.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\calculateshippingcost.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\github repositories\\cosc 3380 database systems project\\webappcosc\\coscpfwa\\coscpfwa\\calculateshippingcost.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\calculateshippingcost.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\coscpfwa\\datareportrequest.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\datareportrequest.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\coscpfwa\\shipping.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\shipping.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\github repositories\\cosc 3380 database systems project\\webappcosc\\coscpfwa\\coscpfwa\\datareportrequest.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\github repositories\\cosc 3380 database systems project\\webappcosc\\coscpfwa\\coscpfwa\\calculateshippingcost.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\calculateshippingcost.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\coscpfwa\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\github repositories\\cosc 3380 database systems project\\webappcosc\\coscpfwa\\coscpfwa\\shipping.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\shipping.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\coscpfwa\\createshipment.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\createshipment.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\coscpfwa\\trackshipment.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\trackshipment.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\coscpfwa\\trackcustomerpackage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\trackcustomerpackage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\coscpfwa\\datareportrequest.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\datareportrequest.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -19,20 +51,8 @@
       "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\editemployee.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\github repositories\\cosc 3380 database systems project\\webappcosc\\coscpfwa\\coscpfwa\\employee.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\coscpfwa\\employee.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\employee.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\coscpfwa\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\github repositories\\cosc 3380 database systems project\\webappcosc\\coscpfwa\\coscpfwa\\datareportrequest.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\datareportrequest.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\github repositories\\cosc 3380 database systems project\\webappcosc\\coscpfwa\\coscpfwa\\createshipment.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\createshipment.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\coscpfwa\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
@@ -67,10 +87,6 @@
       "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\contact.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\coscpfwa\\trackcustomerpackage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\trackcustomerpackage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\coscpfwa\\subscribesmartlocker.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\subscribesmartlocker.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
@@ -89,10 +105,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\coscpfwa\\about.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\about.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\coscpfwa\\trackshipment.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\trackshipment.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\coscpfwa\\employeedashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
@@ -118,7 +130,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 23,
+          "SelectedChildIndex": 21,
           "Children": [
             {
               "$type": "Document",
@@ -136,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "SubscribeSmartLocker.aspx",
               "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\SubscribeSmartLocker.aspx",
               "RelativeDocumentMoniker": "COSCPFWA\\SubscribeSmartLocker.aspx",
@@ -225,80 +237,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Employee.aspx",
-              "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Employee.aspx",
-              "RelativeDocumentMoniker": "COSCPFWA\\Employee.aspx",
-              "ToolTip": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Employee.aspx",
-              "RelativeToolTip": "COSCPFWA\\Employee.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-16T16:50:45.258Z",
+              "DocumentIndex": 0,
+              "Title": "CalculateShippingCost.aspx.cs",
+              "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\CalculateShippingCost.aspx.cs",
+              "RelativeDocumentMoniker": "COSCPFWA\\CalculateShippingCost.aspx.cs",
+              "ToolTip": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\CalculateShippingCost.aspx.cs*",
+              "RelativeToolTip": "COSCPFWA\\CalculateShippingCost.aspx.cs*",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAcwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T03:18:02.436Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Shipping.aspx",
-              "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Shipping.aspx",
-              "RelativeDocumentMoniker": "COSCPFWA\\Shipping.aspx",
-              "ToolTip": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Shipping.aspx",
-              "RelativeToolTip": "COSCPFWA\\Shipping.aspx",
+              "Title": "CalculateShippingCost.aspx",
+              "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\CalculateShippingCost.aspx",
+              "RelativeDocumentMoniker": "COSCPFWA\\CalculateShippingCost.aspx",
+              "ToolTip": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\CalculateShippingCost.aspx*",
+              "RelativeToolTip": "COSCPFWA\\CalculateShippingCost.aspx*",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-16T03:20:28.513Z",
+              "WhenOpened": "2024-11-17T02:17:42.861Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Shipping.aspx.cs",
-              "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Shipping.aspx.cs",
-              "RelativeDocumentMoniker": "COSCPFWA\\Shipping.aspx.cs",
-              "ToolTip": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Shipping.aspx.cs",
-              "RelativeToolTip": "COSCPFWA\\Shipping.aspx.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAkwFMAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T03:29:07.399Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EditEmployee.aspx.cs",
-              "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\EditEmployee.aspx.cs",
-              "RelativeDocumentMoniker": "COSCPFWA\\EditEmployee.aspx.cs",
-              "ToolTip": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\EditEmployee.aspx.cs",
-              "RelativeToolTip": "COSCPFWA\\EditEmployee.aspx.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAiwH0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T03:28:26.483Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DataReportRequest.aspx.cs",
-              "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\DataReportRequest.aspx.cs",
-              "RelativeDocumentMoniker": "COSCPFWA\\DataReportRequest.aspx.cs",
-              "ToolTip": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\DataReportRequest.aspx.cs",
-              "RelativeToolTip": "COSCPFWA\\DataReportRequest.aspx.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAqwHUAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T06:29:50.884Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "EditEmployee.aspx.designer.cs",
-              "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\EditEmployee.aspx.designer.cs",
-              "RelativeDocumentMoniker": "COSCPFWA\\EditEmployee.aspx.designer.cs",
-              "ToolTip": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\EditEmployee.aspx.designer.cs",
-              "RelativeToolTip": "COSCPFWA\\EditEmployee.aspx.designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T05:26:11.05Z"
             },
             {
               "$type": "Document",
@@ -315,7 +276,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
+              "Title": "Shipping.aspx",
+              "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Shipping.aspx",
+              "RelativeDocumentMoniker": "COSCPFWA\\Shipping.aspx",
+              "ToolTip": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Shipping.aspx",
+              "RelativeToolTip": "COSCPFWA\\Shipping.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-16T03:20:28.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "DataReportRequest.aspx",
               "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\DataReportRequest.aspx",
               "RelativeDocumentMoniker": "COSCPFWA\\DataReportRequest.aspx",
@@ -328,7 +302,107 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CalculateShippingCost.aspx.designer.cs",
+              "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\CalculateShippingCost.aspx.designer.cs",
+              "RelativeDocumentMoniker": "COSCPFWA\\CalculateShippingCost.aspx.designer.cs",
+              "ToolTip": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\CalculateShippingCost.aspx.designer.cs*",
+              "RelativeToolTip": "COSCPFWA\\CalculateShippingCost.aspx.designer.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswNcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T04:02:07.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TrackShipment.aspx",
+              "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\TrackShipment.aspx",
+              "RelativeDocumentMoniker": "COSCPFWA\\TrackShipment.aspx",
+              "ToolTip": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\TrackShipment.aspx",
+              "RelativeToolTip": "COSCPFWA\\TrackShipment.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-14T21:02:55.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "TrackCustomerPackage.aspx",
+              "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\TrackCustomerPackage.aspx",
+              "RelativeDocumentMoniker": "COSCPFWA\\TrackCustomerPackage.aspx",
+              "ToolTip": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\TrackCustomerPackage.aspx",
+              "RelativeToolTip": "COSCPFWA\\TrackCustomerPackage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-14T21:29:05.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Shipping.aspx.cs",
+              "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Shipping.aspx.cs",
+              "RelativeDocumentMoniker": "COSCPFWA\\Shipping.aspx.cs",
+              "ToolTip": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Shipping.aspx.cs",
+              "RelativeToolTip": "COSCPFWA\\Shipping.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T03:29:07.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EditEmployee.aspx.designer.cs",
+              "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\EditEmployee.aspx.designer.cs",
+              "RelativeDocumentMoniker": "COSCPFWA\\EditEmployee.aspx.designer.cs",
+              "ToolTip": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\EditEmployee.aspx.designer.cs",
+              "RelativeToolTip": "COSCPFWA\\EditEmployee.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T05:26:11.05Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DataReportRequest.aspx.cs",
+              "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\DataReportRequest.aspx.cs",
+              "RelativeDocumentMoniker": "COSCPFWA\\DataReportRequest.aspx.cs",
+              "ToolTip": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\DataReportRequest.aspx.cs",
+              "RelativeToolTip": "COSCPFWA\\DataReportRequest.aspx.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAqwHUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T06:29:50.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EditEmployee.aspx.cs",
+              "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\EditEmployee.aspx.cs",
+              "RelativeDocumentMoniker": "COSCPFWA\\EditEmployee.aspx.cs",
+              "ToolTip": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\EditEmployee.aspx.cs",
+              "RelativeToolTip": "COSCPFWA\\EditEmployee.aspx.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAiwH0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T03:28:26.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Employee.aspx",
+              "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Employee.aspx",
+              "RelativeDocumentMoniker": "COSCPFWA\\Employee.aspx",
+              "ToolTip": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Employee.aspx",
+              "RelativeToolTip": "COSCPFWA\\Employee.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-16T16:50:45.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "EditEmployee.aspx",
               "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\EditEmployee.aspx",
               "RelativeDocumentMoniker": "COSCPFWA\\EditEmployee.aspx",
@@ -340,7 +414,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "Login.aspx",
               "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Login.aspx",
               "RelativeDocumentMoniker": "COSCPFWA\\Login.aspx",
@@ -352,7 +426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "Checkpackages.aspx.cs",
               "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Checkpackages.aspx.cs",
               "RelativeDocumentMoniker": "COSCPFWA\\Checkpackages.aspx.cs",
@@ -364,7 +438,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "AdminDashboard.aspx",
               "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\AdminDashboard.aspx",
               "RelativeDocumentMoniker": "COSCPFWA\\AdminDashboard.aspx",
@@ -376,7 +450,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "CustomerDashboard.aspx",
               "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\CustomerDashboard.aspx",
               "RelativeDocumentMoniker": "COSCPFWA\\CustomerDashboard.aspx",
@@ -388,7 +462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "Refunds.aspx",
               "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Refunds.aspx",
               "RelativeDocumentMoniker": "COSCPFWA\\Refunds.aspx",
@@ -400,7 +474,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "Contact.aspx",
               "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Contact.aspx",
               "RelativeDocumentMoniker": "COSCPFWA\\Contact.aspx",
@@ -412,19 +486,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "TrackCustomerPackage.aspx",
-              "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\TrackCustomerPackage.aspx",
-              "RelativeDocumentMoniker": "COSCPFWA\\TrackCustomerPackage.aspx",
-              "ToolTip": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\TrackCustomerPackage.aspx",
-              "RelativeToolTip": "COSCPFWA\\TrackCustomerPackage.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-14T21:29:05.474Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "SchedulePickup.aspx.cs",
               "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\SchedulePickup.aspx.cs",
               "RelativeDocumentMoniker": "COSCPFWA\\SchedulePickup.aspx.cs",
@@ -436,7 +498,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "Login.aspx.cs",
               "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Login.aspx.cs",
               "RelativeDocumentMoniker": "COSCPFWA\\Login.aspx.cs",
@@ -448,7 +510,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "Site.Master.cs",
               "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Site.Master.cs",
               "RelativeDocumentMoniker": "COSCPFWA\\Site.Master.cs",
@@ -460,7 +522,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "About.aspx",
               "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\About.aspx",
               "RelativeDocumentMoniker": "COSCPFWA\\About.aspx",
@@ -472,19 +534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "TrackShipment.aspx",
-              "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\TrackShipment.aspx",
-              "RelativeDocumentMoniker": "COSCPFWA\\TrackShipment.aspx",
-              "ToolTip": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\TrackShipment.aspx",
-              "RelativeToolTip": "COSCPFWA\\TrackShipment.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-14T21:02:55.164Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "EmployeeDashboard.aspx",
               "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\EmployeeDashboard.aspx",
               "RelativeDocumentMoniker": "COSCPFWA\\EmployeeDashboard.aspx",
@@ -496,7 +546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "TrackCustomerPackage.aspx.cs",
               "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\TrackCustomerPackage.aspx.cs",
               "RelativeDocumentMoniker": "COSCPFWA\\TrackCustomerPackage.aspx.cs",
@@ -508,7 +558,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "Home.aspx",
               "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Home.aspx",
               "RelativeDocumentMoniker": "COSCPFWA\\Home.aspx",
@@ -520,7 +570,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "ViewTable.aspx.cs",
               "DocumentMoniker": "C:\\GitHub Repositories\\COSC 3380 Database Systems Project\\WebappCOSC\\COSCPFWA\\COSCPFWA\\ViewTable.aspx.cs",
               "RelativeDocumentMoniker": "COSCPFWA\\ViewTable.aspx.cs",

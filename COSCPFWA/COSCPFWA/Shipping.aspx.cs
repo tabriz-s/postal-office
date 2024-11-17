@@ -72,14 +72,16 @@ namespace COSCPFWA
                 {
                     conn.Open();
                     // Insert Package
-                    string query = @"INSERT INTO package(CustomerID, RecievedDate, ServiceType, CurrentStatus, Contents, Weight_lbs, Dimensions) 
-                                     VALUES (1, CURRENT_TIMESTAMP, @ServiceType, 'Recieved', @Contents, @Weight, @Dimensions);";
+                    string query = @"INSERT INTO package(CustomerID, RecievedDate, ServiceType, CurrentStatus, Contents, Weight_lbs, Length_in, Width_in, Height_in) 
+                                     VALUES (1, CURRENT_TIMESTAMP, @ServiceType, 'Recieved', @Contents, @Weight, @Length, @Width, @Height);";
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@ServiceType", ServiceType);
                         cmd.Parameters.AddWithValue("@Contents", Contents);
                         cmd.Parameters.AddWithValue("@Weight", Weight);
-                        cmd.Parameters.AddWithValue("@Dimensions", Dimensions);
+                        cmd.Parameters.AddWithValue("@Length", Length);
+                        cmd.Parameters.AddWithValue("@Width", Width);
+                        cmd.Parameters.AddWithValue("Height", Height);
                         cmd.ExecuteNonQuery();
                     }
 
