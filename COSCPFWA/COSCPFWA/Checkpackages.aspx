@@ -53,15 +53,6 @@
                 </ItemTemplate>
             </asp:TemplateField>
 
-            <asp:TemplateField HeaderText="Weight (lbs)">
-                <EditItemTemplate>
-                    <asp:TextBox ID="WeightTextBox" runat="server" Text='<%# Bind("Weight_lbs") %>'></asp:TextBox>
-                </EditItemTemplate>
-                <ItemTemplate>
-                    <asp:Label ID="LabelWeight" runat="server" Text='<%# Eval("Weight_lbs") %>'></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-
             <asp:CommandField ShowEditButton="true" ShowDeleteButton="true" />
         </Columns>
     </asp:GridView>

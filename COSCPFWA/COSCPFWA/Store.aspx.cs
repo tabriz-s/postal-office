@@ -10,21 +10,28 @@ namespace COSCPFWA
         {
             if (IsPostBack)
             {
-                string itemType = Request.Form["item"];
-                string quantitySold = Request.Form["quantity"];
+                string itemType = Request.Form["selectedItem"];
+                string quantitySoldStr = Request.Form["quantity"];
                 string lastUpdated = Request.Form["submitTime"];
 
-                if (string.IsNullOrEmpty(itemType) || string.IsNullOrEmpty(quantitySold) || string.IsNullOrEmpty(lastUpdated))
+                if (string.IsNullOrEmpty(itemType) || string.IsNullOrEmpty(quantitySoldStr) || string.IsNullOrEmpty(lastUpdated))
                 {
                     // Log or print which fields are empty
-                    Response.Write($"ItemType: {itemType ?? "null"}, QuantitySold: {quantitySold ?? "null"}, LastUpdated: {lastUpdated ?? "null"}");
+                    Response.Write($"ItemType: {itemType ?? "null"}, QuantitySold: {quantitySoldStr ?? "null"}, LastUpdated: {lastUpdated ?? "null"}");
                     Response.Write("One or more fields are empty. Please fill out the form correctly.");
                     return;
                 }
 
+                // Convert the quantitySold to int
+                if (!int.TryParse(quantitySoldStr, out int quantitySold))
+                {
+                    // Handle invalid quantity format
+                    Response.Write("Invalid quantity format.");
+                    return;
+                }
+
                 // Convert the lastUpdated to DateTime
-                DateTime lastUpdatedDateTime;
-                if (!DateTime.TryParse(lastUpdated, out lastUpdatedDateTime))
+                if (!DateTime.TryParse(lastUpdated, out DateTime lastUpdatedDateTime))
                 {
                     // Handle invalid datetime format
                     Response.Write("Invalid submit time format.");
@@ -36,7 +43,7 @@ namespace COSCPFWA
             }
         }
 
-        private void SaveToDatabase(string itemType, string quantitySold, DateTime lastUpdated)
+        private void SaveToDatabase(string itemType, int quantitySold, DateTime lastUpdated)
         {
             string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"]?.ConnectionString;
             using (MySqlConnection conn = new MySqlConnection(connString))

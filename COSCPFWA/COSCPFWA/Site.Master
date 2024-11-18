@@ -57,7 +57,7 @@
                                 <ul class="dropdown-menu" aria-labelledby="shippingDropdown">
                                     <li><a class="dropdown-item" runat="server" href="~/Shipping">Create a Shipment</a></li>
                                     <li><a class="dropdown-item" runat="server" href="~/SchedulePickup">Schedule a Pickup</a></li>
-                                    <li><a class="dropdown-item" runat="server" href="~/Store">Order Supplies</a></li>
+                                    <li><a class="dropdown-item" runat="server" href="~/Store">Supplies</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">

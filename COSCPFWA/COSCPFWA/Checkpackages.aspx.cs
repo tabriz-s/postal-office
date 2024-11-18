@@ -56,18 +56,16 @@ namespace COSCPFWA
             int packageID = Convert.ToInt32(PackagesGridView.DataKeys[e.RowIndex].Value.ToString());
             string employeeID = ((TextBox)PackagesGridView.Rows[e.RowIndex].FindControl("EmployeeIDTextBox")).Text;
             string contents = ((TextBox)PackagesGridView.Rows[e.RowIndex].FindControl("ContentsTextBox")).Text;
-            string weight_lbs = ((TextBox)PackagesGridView.Rows[e.RowIndex].FindControl("Weight_lbsTextBox")).Text;
             string serviceType = ((TextBox)PackagesGridView.Rows[e.RowIndex].FindControl("ServiceTypeTextBox")).Text;
             string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"]?.ConnectionString;
 
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
-                string query = "UPDATE package SET EmployeeID=@EmployeeID, Contents=@Contents, Weight_lbs=@Weight_lbs, ServiceType=@ServiceType WHERE PackageID=@PackageID;";
+                string query = "UPDATE package SET EmployeeID=@EmployeeID, Contents=@Contents, ServiceType=@ServiceType WHERE PackageID=@PackageID;";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@PackageID", packageID);
                 cmd.Parameters.AddWithValue("@EmployeeID", employeeID);
                 cmd.Parameters.AddWithValue("@Contents", contents);
-                cmd.Parameters.AddWithValue("@Weight_lbs", weight_lbs);
                 cmd.Parameters.AddWithValue("@ServiceType", serviceType);
 
                 System.Diagnostics.Debug.WriteLine("Query: " + cmd.CommandText);
