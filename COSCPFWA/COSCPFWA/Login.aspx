@@ -76,7 +76,7 @@
     </style>
 </head>
 <!-- heheheh... he'll never find me -->
-    <img src="Images/PostOfficeLogo.png" alt="Logo" class="login-logo" />
+    <img src="App_Start/PostOfficeLogo.png" alt="Logo" class="login-logo" />
 
 <body>
     <form id="form1" runat="server" class="login-container">

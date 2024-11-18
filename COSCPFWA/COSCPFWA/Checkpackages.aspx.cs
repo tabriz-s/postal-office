@@ -54,8 +54,10 @@ namespace COSCPFWA
         protected void PackagesGridView_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
             int packageID = Convert.ToInt32(PackagesGridView.DataKeys[e.RowIndex].Value.ToString());
-            string employeeID = ((TextBox)PackagesGridView.Rows[e.RowIndex].FindControl("EmployeeIDTextBox")).Text;
-            string contents = ((TextBox)PackagesGridView.Rows[e.RowIndex].FindControl("ContentsTextBox")).Text;
+            string employeeID = ((Label)PackagesGridView.Rows[e.RowIndex].FindControl("LabelEmployeeID")).Text;
+            var contentsTextBox = (TextBox)PackagesGridView.Rows[e.RowIndex].FindControl("ContentsTextBox");
+            if (contentsTextBox == null) throw new Exception("ContentsTextBox not found.");
+            string contents = contentsTextBox.Text;
             string serviceType = ((TextBox)PackagesGridView.Rows[e.RowIndex].FindControl("ServiceTypeTextBox")).Text;
             string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"]?.ConnectionString;
 

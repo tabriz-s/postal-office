@@ -177,6 +177,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Start\PostOfficeLogo.png" />
+    <Content Include="EditInventory.aspx" />
     <Content Include="CustomerRefunds.aspx" />
     <Content Include="Support.aspx" />
     <Content Include="CustomerNotifications.aspx" />
@@ -293,6 +295,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EditInventory.aspx.cs">
+      <DependentUpon>EditInventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditInventory.aspx.designer.cs">
+      <DependentUpon>EditInventory.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CustomerRefunds.aspx.cs">
       <DependentUpon>CustomerRefunds.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

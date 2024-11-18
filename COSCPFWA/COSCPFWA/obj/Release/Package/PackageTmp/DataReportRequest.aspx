@@ -135,7 +135,7 @@
                         <asp:DropDownList ID="packageType" runat="server" CssClass="form-select">
                             <asp:ListItem value="">Select Package Type</asp:ListItem>
                             <asp:ListItem value="Delivery">Delivery</asp:ListItem>
-                            <asp:ListItem value="SmartLocker">SmartLocker</asp:ListItem>
+                            <asp:ListItem value="Pickup">Pickup</asp:ListItem>
                         </asp:DropDownList>
                     </div>
                 

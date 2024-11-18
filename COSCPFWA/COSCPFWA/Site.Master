@@ -56,7 +56,6 @@
                                 <a class="nav-link dropdown-toggle" href="#" id="shippingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shipping</a>
                                 <ul class="dropdown-menu" aria-labelledby="shippingDropdown">
                                     <li><a class="dropdown-item" runat="server" href="~/Shipping">Create a Shipment</a></li>
-                                    <li><a class="dropdown-item" runat="server" href="~/SchedulePickup">Schedule a Pickup</a></li>
                                     <li><a class="dropdown-item" runat="server" href="~/Store">Supplies</a></li>
                                 </ul>
                             </li>
@@ -70,6 +69,7 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
                                 <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                    <li><a class="dropdown-item" runat="server" href="~/SchedulePickup">Schedule a Pickup</a></li>
                                     <li><a class="dropdown-item" runat="server" href="~/SubscribeSmartLocker">Subscribe to Smart Locker</a></li>
                                     <li><a class="dropdown-item" runat="server" href="~/CalculateShippingCost">Calculate Shipping Cost</a></li>
                                 </ul>
@@ -85,6 +85,7 @@
                                     <li><a class="dropdown-item" runat="server" href="~/TrackPackage">Track Shipment</a></li>
                                 </ul>
                             </li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/EditInventory">Update Inventory</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/CheckPackages">Check Packages</a></li>
                         </asp:PlaceHolder>
 

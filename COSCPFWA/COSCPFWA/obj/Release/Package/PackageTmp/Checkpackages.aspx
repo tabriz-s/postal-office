@@ -18,9 +18,6 @@
             <asp:BoundField DataField="PackageID" HeaderText="PackageID" ReadOnly="true" />
             
             <asp:TemplateField HeaderText="EmployeeID">
-                <EditItemTemplate>
-                    <asp:TextBox ID="EmployeeIDTextBox" runat="server" Text='<%# Bind("EmployeeID") %>'></asp:TextBox>
-                </EditItemTemplate>
                 <ItemTemplate>
                     <asp:Label ID="LabelEmployeeID" runat="server" Text='<%# Eval("EmployeeID") %>'></asp:Label>
                 </ItemTemplate>
