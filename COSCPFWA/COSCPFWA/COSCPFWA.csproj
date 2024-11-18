@@ -178,6 +178,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ChangePassword.aspx" />
+    <Content Include="RegisterEmployee.aspx" />
     <Content Include="UpdateProfile.aspx" />
     <Content Include="CalculateShippingCost.aspx" />
     <Content Include="Checkpackages.aspx" />
@@ -294,6 +295,13 @@
     </Compile>
     <Compile Include="ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterEmployee.aspx.cs">
+      <DependentUpon>RegisterEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegisterEmployee.aspx.designer.cs">
+      <DependentUpon>RegisterEmployee.aspx</DependentUpon>
     </Compile>
     <Compile Include="UpdateProfile.aspx.cs">
       <DependentUpon>UpdateProfile.aspx</DependentUpon>

@@ -87,16 +87,16 @@
                                 </ul>
                             </li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Checkpackages">Check Packages</a></li>
-                            <li class="nav-item"><a class="nav-link" runat="server" href="~/ViewTable">View Tables</a></li>
-                            <li class="nav-item"><a class="nav-link" runat="server" href="~/Refunds">Refunds Activity</a></li>
                         </asp:PlaceHolder>
 
                         <!-- Admin Navigation -->
                         <asp:PlaceHolder ID="phAdminNav" runat="server">
-                            <li class="nav-item"><a class="nav-link" runat="server" href="~/Employee">Employee</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/RegisterEmployee">RegisterEmployee</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/TrackPackage">Track Packages</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/DataReportRequest">Reports</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/EditEmployee">Check Employees</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/ViewTable">View Tables</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/Refunds">Refunds Activity</a></li>
                         </asp:PlaceHolder>
 
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/About">About</a></li>
