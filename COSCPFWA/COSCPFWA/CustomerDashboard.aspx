@@ -24,7 +24,7 @@
                             <a href="Shipping.aspx" class="list-group-item list-group-item-action" style="color: #0d47a1;">
                                 <i class="fas fa-shipping-fast me-2"></i> Create a Shipment
                             </a>
-                            <a href="TrackCustomerPackage.aspx" class="list-group-item list-group-item-action" style="color: #0d47a1;">
+                            <a href="TrackPackage.aspx" class="list-group-item list-group-item-action" style="color: #0d47a1;">
                                 <i class="fas fa-map-marker-alt me-2"></i> Track a Shipment
                             </a>
                         </div>
