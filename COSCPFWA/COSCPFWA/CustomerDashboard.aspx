@@ -22,10 +22,13 @@
                         <p class="card-text">Create, manage, and track your shipments with ease.</p>
                         <div class="list-group list-group-flush">
                             <a href="Shipping.aspx" class="list-group-item list-group-item-action" style="color: #0d47a1;">
-                                <i class="fas fa-shipping-fast me-2"></i> Create a Shipment
+                                <i class="fas fa-shipping-fast me-2"></i>Create a Shipment
                             </a>
                             <a href="TrackPackage.aspx" class="list-group-item list-group-item-action" style="color: #0d47a1;">
-                                <i class="fas fa-map-marker-alt me-2"></i> Track a Shipment
+                                <i class="fas fa-map-marker-alt me-2"></i>Track a Shipment
+                            </a>
+                            <a href="CalculateShippingCost.aspx" class="list-group-item list-group-item-action" style="color: #0d47a1;">
+                                <i class="fas fa-map-marker-alt me-2"></i> Calculate Shipping Cost
                             </a>
                         </div>
                     </div>
@@ -40,10 +43,13 @@
                         <p class="card-text">Enjoy more features tailored to your needs.</p>
                         <div class="list-group list-group-flush">
                             <a href="SchedulePickup.aspx" class="list-group-item list-group-item-action" style="color: #0d47a1;">
-                                <i class="fas fa-calendar-check me-2"></i> Schedule a Pickup
+                                <i class="fas fa-calendar-check me-2"></i>Schedule a Pickup
                             </a>
                             <a href="SubscribeSmartLocker.aspx" class="list-group-item list-group-item-action" style="color: #0d47a1;">
-                                <i class="fas fa-lock me-2"></i> Subscribe to SmartLocker
+                                <i class="fas fa-lock me-2"></i>Subscribe to SmartLocker
+                            </a>
+                            <a href="CustomerRefunds.aspx" class="list-group-item list-group-item-action" style="color: #0d47a1;">
+                                <i class="fas fa-lock me-2"></i>File a Refund
                             </a>
                         </div>
                     </div>
@@ -58,7 +64,7 @@
                         <p class="card-text">See your latest shipments, pickups, and locker usage.</p>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">
-                                <i class="fas fa-box me-2"></i> Package delivered - Locker #3
+                                <i class="fas fa-box me-2"></i> Package - Locker #
                             </li>
                             <li class="list-group-item">
                                 <i class="fas fa-calendar-alt me-2"></i> Pickup scheduled for Nov 15, 2023
@@ -84,8 +90,8 @@
                             <a href="ChangePassword.aspx" class="list-group-item list-group-item-action" style="color: #0d47a1;">
                                 <i class="fas fa-key me-2"></i> Change Password
                             </a>
-                            <a href="NotificationSettings.aspx" class="list-group-item list-group-item-action" style="color: #0d47a1;">
-                                <i class="fas fa-bell me-2"></i> Notification Settings
+                            <a href="CustomerNotifications.aspx" class="list-group-item list-group-item-action" style="color: #0d47a1;">
+                                <i class="fas fa-bell me-2"></i> Notifications
                             </a>
                         </div>
                     </div>

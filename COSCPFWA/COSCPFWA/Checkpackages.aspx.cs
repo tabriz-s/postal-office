@@ -35,7 +35,7 @@ namespace COSCPFWA
             string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"]?.ConnectionString;
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
-                string query = "SELECT * FROM package WHERE EmployeeID = @EmployeeID";
+                string query = "SELECT PackageID, EmployeeID, CurrentStatus, Contents, ServiceType, CreatedAt, DATE_ADD(CreatedAt, INTERVAL FLOOR(1 + (RAND() * 15)) DAY) AS ExpectedDeliveryDate FROM package WHERE EmployeeID = @EmployeeID";
                 MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
                 da.SelectCommand.Parameters.AddWithValue("@EmployeeID", employeeId);
                 DataTable dt = new DataTable();

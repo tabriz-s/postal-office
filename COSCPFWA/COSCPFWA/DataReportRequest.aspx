@@ -126,7 +126,7 @@
 
                 
                     <div class="form-group">
-                        <label for="additionalCustomer">Additional Customer (Last Name Only)</label>
+                        <label for="additionalCustomer">Additional Customer (Full Name[0], Full Name[1])</label>
                         <asp:TextBox ID="additionalCustomer" runat="server" CssClass="form-control" placeholder="Optional"></asp:TextBox>
                     </div>
 
@@ -253,14 +253,14 @@
                         </asp:DropDownList>
                     </div>
 
-                    <!-- Y-axis -->
+                    <!-- Y-axis
                     <div class="form-group">
                         <label for="yAxis">Select Y-axis</label>
                         <asp:DropDownList ID="yAxis" runat="server" CssClass="form-select">
                             <asp:ListItem Text="# of Customers" Value="CustomerCount"></asp:ListItem>
                             <asp:ListItem Text="# of Packages" Value="PackageCount"></asp:ListItem>
                         </asp:DropDownList>
-                    </div>
+                    </div> -->
 
                     <!-- Delete later and fix changes to C# if deleted -->
                     <label for="orderByDropdown">Order By:</label> <!-- Updated label to "Order By" -->

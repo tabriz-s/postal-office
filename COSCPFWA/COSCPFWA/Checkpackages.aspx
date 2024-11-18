@@ -53,6 +53,23 @@
                 </ItemTemplate>
             </asp:TemplateField>
 
+            
+            <asp:TemplateField HeaderText="Recieved Date">
+                <ItemTemplate>
+                    <asp:Label ID="CreatedAtType" runat="server" Text='<%# Eval("CreatedAt", "{0:yyyy-MM-dd HH:mm:ss}") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+
+
+                  
+            <asp:TemplateField HeaderText="Expected Delivery Date">
+                <ItemTemplate>
+                    <asp:Label ID="DueDateType" runat="server" Text='<%# Eval("ExpectedDeliveryDate", "{0:yyyy-MM-dd}") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+
+
+            
             <asp:CommandField ShowEditButton="true" ShowDeleteButton="true" />
         </Columns>
     </asp:GridView>

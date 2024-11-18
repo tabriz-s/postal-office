@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DataBaseConnectionString-Web.config Connection String" description="DataBaseConnectionString Connection String used in web.config by the application to access the database." defaultValue="Server=uhbaseddatabasers.mysql.database.azure.com;Port=3306;Database=test_schema;Uid=UH4;Pwd=COSC3380!;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\tsadr\\source\\repos\\WebappCOSC_CURRENT\\WebappCOSC\\COSCPFWA\\COSCPFWA\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DataBaseConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

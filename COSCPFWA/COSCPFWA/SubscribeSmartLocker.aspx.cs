@@ -44,10 +44,10 @@ namespace COSCPFWA
 
         protected void btnSubscribe_Click(object sender, EventArgs e)
         {
-            // get selected locker location from the dropdown
-            if (!int.TryParse(ddlLockerLocation.SelectedValue, out int locationId))
+            // Get selected locker location from the dropdown
+            if (string.IsNullOrEmpty(ddlLockerLocation.SelectedValue) || !int.TryParse(ddlLockerLocation.SelectedValue, out int locationId))
             {
-                DisplayMessage("Please select a locker location.", "alert-danger");
+                DisplayMessage("Please select a valid locker location.", "alert-danger");
                 return;
             }
 
@@ -82,32 +82,32 @@ namespace COSCPFWA
                 {
                     try
                     {
-                        int lockerId = -1;
+                        int lockerId;
 
-                        // stored procedure to get the first available locker
+                        // Call stored procedure to get the first available locker
                         using (MySqlCommand cmd = new MySqlCommand("GetAvailableLocker", conn, transaction))
                         {
                             cmd.CommandType = CommandType.StoredProcedure;
-
                             cmd.Parameters.AddWithValue("@SelectedLocationID", locationId);
-                            cmd.Parameters.Add(new MySqlParameter("@AvailableLockerID", MySqlDbType.Int32)
+
+                            // Define output parameter
+                            MySqlParameter outputParam = new MySqlParameter("@AvailableLockerID", MySqlDbType.Int32)
                             {
                                 Direction = ParameterDirection.Output
-                            });
+                            };
+                            cmd.Parameters.Add(outputParam);
 
                             cmd.ExecuteNonQuery();
 
-                            // retrieve the locker ID from the output parameter
-                            object lockerIdObj = cmd.Parameters["@AvailableLockerID"].Value;
-                            if (lockerIdObj == DBNull.Value || lockerIdObj == null)
+                            // Retrieve the locker ID from the output parameter
+                            lockerId = Convert.IsDBNull(outputParam.Value) ? -1 : Convert.ToInt32(outputParam.Value);
+                            if (lockerId == -1)
                             {
                                 return false; // No available lockers
                             }
-
-                            lockerId = Convert.ToInt32(lockerIdObj);
                         }
 
-                        // create a new assignment in the lockerassignment table
+                        // Create a new assignment in the lockerassignment table
                         string insertAssignmentQuery = @"
                             INSERT INTO lockerassignment (LockerID, CustomerID, AssignedAt) 
                             VALUES (@LockerID, @CustomerID, NOW())";
@@ -119,15 +119,15 @@ namespace COSCPFWA
                             cmd.ExecuteNonQuery();
                         }
 
-                        // commit the transaction
+                        // Commit the transaction
                         transaction.Commit();
                         success = true;
                     }
-                    catch
+                    catch (Exception ex)
                     {
                         // Rollback the transaction on error
                         transaction.Rollback();
-                        throw;
+                        DisplayMessage($"Error: {ex.Message}", "alert-danger");
                     }
                 }
             }

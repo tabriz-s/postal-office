@@ -1,56 +1,19 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Configuration;
 using System.Data;
-using System.Linq;
-using System.Web;
+using MySql.Data.MySqlClient;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace COSCPFWA
 {
-    public partial class Refunds : System.Web.UI.Page
+    public partial class Refunds : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                LoadRefunds("All");  // loads all refunds by default
-                CalculateTotalRefund();
-            }
-        }
-
-        protected void LoadRefunds(string statusFilter)
-        {
-            string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"].ConnectionString;
-            using (MySqlConnection conn = new MySqlConnection(connString))
-            {
-                conn.Open();
-                string query = "SELECT r.RefundID, CONCAT(c.FirstName, ' ', c.LastName) AS CustomerName, " +
-                               "r.PackageID, r.RefundAmount, r.RefundReason, r.RefundDate, r.RefundStatus " +
-                               "FROM refunds r JOIN customer c ON r.CustomerID = c.CustomerID";
-
-                if (statusFilter != "All")
-                {
-                    query += " WHERE r.RefundStatus = @StatusFilter";
-                }
-
-                using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                {
-                    if (statusFilter != "All")
-                    {
-                        cmd.Parameters.AddWithValue("@StatusFilter", statusFilter);
-                    }
-
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        DataTable dt = new DataTable();
-                        dt.Load(reader);
-                        refundRepeater.DataSource = dt;
-                        refundRepeater.DataBind();
-                    }
-                }
+                LoadRefunds("All");
             }
         }
 
@@ -58,62 +21,79 @@ namespace COSCPFWA
         {
             string selectedStatus = ddlStatusFilter.SelectedValue;
             LoadRefunds(selectedStatus);
-            CalculateTotalRefund();
         }
 
-        protected void btnApprove_Click(object sender, EventArgs e)
-        {
-            Button btnApprove = (Button)sender;
-            string refundID = btnApprove.CommandArgument;
-
-            string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"].ConnectionString;
-            using (MySqlConnection conn = new MySqlConnection(connString))
-            {
-                try
-                {
-                    conn.Open();
-                    string query = "UPDATE refunds SET RefundStatus = 'Approved' WHERE RefundID = @RefundID";
-                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@RefundID", refundID);
-                        cmd.ExecuteNonQuery();
-                    }
-
-                    LoadRefunds(ddlStatusFilter.SelectedValue); // reload refunds to reflect changes
-                    CalculateTotalRefund(); // recalculate total refund amount
-                }
-                catch (Exception ex)
-                {
-                    Response.Write("<script>alert('Error approving refund: " + ex.Message + "');</script>");
-                }
-            }
-        }
-
-        protected void CalculateTotalRefund()
+        private void LoadRefunds(string status)
         {
             string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"].ConnectionString;
+
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
                 conn.Open();
-                string query = "SELECT SUM(RefundAmount) FROM refunds";
+                string query = @"SELECT r.RefundID, CONCAT(c.FirstName, ' ', c.LastName) AS CustomerName, r.PackageID, 
+                                 r.RefundAmount, r.RefundReason, r.RefundDate, r.RefundStatus
+                                 FROM refunds r
+                                 JOIN customer c ON r.CustomerID = c.CustomerID";
 
-                if (ddlStatusFilter.SelectedValue != "All")
+                if (status != "All")
                 {
-                    query += " WHERE RefundStatus = @StatusFilter";
+                    query += " WHERE r.RefundStatus = @Status";
                 }
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
-                    if (ddlStatusFilter.SelectedValue != "All")
+                    if (status != "All")
                     {
-                        cmd.Parameters.AddWithValue("@StatusFilter", ddlStatusFilter.SelectedValue);
+                        cmd.Parameters.AddWithValue("@Status", status);
                     }
 
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        refundRepeater.DataSource = reader;
+                        refundRepeater.DataBind();
+                    }
+                }
+
+                // Calculate total refund amount
+                query = "SELECT SUM(RefundAmount) FROM refunds WHERE RefundStatus = 'Approved'";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
                     object result = cmd.ExecuteScalar();
-                    decimal totalRefund = result != DBNull.Value ? Convert.ToDecimal(result) : 0;
-                    lblRefundSum.Text = $"{totalRefund:C}";
+                    lblRefundSum.Text = result != DBNull.Value ? $"{Convert.ToDecimal(result):C}" : "$0.00";
                 }
             }
+        }
+
+        protected void btnApprove_Click(object sender, EventArgs e)
+        {
+            int refundId = Convert.ToInt32((sender as Button).CommandArgument);
+            UpdateRefundStatus(refundId, "Approved");
+        }
+
+        protected void btnDeny_Click(object sender, EventArgs e)
+        {
+            int refundId = Convert.ToInt32((sender as Button).CommandArgument);
+            UpdateRefundStatus(refundId, "Denied");
+        }
+
+        private void UpdateRefundStatus(int refundId, string status)
+        {
+            string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"].ConnectionString;
+
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                conn.Open();
+                string query = "UPDATE refunds SET RefundStatus = @Status, LastUpdated = NOW() WHERE RefundID = @RefundID";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Status", status);
+                    cmd.Parameters.AddWithValue("@RefundID", refundId);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+            LoadRefunds(ddlStatusFilter.SelectedValue);
         }
     }
 }

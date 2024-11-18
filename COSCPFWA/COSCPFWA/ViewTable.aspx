@@ -14,11 +14,11 @@
                 <asp:ListItem Text="Notifications" Value="notifications" />
                 <asp:ListItem Text="Tracking History" Value="trackinghistory" />
                 <asp:ListItem Text="Incident" Value="incident" />
-                <asp:ListItem Text="Money Orders" Value="money_orders" />
                 <asp:ListItem Text="Shipping Details" Value="shippingdetails" />
                 <asp:ListItem Text="Inventory" Value="inventory" />
                 <asp:ListItem Text="Store" Value="store" />
                 <asp:ListItem Text="Government Services" Value="government_services" />
+                
             </asp:DropDownList>
         </div>
 

@@ -177,11 +177,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CustomerRefunds.aspx" />
+    <Content Include="Support.aspx" />
+    <Content Include="CustomerNotifications.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="RegisterEmployee.aspx" />
     <Content Include="UpdateProfile.aspx" />
     <Content Include="CalculateShippingCost.aspx" />
-    <Content Include="Checkpackages.aspx" />
+    <Content Include="CheckPackages.aspx" />
     <Content Include="Content\dashboard.css" />
     <Content Include="EditDepartment.aspx" />
     <Content Include="EditEmployee.aspx" />
@@ -216,7 +219,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="DataReportRequest.aspx" />
-    <Content Include="Home.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="Employee.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -252,6 +255,7 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Store.aspx" />
+    <None Include="Properties\PublishProfiles\PostalOfficePortal - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -289,6 +293,27 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerRefunds.aspx.cs">
+      <DependentUpon>CustomerRefunds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerRefunds.aspx.designer.cs">
+      <DependentUpon>CustomerRefunds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Support.aspx.cs">
+      <DependentUpon>Support.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Support.aspx.designer.cs">
+      <DependentUpon>Support.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerNotifications.aspx.cs">
+      <DependentUpon>CustomerNotifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerNotifications.aspx.designer.cs">
+      <DependentUpon>CustomerNotifications.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -317,12 +342,12 @@
     <Compile Include="CalculateShippingCost.aspx.designer.cs">
       <DependentUpon>CalculateShippingCost.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Checkpackages.aspx.cs">
-      <DependentUpon>Checkpackages.aspx</DependentUpon>
+    <Compile Include="CheckPackages.aspx.cs">
+      <DependentUpon>CheckPackages.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Checkpackages.aspx.designer.cs">
-      <DependentUpon>Checkpackages.aspx</DependentUpon>
+    <Compile Include="CheckPackages.aspx.designer.cs">
+      <DependentUpon>CheckPackages.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditDepartment.aspx.cs">
       <DependentUpon>EditDepartment.aspx</DependentUpon>
@@ -438,12 +463,12 @@
     <Compile Include="DataReportRequest.aspx.designer.cs">
       <DependentUpon>DataReportRequest.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Home.aspx.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Home.aspx.designer.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Employee.aspx.cs">
       <DependentUpon>Employee.aspx</DependentUpon>

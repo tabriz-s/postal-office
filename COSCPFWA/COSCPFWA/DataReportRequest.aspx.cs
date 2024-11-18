@@ -166,7 +166,7 @@ namespace COSCPFWA
 
             //Employee Variables
             string EmployeeName = employeeName.Text;
-            string Department = departmentInput.SelectedValue;
+            int? Department = string.IsNullOrEmpty(departmentInput.SelectedValue) ? (int?)null : int.Parse(departmentInput.SelectedValue); //From stack overflow
             string AdditionalEmployees = additionalEmployees.Text.Trim();
 
             //Financial Variables
@@ -206,7 +206,7 @@ namespace COSCPFWA
                                             JOIN customer AS c ON p.CustomerID = c.CustomerID
                                             WHERE 1=1";
                         }
-                        else if (X_Axis== "Name")
+                        else if (X_Axis == "Name")
                         {
                             chartQuery = @"SELECT CONCAT(c.FirstName, ' ' , c.LastName) AS Name , COUNT(p.PackageID) AS NumPackages
                                             FROM package AS p
@@ -227,8 +227,8 @@ namespace COSCPFWA
 
                             if (!string.IsNullOrEmpty(firstName))
                             {
-                                reportQuery += " AND c.FirstName = @CustomerFirstName";
-                                chartQuery += " AND c.FirstName = @CustomerFirstName";
+                                reportQuery += " AND (c.FirstName = @CustomerFirstName";
+                                chartQuery += " AND (c.FirstName = @CustomerFirstName";
 
 
                                 gridViewCmd.Parameters.AddWithValue("@CustomerFirstName", firstName);
@@ -236,8 +236,8 @@ namespace COSCPFWA
                             }
                             if (!string.IsNullOrEmpty(lastName))
                             {
-                                reportQuery += " AND c.LastName = @CustomerLastName";
-                                chartQuery += " AND c.LastName = @CustomerLastName";
+                                reportQuery += " AND c.LastName = @CustomerLastName)";
+                                chartQuery += " AND c.LastName = @CustomerLastName)";
 
 
                                 gridViewCmd.Parameters.AddWithValue("@CustomerLastName", lastName);
@@ -249,19 +249,19 @@ namespace COSCPFWA
                             if (!string.IsNullOrEmpty(additionalEntries))
                             {
                                 string[] customerNames = additionalEntries.Split(',');
-                                for (int i = 0; i  < customerNames.Length; i++)
+                                for (int i = 0; i < customerNames.Length; i++)
                                 {
                                     string[] nameParts = customerNames[i].Trim().Split(' ');
                                     if (nameParts.Length == 2)
                                     {
                                         string firstParam = $"@AdditionalCustomerFirst{i}";
                                         string lastParam = $"@AdditionalCustomerLast{i}";
-                                        //pplQuery.Add($"(c.FirstName = @{firstParam} AND c.LastName = @{lastParam})");
-                                        pplQuery.Add($"(c.FirstName = {firstParam} AND c.LastName = {lastParam})");
-                                        gridViewCmd.Parameters.AddWithValue(firstParam, nameParts[0]);
-                                        gridViewCmd.Parameters.AddWithValue(lastParam, nameParts[1]);
-                                        chartCmd.Parameters.AddWithValue(firstParam, nameParts[0]);
-                                        chartCmd.Parameters.AddWithValue(lastParam, nameParts[1]);
+                                        pplQuery.Add($"c.FirstName = {firstParam} AND c.LastName = {lastParam}");
+                                        //pplQuery.Add($"(c.FirstName = {firstParam} AND c.LastName = {lastParam})");
+                                        gridViewCmd.Parameters.AddWithValue($"@{firstParam}", nameParts[0]);
+                                        gridViewCmd.Parameters.AddWithValue($"@{lastParam}", nameParts[1]);
+                                        chartCmd.Parameters.AddWithValue($"@{firstParam}", nameParts[0]);
+                                        chartCmd.Parameters.AddWithValue($"@{lastParam}", nameParts[1]);
                                     }
                                 }
                             }
@@ -269,8 +269,8 @@ namespace COSCPFWA
                             if (pplQuery.Count > 0)
                             {
                                 string combinedNames = string.Join(" OR ", pplQuery);
-                                reportQuery += $"AND({combinedNames})";
-                                chartQuery += $"AND({combinedNames})";
+                                reportQuery += $" OR ({combinedNames})";
+                                chartQuery += $" OR ({combinedNames})";
                                 System.Diagnostics.Debug.WriteLine($"Combined Names: {combinedNames}");
 
                             }
@@ -289,7 +289,8 @@ namespace COSCPFWA
                             }
 
 
-                            if (!string.IsNullOrEmpty(dateFrom) &&   !string.IsNullOrEmpty(dateTo))
+
+                            if (!string.IsNullOrEmpty(dateFrom) && !string.IsNullOrEmpty(dateTo))
                             {
                                 reportQuery += " AND p.CreatedAt >= @FromDate AND p.CreatedAt <= @ToDate";
                                 chartQuery += " AND p.CreatedAt >= @FromDate AND p.CreatedAt <= @ToDate";
@@ -381,12 +382,13 @@ namespace COSCPFWA
                         conn.Open();
 
 
-                        reportQuery = @"SELECT e.Name, e.EmployeeID , p.PackageID, p.ServiceType, p.CreatedAt
+                        reportQuery = @"SELECT e.Name, e.EmployeeID, e.DepartmentNum , p.PackageID, p.ServiceType, p.CreatedAt
                                                 FROM package AS p
                                                 JOIN employee AS e ON p.EmployeeID = e.EmployeeID
                                                 LEFT JOIN customer AS c ON p.CustomerID = c.CustomerID
                                                 LEFT JOIN shippingdetails AS sd ON sd.PackageID = p.PackageID
                                                 LEFT JOIN package_to_locker AS pl ON pl.PackageID = p.PackageID
+                                                LEFT JOIN departments AS d ON d.DepartmentNum = e.DepartmentNum
                                                 LEFT JOIN pickupdetails AS pd ON pd.PackageID = p.PackageID
                                                 WHERE 1=1";
 
@@ -400,7 +402,7 @@ namespace COSCPFWA
 
 
                         }
-                        else if (X_Axis== "Name")
+                        else if (X_Axis == "Name")
                         {
                             chartQuery = @"SELECT e.Name, e.DepartmentNum, COUNT(p.PackageID) AS NumPackages
                                             FROM package AS p
@@ -412,7 +414,7 @@ namespace COSCPFWA
                         using (MySqlCommand gridViewCmd = new MySqlCommand())
                         using (MySqlCommand chartCmd = new MySqlCommand())
                         {
-                            gridViewCmd.Connection =  conn;
+                            gridViewCmd.Connection = conn;
                             chartCmd.Connection = conn;
 
                             List<string> employeeList = new List<string>();
@@ -448,13 +450,13 @@ namespace COSCPFWA
                             if (employeeList.Count > 0)
                             {
                                 string combinedConditions = string.Join(" OR ", employeeList);
-                                reportQuery += $" AND ({combinedConditions})";
-                                chartQuery += $" AND ({combinedConditions})";
+                                reportQuery += $" OR ({combinedConditions})";
+                                chartQuery += $" OR ({combinedConditions})";
                             }
 
                             if (!string.IsNullOrEmpty(type))
                             {
-                                reportQuery +=  " AND p.ServiceType = @PackageType";
+                                reportQuery += " AND p.ServiceType = @PackageType";
                                 chartQuery += " AND p.ServiceType = @PackageType";
 
                                 gridViewCmd.Parameters.AddWithValue("@PackageType", type);
@@ -463,8 +465,17 @@ namespace COSCPFWA
 
                             }
 
+                            if (Department.HasValue)
+                            {
+                                reportQuery += " AND e.DepartmentNum = @DepartmentNum";
+                                chartQuery += " AND e.DepartmentNum = @DepartmentNum";
 
-                            if (!string.IsNullOrEmpty(dateFrom) &&   !string.IsNullOrEmpty(dateTo))
+                                gridViewCmd.Parameters.AddWithValue("@DepartmentNum", Department);
+                                chartCmd.Parameters.AddWithValue("@DepartmentNum", Department);
+                            }
+
+
+                            if (!string.IsNullOrEmpty(dateFrom) && !string.IsNullOrEmpty(dateTo))
                             {
                                 reportQuery += " AND p.CreatedAt >= @FromDate AND p.CreatedAt <= @ToDate";
                                 chartQuery += " AND p.CreatedAt >= @FromDate AND p.CreatedAt <= @ToDate";
@@ -480,7 +491,7 @@ namespace COSCPFWA
                             }
 
                             gridViewCmd.CommandText = reportQuery;
-                            System.Diagnostics.Debug.WriteLine("Final Report Query: "  + reportQuery);
+                            System.Diagnostics.Debug.WriteLine("Final Report Query: " + reportQuery);
 
 
 
@@ -552,7 +563,7 @@ namespace COSCPFWA
 
 
 
-                        if (QuantitativeValue == "Revenue" && OrganizedBy=="Service")
+                        if (QuantitativeValue == "Revenue" && OrganizedBy == "Service")
                         {
                             chartQuery = @"SELECT p.ServiceType, SUM(p.Base_Price) AS MoneyMade
                                             FROM package AS p

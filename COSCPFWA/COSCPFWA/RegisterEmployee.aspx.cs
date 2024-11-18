@@ -16,18 +16,18 @@ namespace COSCPFWA
         protected void btnRegister_Click(object sender, EventArgs e)
         {
             // Get user inputs
-            string name = txtName.Text.Trim();
-            string departmentNum = txtDepartmentNum.Text.Trim();
-            string phoneNumber = txtPhoneNumber.Text.Trim();
-            string email = txtEmail.Text.Trim();
-            string address = txtAddress.Text.Trim();
-            string role = txtRole.Text.Trim();
-            string salary = txtSalary.Text.Trim();
-            string managerID = txtManagerID.Text.Trim();
+            string name = txtName.Text;
+            string departmentNum = txtDepartmentNum.Text;
+            string phoneNumber = txtPhoneNumber.Text;
+            string email = txtEmail.Text;
+            string address = txtAddress.Text;
+            string role = txtRole.Text;
+            string salary = txtSalary.Text;
+            string managerID = txtManagerID.Text;
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
             string confirmPassword = txtConfirmPassword.Text.Trim();
-            string employeeId = txtEmployeeID.Text.Trim();
+            string employeeId = txtEmployeeID.Text;
 
             if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(departmentNum) || string.IsNullOrEmpty(phoneNumber) ||
                 string.IsNullOrEmpty(email) || string.IsNullOrEmpty(address) || string.IsNullOrEmpty(role) ||
@@ -52,12 +52,13 @@ namespace COSCPFWA
                     using (var transaction = conn.BeginTransaction())
                     {
                         string insertUserQuery = "INSERT INTO user_logins (Username, Password, Email) VALUES (@Username, @Password, @Email)";
+                        long newUserId;
                         MySqlCommand userCmd = new MySqlCommand(insertUserQuery, conn, transaction);
                         userCmd.Parameters.AddWithValue("@Username", username);
                         userCmd.Parameters.AddWithValue("@Password", password);
                         userCmd.Parameters.AddWithValue("@Email", email);
                         userCmd.ExecuteNonQuery();
-                        long newUserId = userCmd.LastInsertedId;
+                        newUserId = userCmd.LastInsertedId;
 
                         string insertRoleQuery = "INSERT INTO user_roles (UserID, RoleID) VALUES (@UserID, 2)"; // RoleID 2 for "Employee"
                         MySqlCommand roleCmd = new MySqlCommand(insertRoleQuery, conn, transaction);
@@ -66,7 +67,7 @@ namespace COSCPFWA
 
                         string insertEmployeeQuery = @"
                             INSERT INTO employee (EmployeeID, DepartmentNum, Name, PhoneNumber, Email, Address, Role, Salary, ManagerID, UserID) 
-                            VALUES (@DepartmentNum, @Name, @PhoneNumber, @Email, @Address, @Role, @Salary, @ManagerID, @UserID)";
+                            VALUES (@EmployeeID, @DepartmentNum, @Name, @PhoneNumber, @Email, @Address, @Role, @Salary, @ManagerID, @UserID)";
                         MySqlCommand employeeCmd = new MySqlCommand(insertEmployeeQuery, conn, transaction);
                         employeeCmd.Parameters.AddWithValue("@EmployeeID", employeeId);
                         employeeCmd.Parameters.AddWithValue("@DepartmentNum", departmentNum);

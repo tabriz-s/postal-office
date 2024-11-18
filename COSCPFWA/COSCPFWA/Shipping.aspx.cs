@@ -106,8 +106,11 @@ namespace COSCPFWA
                             cmd.Parameters.AddWithValue("@FirstNameTo", firstName_to);
                             cmd.Parameters.AddWithValue("@LastNameTo", lastName_to);
                             cmd.ExecuteNonQuery();
+
+                            Response.Write("<script>alert('Processing your request...');</script>");
                         }
                     }
+                    Response.Write("<script>alert('Your package has be created! Your PackageID is {packageID}');</script>");
                 }
                 catch (MySqlException ex)
                 {
