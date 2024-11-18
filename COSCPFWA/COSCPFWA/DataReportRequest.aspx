@@ -102,12 +102,12 @@
             <form id="form1">
 
                 <div class="form-group">
-                    <label for="reportType">Report Type (Customer, Employee, or Revenue)</label>
+                    <label for="reportType">Report Type (Customer, Employee, or Financial)</label>
                     <asp:DropDownList ID="reportType" runat="server" CssClass="form-select" required="required" AutoPostBack="false" onchange="toggleForms()">
                         <asp:ListItem Value="" Text="Select Report Type" Disabled="true" Selected="true"></asp:ListItem>
                         <asp:ListItem Value="Customer" Text="Customer"></asp:ListItem>
                         <asp:ListItem Value="Employee" Text="Employee"></asp:ListItem>
-                        <asp:ListItem Value="'Revenue" Text="Revenue"></asp:ListItem>
+                        <asp:ListItem Value="Financial" Text="Financial"></asp:ListItem>
                     </asp:DropDownList>
                 </div>
 
@@ -126,7 +126,7 @@
 
                 
                     <div class="form-group">
-                        <label for="additionalCustomer">Additional Customer</label>
+                        <label for="additionalCustomer">Additional Customer (Last Name Only)</label>
                         <asp:TextBox ID="additionalCustomer" runat="server" CssClass="form-control" placeholder="Optional"></asp:TextBox>
                     </div>
 
@@ -152,38 +152,11 @@
                     <asp:Button ID="ViewReportBtn" runat="server" Text="View Report" CssClass="submit-btn" OnClick="ViewReport_Click" />
 
                     <!-- Using the user inputs from all the forms before this, now generates a chart where the user gets to select the x & y axis -->
-                    <h2>Data Visualization</h2>
+                    
 
-                    <!-- X-axis -->
-                    <div class="form-group">
-                        <label for="xAxis">Select X-axis</label>
-                        <asp:DropDownList ID="xAxis" runat="server" CssClass="form-select">
-                            <asp:ListItem Text="ServiceType" Value="ServiceType"></asp:ListItem>
-                        </asp:DropDownList>
-                    </div>
+                   
 
-                    <!-- Y-axis -->
-                    <div class="form-group">
-                        <label for="yAxis">Select Y-axis</label>
-                        <asp:DropDownList ID="yAxis" runat="server" CssClass="form-select">
-                            <asp:ListItem Text="# of Customers" Value="CustomerCount"></asp:ListItem>
-                        </asp:DropDownList>
-                    </div>
-
-                    <!-- Delete later and fix changes to C# if deleted -->
-                    <label for="orderByDropdown">Order By:</label> <!-- Updated label to "Order By" -->
-                    <asp:DropDownList ID="orderByDropdown" runat="server"></asp:DropDownList> <!-- Renamed to "orderByDropdown" -->
-
-                    <!-- Generate Chart button -->
-                    <asp:Button ID="btnGenerateChart" runat="server" Text="Generate Chart" OnClick="btnGenerateChart_Click" CssClass="btnStacked" />
-
-                    <!-- Canvas element to display the generated chart -->
-                    <div>
-                        <canvas id="myChart" width="400" height="200"></canvas>
-                    </div>
-
-                    <!-- Hidden field to store JSON data for chart rendering -->
-                    <asp:HiddenField ID="chartData" runat="server" />
+                   
 
                 </div>
                 <!-- Employee Report Section -->
@@ -196,8 +169,22 @@
                                     
                     <div class="form-group">
                         <label for="additionalEmployees">Additional Employee</label>
-                        <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" placeholder="Optional"></asp:TextBox>
+                        <asp:TextBox ID="additionalEmployees" runat="server" CssClass="form-control" placeholder="Optional"></asp:TextBox>
                     </div>
+
+                                       
+                   
+                    <div class="form-group">
+                        <label for="departmentInput">Department</label>
+                        <asp:DropDownList ID="departmentInput" runat="server" CssClass="form-select">
+                            <asp:ListItem value="">Select Department</asp:ListItem>
+                            <asp:ListItem value="101">Operations (#101)</asp:ListItem>
+                            <asp:ListItem value="102">Logistics (#102)</asp:ListItem>
+                            <asp:ListItem value="103">Customer Service (#103)</asp:ListItem>
+                            <asp:ListItem value="104">Human Resources (#104)</asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
+
 
                     <div class="form-group">
                         <label for="packageType">Package Type</label>
@@ -205,38 +192,73 @@
                             <asp:ListItem value="">Select Package Type</asp:ListItem>
                             <asp:ListItem value="Delivery">Delivery</asp:ListItem>
                             <asp:ListItem value="SmartLocker">SmartLocker</asp:ListItem>
+                            <asp:ListItem Value ="Pickup">Pickup</asp:ListItem>
                         </asp:DropDownList>
                     </div>
                 
                     <div class="form-group">
-                        <label for="activityDateFrom">Activity Date From</label>
-                        <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+                        <label for="employeeFrom">Activity Date From</label>
+                        <asp:TextBox ID="employeeFrom" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
                     </div>
                 
                     <div class="form-group">
-                        <label for="activityDateTo">Activity Date To</label>
-                        <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+                        <label for="employee    To">Activity Date To</label>
+                        <asp:TextBox ID="employeeTo" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
                     </div>
 
                     <asp:Button ID="Button1" runat="server" Text="View Report" CssClass="submit-btn" OnClick="ViewReport_Click" />
+                </div>
 
+                
+                <!-- Create revenue report section -->
+                <div id="financialReport" style="display: none;">
+                    <div class="form-group">
+                        <label for="valueMeasure">Quantitative Values</label>
+                        <asp:DropDownList ID="valueMeasure" runat="server" CssClass="form-select">
+                            <asp:ListItem Text="# of Revenue" Value="Revenue"></asp:ListItem>
+                            <asp:ListItem Text="# of Expenses" Value="Expense"></asp:ListItem>
+                        </asp:DropDownList>
+
+                        
+                        <label for="by">Organized By</label>
+                        <asp:DropDownList ID="by" runat="server" CssClass="form-select">
+                            <asp:ListItem Text="Service" Value="Service"></asp:ListItem>
+                            <asp:ListItem Text="Department" Value="Department"></asp:ListItem>
+                            <asp:ListItem Text="Employee" Value="Employee"></asp:ListItem>
+                        </asp:DropDownList>
+
+                        <div class="form-group">
+                            <label for="financialFrom">Activity Date From</label>
+                            <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="financialTo">Activity Date To</label>
+                            <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+                        </div>
+
+                    </div>
+                        <asp:Button ID="Button2" runat="server" Text="View Report" CssClass="submit-btn" OnClick="ViewReport_Click" />
+                </div>
                     
                     <!-- Using the user inputs from all the forms before this, now generates a chart where the user gets to select the x & y axis -->
-                    <h2>Data Visualization</h2>
+                    <h2>Data Visualization Parameters</h2>
 
                     <!-- X-axis -->
                     <div class="form-group">
                         <label for="xAxis">Select X-axis</label>
-                        <asp:DropDownList ID="DropDownList2" runat="server" CssClass="form-select">
+                        <asp:DropDownList ID="xAxis" runat="server" CssClass="form-select">
                             <asp:ListItem Text="ServiceType" Value="ServiceType"></asp:ListItem>
+                            <asp:ListItem Text="Name" Value="Name"></asp:ListItem>
                         </asp:DropDownList>
                     </div>
 
                     <!-- Y-axis -->
                     <div class="form-group">
                         <label for="yAxis">Select Y-axis</label>
-                        <asp:DropDownList ID="DropDownList3" runat="server" CssClass="form-select">
+                        <asp:DropDownList ID="yAxis" runat="server" CssClass="form-select">
                             <asp:ListItem Text="# of Customers" Value="CustomerCount"></asp:ListItem>
+                            <asp:ListItem Text="# of Packages" Value="PackageCount"></asp:ListItem>
                         </asp:DropDownList>
                     </div>
 
@@ -244,8 +266,6 @@
                     <label for="orderByDropdown">Order By:</label> <!-- Updated label to "Order By" -->
                     <asp:DropDownList ID="DropDownList4" runat="server"></asp:DropDownList> <!-- Renamed to "orderByDropdown" -->
 
-                    <!-- Generate Chart button -->
-                    <asp:Button ID="Button2" runat="server" Text="Generate Chart" OnClick="btnGenerateChart_Click" CssClass="btnStacked" />
 
                     <!-- Canvas element to display the generated chart -->
                     <div>
@@ -253,19 +273,18 @@
                     </div>
 
                     <!-- Hidden field to store JSON data for chart rendering -->
-                    <asp:HiddenField ID="HiddenField1" runat="server" />
+                    <asp:HiddenField ID="chartData" runat="server" />
 
 
-                </div>
-                <!-- Create revenue report section -->
+   
+                
 
                 <!-- Added Chart.js library for data visualization -->
                 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
                 <script type="text/javascript">
                     // Function to render chart using Chart.js and JSON data from server
-                    function renderChart(data)
-                    {
+                    function renderChart(data) {
                         var ctx = document.getElementById('myChart').getContext('2d');
                         var chartData = JSON.parse(data);
                         new Chart(ctx, {
@@ -291,12 +310,12 @@
                     }
 
                     // Toggle visibility of form sections based on report type
-                    function toggleForms()
-                    {
+                    function toggleForms() {
                         var reportType = document.getElementById('<%= reportType.ClientID %>').value;
                         var customerReport = document.getElementById("customerReport");
                         customerReport.style.display = "none";
                         employeeReport.style.display = "none";
+                        financialReport.style.display = "none";
 
                         // Show relevant section based on report type
                         if (reportType === "Customer")
@@ -306,6 +325,10 @@
                         else if (reportType == "Employee")
                         {
                             employeeReport.style.display = "block";
+                        }
+                        else if (reportType == "Financial")
+                        {
+                            financialReport.style.display = "block";
                         }
                     }
 
