@@ -135,8 +135,9 @@
                     <p><strong>Current Status:</strong> <asp:Label ID="StatusLabel" runat="server"></asp:Label></p>
                     <p><strong>Service Type:</strong> <asp:Label ID="ServiceTypeLabel" runat="server"></asp:Label></p>
                     <p><strong>Contents:</strong> <asp:Label ID="ContentsLabel" runat="server"></asp:Label></p>
-                    <p><strong>Weight:</strong> <asp:Label ID="WeightLabel" runat="server"></asp:Label></p>
-                    <p><strong>Dimensions:</strong> <asp:Label ID="DimensionsLabel" runat="server"></asp:Label></p>
+                    <p><strong>Weight_lbs:</strong> <asp:Label ID="WeightLabel" runat="server"></asp:Label></p>
+                    <p><strong>Length_in:</strong> <asp:Label ID="LengthLabel" runat="server"></asp:Label></p>
+                    <p><strong>Width_in:</strong> <asp:Label ID="WidthLabel" runat="server"></asp:Label></p>
                     <p><strong>Received Date:</strong> <asp:Label ID="ReceivedDateLabel" runat="server"></asp:Label></p>
                 </div>
             </asp:Panel>

@@ -33,9 +33,8 @@ namespace COSCPFWA
                         ServiceTypeLabel.Text = reader["ServiceType"].ToString();
                         ContentsLabel.Text = reader["Contents"].ToString();
                         WeightLabel.Text = reader["Weight_lbs"].ToString() + " lbs";
-                        DimensionsLabel.Text = reader["Dimensions"].ToString();
-                        ReceivedDateLabel.Text = Convert.ToDateTime(reader["ReceivedDate"]).ToString("yyyy-MM-dd");
-
+                        WidthLabel.Text = reader["Width_in"].ToString();
+                        LengthLabel.Text = reader["Length_in"].ToString();
                         TrackingPanel.Visible = true;
                     }
                     else

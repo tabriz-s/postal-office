@@ -78,13 +78,22 @@ namespace COSCPFWA
         protected global::System.Web.UI.WebControls.Label WeightLabel;
 
         /// <summary>
-        /// DimensionsLabel control.
+        /// LengthLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label DimensionsLabel;
+        protected global::System.Web.UI.WebControls.Label LengthLabel;
+
+        /// <summary>
+        /// WidthLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label WidthLabel;
 
         /// <summary>
         /// ReceivedDateLabel control.
