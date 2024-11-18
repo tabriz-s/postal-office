@@ -1,22 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\sjgam\\Documents\\GitHub\\WebappCOSC\\COSCPFWA\\",
+  "WorkspaceRootPath": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\users\\sjgam\\documents\\github\\webappcosc\\coscpfwa\\coscpfwa\\store.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\users\\tsadr\\source\\repos\\webappcosc_main\\coscpfwa\\coscpfwa\\changepassword.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\changepassword.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\users\\tsadr\\source\\repos\\webappcosc_main\\coscpfwa\\coscpfwa\\changepassword.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\changepassword.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\users\\tsadr\\source\\repos\\webappcosc_main\\coscpfwa\\coscpfwa\\updateprofile.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\updateprofile.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\users\\tsadr\\source\\repos\\webappcosc_main\\coscpfwa\\coscpfwa\\updateprofile.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\updateprofile.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\users\\tsadr\\source\\repos\\webappcosc_main\\coscpfwa\\coscpfwa\\updateprofile.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\updateprofile.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\users\\tsadr\\source\\repos\\webappcosc_main\\coscpfwa\\coscpfwa\\registercustomer.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\registercustomer.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\users\\tsadr\\source\\repos\\webappcosc_main\\coscpfwa\\coscpfwa\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\coscpfwa\\customerdashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\customerdashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\users\\tsadr\\source\\repos\\webappcosc_main\\coscpfwa\\coscpfwa\\store.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\store.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|c:\\users\\sjgam\\documents\\github\\webappcosc\\coscpfwa\\coscpfwa\\store.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\coscpfwa\\store.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\store.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\Users\\sjgam\\Documents\\GitHub\\WebappCOSC\\COSCPFWA\\coscpfwa\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\coscpfwa\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
       "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|C:\\Users\\sjgam\\Documents\\GitHub\\WebappCOSC\\COSCPFWA\\coscpfwa\\customerdashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{8330814A-CDF4-46E7-9DE5-BBCCC144CA5C}|COSCPFWA\\COSCPFWA.csproj|solutionrelative:coscpfwa\\customerdashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,21 +54,116 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "Site.Master",
-              "DocumentMoniker": "C:\\Users\\sjgam\\Documents\\GitHub\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Site.Master",
+              "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\COSCPFWA\\Site.Master",
               "RelativeDocumentMoniker": "COSCPFWA\\Site.Master",
-              "ToolTip": "C:\\Users\\sjgam\\Documents\\GitHub\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Site.Master",
+              "ToolTip": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\COSCPFWA\\Site.Master",
               "RelativeToolTip": "COSCPFWA\\Site.Master",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2024-11-14T20:31:05.969Z",
               "IsPinned": true,
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChangePassword.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\COSCPFWA\\ChangePassword.aspx.cs",
+              "RelativeDocumentMoniker": "COSCPFWA\\ChangePassword.aspx.cs",
+              "ToolTip": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\COSCPFWA\\ChangePassword.aspx.cs*",
+              "RelativeToolTip": "COSCPFWA\\ChangePassword.aspx.cs*",
+              "ViewState": "AgIAADAAAAAAAAAAAAAowFMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T04:41:01.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChangePassword.aspx",
+              "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\COSCPFWA\\ChangePassword.aspx",
+              "RelativeDocumentMoniker": "COSCPFWA\\ChangePassword.aspx",
+              "ToolTip": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\COSCPFWA\\ChangePassword.aspx*",
+              "RelativeToolTip": "COSCPFWA\\ChangePassword.aspx*",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-18T04:40:41.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UpdateProfile.aspx.designer.cs",
+              "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\COSCPFWA\\UpdateProfile.aspx.designer.cs",
+              "RelativeDocumentMoniker": "COSCPFWA\\UpdateProfile.aspx.designer.cs",
+              "ToolTip": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\COSCPFWA\\UpdateProfile.aspx.designer.cs*",
+              "RelativeToolTip": "COSCPFWA\\UpdateProfile.aspx.designer.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAH0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T04:39:12.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UpdateProfile.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\COSCPFWA\\UpdateProfile.aspx.cs",
+              "RelativeDocumentMoniker": "COSCPFWA\\UpdateProfile.aspx.cs",
+              "ToolTip": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\COSCPFWA\\UpdateProfile.aspx.cs*",
+              "RelativeToolTip": "COSCPFWA\\UpdateProfile.aspx.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T04:39:04.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpdateProfile.aspx",
+              "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\COSCPFWA\\UpdateProfile.aspx",
+              "RelativeDocumentMoniker": "COSCPFWA\\UpdateProfile.aspx",
+              "ToolTip": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\COSCPFWA\\UpdateProfile.aspx*",
+              "RelativeToolTip": "COSCPFWA\\UpdateProfile.aspx*",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-18T04:38:37.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RegisterCustomer.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\COSCPFWA\\RegisterCustomer.aspx.cs",
+              "RelativeDocumentMoniker": "COSCPFWA\\RegisterCustomer.aspx.cs",
+              "ToolTip": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\COSCPFWA\\RegisterCustomer.aspx.cs*",
+              "RelativeToolTip": "COSCPFWA\\RegisterCustomer.aspx.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T04:38:12.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\COSCPFWA\\Login.aspx.cs",
+              "RelativeDocumentMoniker": "COSCPFWA\\Login.aspx.cs",
+              "ToolTip": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\COSCPFWA\\Login.aspx.cs*",
+              "RelativeToolTip": "COSCPFWA\\Login.aspx.cs*",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAowGMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T04:37:58.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
@@ -61,10 +184,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
@@ -104,42 +223,41 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:137:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "Store.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\sjgam\\Documents\\GitHub\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Store.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\COSCPFWA\\Store.aspx.cs",
               "RelativeDocumentMoniker": "COSCPFWA\\Store.aspx.cs",
-              "ToolTip": "C:\\Users\\sjgam\\Documents\\GitHub\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Store.aspx.cs*",
-              "RelativeToolTip": "COSCPFWA\\Store.aspx.cs*",
-              "ViewState": "AgIAAAYAAAAAAAAAAAA3wEcAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\COSCPFWA\\Store.aspx.cs",
+              "RelativeToolTip": "COSCPFWA\\Store.aspx.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAYwEcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-18T03:16:22.685Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "Store.aspx",
-              "DocumentMoniker": "C:\\Users\\sjgam\\Documents\\GitHub\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Store.aspx",
+              "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\COSCPFWA\\Store.aspx",
               "RelativeDocumentMoniker": "COSCPFWA\\Store.aspx",
               "ToolTip": "C:\\Users\\sjgam\\Documents\\GitHub\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Store.aspx*",
-              "RelativeToolTip": "COSCPFWA\\Store.aspx*",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\sjgam\\Documents\\GitHub\\WebappCOSC\\COSCPFWA\\COSCPFWA\\Store.aspx*",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-18T02:02:00.082Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T02:02:00.082Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "CustomerDashboard.aspx",
-              "DocumentMoniker": "C:\\Users\\sjgam\\Documents\\GitHub\\WebappCOSC\\COSCPFWA\\COSCPFWA\\CustomerDashboard.aspx",
+              "DocumentMoniker": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\COSCPFWA\\CustomerDashboard.aspx",
               "RelativeDocumentMoniker": "COSCPFWA\\CustomerDashboard.aspx",
-              "ToolTip": "C:\\Users\\sjgam\\Documents\\GitHub\\WebappCOSC\\COSCPFWA\\COSCPFWA\\CustomerDashboard.aspx",
-              "RelativeToolTip": "COSCPFWA\\CustomerDashboard.aspx",
+              "ToolTip": "C:\\Users\\tsadr\\source\\repos\\WebappCOSC_MAIN\\COSCPFWA\\COSCPFWA\\CustomerDashboard.aspx*",
+              "RelativeToolTip": "COSCPFWA\\CustomerDashboard.aspx*",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2024-11-14T20:28:51.841Z",

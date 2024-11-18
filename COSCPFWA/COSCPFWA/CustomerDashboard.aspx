@@ -10,8 +10,9 @@
     <div class="container mt-5">
         <div class="text-center mb-4">
             <h2 class="display-5">Welcome, <%= Session["Username"] %>!</h2>
+            <h1> Your customer ID: <%= Session["CustomerID"] %>, and user ID: <%= Session["UserID"] %></h1>
         </div>
-
+        
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
             <!-- Shipping Options  -->
             <div class="col">

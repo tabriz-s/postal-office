@@ -13,25 +13,37 @@ namespace COSCPFWA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session.Clear();
+            if (!IsPostBack)
+            {
+                // Only clear session on first load
+                Session.Clear();
+            }
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
+
             try
             {
                 string connString = ConfigurationManager.ConnectionStrings["DataBaseConnectionString"].ConnectionString;
                 using (MySqlConnection conn = new MySqlConnection(connString))
                 {
                     conn.Open();
-                    string query = "SELECT r.RoleName, COALESCE(e.EmployeeID, c.CustomerID) AS RoleSpecificID " +
-                        "FROM user_logins ul JOIN user_roles ur ON ul.UserID = ur.UserID " +
-                        "JOIN roles r ON ur.RoleID = r.RoleID " +
-                        "LEFT JOIN employee e ON ul.UserID = e.UserID " +
-                        "LEFT JOIN customer c ON ul.UserID = c.CustomerID " +
-                        "WHERE ul.Username = @Username AND ul.Password = @Password";
+                    string query = @"
+                        SELECT ul.UserID, r.RoleName, 
+                               CASE 
+                                   WHEN r.RoleName = 'Employee' THEN e.EmployeeID
+                                   WHEN r.RoleName = 'Customer' THEN c.CustomerID
+                                   ELSE NULL
+                               END AS RoleSpecificID
+                        FROM user_logins ul
+                        JOIN user_roles ur ON ul.UserID = ur.UserID
+                        JOIN roles r ON ur.RoleID = r.RoleID
+                        LEFT JOIN employee e ON ul.UserID = e.UserID
+                        LEFT JOIN customer c ON ul.UserID = c.UserID
+                        WHERE ul.Username = @Username AND ul.Password = @Password";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
@@ -42,26 +54,28 @@ namespace COSCPFWA
                         {
                             if (reader.Read())
                             {
+                                string userID = reader["UserID"].ToString();
                                 string role = reader["RoleName"].ToString();
-                                object roleSpecificID = reader["RoleSpecificID"];
+                                string roleSpecificID = reader["RoleSpecificID"]?.ToString();
 
+                                Session["UserID"] = userID;
                                 Session["Username"] = username;
                                 Session["RoleName"] = role;
 
-                                // Redirect based on user role
+
                                 if (role == "Admin")
                                 {
-                                    Session["EmployeeID"] = roleSpecificID?.ToString();
+                                    Session["EmployeeID"] = roleSpecificID;
                                     Response.Redirect("AdminDashboard.aspx");
                                 }
                                 else if (role == "Employee")
                                 {
-                                    Session["EmployeeID"] = roleSpecificID?.ToString();
+                                    Session["EmployeeID"] = roleSpecificID;
                                     Response.Redirect("EmployeeDashboard.aspx");
                                 }
                                 else if (role == "Customer")
                                 {
-                                    Session["CustomerID"] = roleSpecificID?.ToString();
+                                    Session["CustomerID"] = roleSpecificID;
                                     Response.Redirect("CustomerDashboard.aspx");
                                 }
                                 else
@@ -71,20 +85,16 @@ namespace COSCPFWA
                             }
                             else
                             {
-
                                 lblMessage.Text = "Invalid Username or Password.";
                             }
                         }
-
                     }
                 }
             }
             catch (Exception ex)
             {
-                lblMessage.Text = ex.Message;
+                lblMessage.Text = "Error: " + ex.Message;
             }
-
         }
-
     }
 }

@@ -90,8 +90,8 @@ namespace COSCPFWA
                             roleCmd.Parameters.AddWithValue("@RoleID", 1); // 1 is "Customer" 2, is "Employee", 3 is "Admin"
 
                             int roleRowsAffected = roleCmd.ExecuteNonQuery();
-
                         }
+                        Session["UserID"] = newUserId;
 
                         // insert into customer table
                         string insertCustomerQuery = @"INSERT INTO customer (FirstName, MiddleInitial, LastName, Address, City, State, ZipCode, PhoneNumber, Email, UserID) VALUES (@FirstName, @MiddleInitial, @LastName, @Address, @City, @State, @ZipCode, @PhoneNumber, @Email, @UserID);";

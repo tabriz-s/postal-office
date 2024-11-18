@@ -94,6 +94,7 @@
                         <!-- Admin Navigation -->
                         <asp:PlaceHolder ID="phAdminNav" runat="server">
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Employee">Employee</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/TrackPackage">Track Packages</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/DataReportRequest">Reports</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/EditEmployee">Check Employees</a></li>
                         </asp:PlaceHolder>
