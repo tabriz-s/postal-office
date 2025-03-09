@@ -4,11 +4,11 @@ Team 4 - Postal Office Database Web applications
 ---------------------------------------------------------
 Get Started:
 
-To access the Web application: Click on the link https://postalofficeportal-frgkd9fqd8a3cfc6.centralus-01.azurewebsites.net to access the Web application
+To access the Web application: Click on this link https://postalofficeportal-frgkd9fqd8a3cfc6.centralus-01.azurewebsites.net 
 
 To access the Database: open 'COSC3380_UH4.sql' in your preferred SQL editor
 
-To access the code: Select the "New MAin" branch, open your preferred code editor, and click on "clone repository". If this did not work,
+To access the code: Select the "New Main" branch, open your preferred code editor, and click on "clone repository". If this did not work,
 download the repository and open the COSCPFWA.sln file
 
 ---------------------------------------------------------
